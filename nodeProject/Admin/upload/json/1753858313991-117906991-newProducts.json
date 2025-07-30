@@ -1,0 +1,14 @@
+[
+  {
+    "productId": "prod001",
+    "name": "Cool Perfume",
+    "price": 49.99,
+    "category": "Men"
+  },
+  {
+    "productId": "prod002",
+    "name": "Floral Fragrance",
+    "price": 59.99,
+    "category": "Women"
+  }
+]
