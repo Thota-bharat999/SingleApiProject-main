@@ -28,6 +28,9 @@ mongoose.connect(process.env.MONGO_URI)
 .then(() => logger.info("✅ MongoDB connected"))
 .catch(err => logger.error("❌ MongoDB error", err));
 
+app.get("/", (req, res) => {
+  res.send("🟢 API is running... Welcome to Single API Project");
+});
 // Server listen
 const PORT = process.env.PORT || 5000;
 app.listen(PORT, () => {
