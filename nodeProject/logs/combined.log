@@ -838,3 +838,10 @@
 [2025-07-30 21:52:13] [32minfo[39m: ✅ MongoDB connected
 [2025-07-31 07:43:56] [32minfo[39m: 🚀 Server running on port 5000
 [2025-07-31 07:43:56] [32minfo[39m: ✅ MongoDB connected
+[2025-07-31 10:13:27] [32minfo[39m: 🚀 Server running on port 5000
+[2025-07-31 10:13:27] [32minfo[39m: ✅ MongoDB connected
+[2025-07-31 12:26:44] [33mwarn[39m: [USER] Login failed: Incorrect password for email idea@example.com
+[2025-07-31 12:27:00] [32minfo[39m: [USER] New user registered: amma@example.com (ID: 688b13bcb88074da011ece06)
+[2025-07-31 12:27:06] [33mwarn[39m: [USER] Login failed: Incorrect password for email idea@example.com
+[2025-07-31 12:29:58] [32minfo[39m: [USER] New user registered: yuquazeuhixa-9264@yopmail.com (ID: 688b146eb88074da011ece0a)
+[2025-07-31 12:30:13] [32minfo[39m: [USER] Login successful for user yuquazeuhixa-9264@yopmail.com
