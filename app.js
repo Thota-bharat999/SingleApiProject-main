@@ -26,7 +26,7 @@ app.use('/api-docs', swaggerUi.serve, swaggerUi.setup(specs));
 app.use('/api/user', orderRoutes); 
 app.use('/api/admin/upload', uploadRoutes);
 
-mongoose.connect(process.env.MONGO_URL)
+mongoose.connect(process.env.MONGO_URI)
 .then(() => logger.info("✅ MongoDB connected"))
   .catch(err => logger.error("❌ MongoDB error", err));
 
