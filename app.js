@@ -26,10 +26,8 @@ app.use('/api-docs', swaggerUi.serve, swaggerUi.setup(specs));
 app.use('/api/user', orderRoutes); 
 app.use('/api/admin/upload', uploadRoutes);
 
-mongoose.connect(process.env.MONGO_URI, {
-  useNewUrlParser: true,
-  useUnifiedTopology: true
-}).then(() => logger.info("✅ MongoDB connected"))
+mongoose.connect(process.env.MONGO_URL)
+.then(() => logger.info("✅ MongoDB connected"))
   .catch(err => logger.error("❌ MongoDB error", err));
 
 app.listen(process.env.PORT, () => {
