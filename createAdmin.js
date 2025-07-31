@@ -4,7 +4,7 @@ const Admin = require("./Admin/authModel"); // Adjust path
 const logger=require('./utils/logger');
 const adminLogger = require("./utils/adminLogger");
 
-mongoose.connect("mongodb://localhost:27017/jwtauthdb")
+mongoose.connect(process.env.MONGO_URL)
   .then(async () => {
     const existing = await Admin.findOne({ email: "jeuwaummukuza-1818@yopmail.com" });
     if (existing) {
