@@ -54,7 +54,7 @@ const {
  *       500:
  *         description: Server error
  */
-router.post("/register", userController.registerUser);
+router.post("/register",registerUser);
 /**
  * @swagger
  * /api/user/login:
