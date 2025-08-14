@@ -1,0 +1,971 @@
+[2025-07-23 12:30:49] [32minfo[39m: 🚀 Server running on port 5000
+[2025-07-23 12:37:29] [32minfo[39m: 🚀 Server running on port 5000
+[2025-07-23 12:45:27] [32minfo[39m: 🚀 Server running on port 5000
+[2025-07-23 12:45:44] [32minfo[39m: 🚀 Server running on port 5000
+[2025-07-23 12:47:09] [32minfo[39m: 🚀 Server running on port 5000
+[2025-07-23 12:47:13] [32minfo[39m: 🚀 Server running on port 5000
+[2025-07-23 13:00:17] [32minfo[39m: 🚀 Server running on port 5000
+[2025-07-23 13:07:32] [33mwarn[39m: Registration failed: Email already exists (prasad@example.com)
+[2025-07-23 13:25:06] [32minfo[39m: 🚀 Server running on port 5000
+[2025-07-23 13:25:13] [33mwarn[39m: Registration failed: Email already exists (prasad@example.com)
+[2025-07-23 13:25:43] [32minfo[39m: 🚀 Server running on port 5000
+[2025-07-23 13:25:57] [33mwarn[39m: Registration failed: Email already exists (prasad@example.com)
+[2025-07-23 13:26:18] [32minfo[39m: 🚀 Server running on port 5000
+[2025-07-23 13:28:36] [32minfo[39m: 🚀 Server running on port 5000
+[2025-07-23 13:28:56] [33mwarn[39m: Registration failed: Email already exists (prasad@example.com)
+[2025-07-23 13:29:21] [32minfo[39m: New user registered: set@example.com (ID: 688096593eb138b377cc9665)
+[2025-07-23 13:33:48] [33mwarn[39m: Registration failed: Email already exists (set@example.com)
+[2025-07-23 13:34:16] [33mwarn[39m: Registration failed: Email already exists (set@example.com)
+[2025-07-23 13:36:55] [32minfo[39m: New user registered: sri@example.com (ID: 6880981f3eb138b377cc966a)
+[2025-07-23 13:37:50] [32minfo[39m: 🚀 Server running on port 5000
+[2025-07-23 13:46:17] [32minfo[39m: 🚀 Server running on port 5000
+[2025-07-23 13:51:28] [32minfo[39m: 🚀 Server running on port 5000
+[2025-07-23 16:17:58] [32minfo[39m: 🚀 Server running on port 5000
+[2025-07-23 16:19:39] [32minfo[39m: 🚀 Server running on port 5000
+[2025-07-23 16:21:49] [32minfo[39m: 🚀 Server running on port 5000
+[2025-07-23 16:22:58] [32minfo[39m: 🚀 Server running on port 5000
+[2025-07-23 16:32:02] [32minfo[39m: 🚀 Server running on port 5000
+[2025-07-23 16:42:46] [32minfo[39m: 🚀 Server running on port 5000
+[2025-07-23 16:53:57] [32minfo[39m: 🚀 Server running on port 5000
+[2025-07-23 18:36:57] [32minfo[39m: 🚀 Server running on port 5000
+[2025-07-23 18:46:16] [32minfo[39m: 🚀 Server running on port 5000
+[2025-07-23 18:49:12] [32minfo[39m: 🚀 Server running on port 5000
+[2025-07-23 18:50:28] [32minfo[39m: 🚀 Server running on port 5000
+[2025-07-23 18:52:23] [32minfo[39m: 🚀 Server running on port 5000
+[2025-07-23 18:53:23] [32minfo[39m: 🚀 Server running on port 5000
+[2025-07-23 19:52:30] [32minfo[39m: 🚀 Server running on port 5000
+[2025-07-23 19:52:56] [32minfo[39m: 🚀 Server running on port 5000
+[2025-07-23 19:53:49] [32minfo[39m: 🚀 Server running on port 5000
+[2025-07-23 19:54:16] [32minfo[39m: 🚀 Server running on port 5000
+[2025-07-23 19:54:42] [32minfo[39m: 🚀 Server running on port 5000
+[2025-07-23 19:59:12] [32minfo[39m: 🚀 Server running on port 5000
+[2025-07-23 20:01:44] [32minfo[39m: 🚀 Server running on port 5000
+[2025-07-23 20:01:45] [32minfo[39m: 🚀 Server running on port 5000
+[2025-07-23 22:00:10] [32minfo[39m: 🚀 Server running on port 5000
+[2025-07-23 22:08:03] [32minfo[39m: 🚀 Server running on port 5000
+[2025-07-23 22:20:22] [32minfo[39m: 🚀 Server running on port 5000
+[2025-07-24 13:26:58] [32minfo[39m: 🚀 Server running on port 5000
+[2025-07-24 13:35:12] [32minfo[39m: 🚀 Server running on port 5000
+[2025-07-24 13:41:04] [32minfo[39m: 🚀 Server running on port 5000
+[2025-07-24 13:50:29] [32minfo[39m: 🚀 Server running on port 5000
+[2025-07-24 13:52:21] [32minfo[39m: 🚀 Server running on port 5000
+[2025-07-24 13:55:00] [32minfo[39m: 🚀 Server running on port 5000
+[2025-07-24 13:57:39] [32minfo[39m: 🚀 Server running on port 5000
+[2025-07-24 14:01:19] [32minfo[39m: 🚀 Server running on port 5000
+[2025-07-24 14:03:26] [32minfo[39m: 🚀 Server running on port 5000
+[2025-07-24 14:07:37] [32minfo[39m: 🚀 Server running on port 5000
+[2025-07-24 14:12:22] [32minfo[39m: 🚀 Server running on port 5000
+[2025-07-24 14:14:11] [32minfo[39m: 🚀 Server running on port 5000
+[2025-07-24 14:15:05] [32minfo[39m: 🚀 Server running on port 5000
+[2025-07-24 14:16:14] [32minfo[39m: 🚀 Server running on port 5000
+[2025-07-24 14:16:43] [32minfo[39m: 🚀 Server running on port 5000
+[2025-07-24 14:19:21] [32minfo[39m: 🚀 Server running on port 5000
+[2025-07-24 14:21:13] [32minfo[39m: 🚀 Server running on port 5000
+[2025-07-24 14:22:35] [32minfo[39m: 🚀 Server running on port 5000
+[2025-07-24 14:23:58] [32minfo[39m: 🚀 Server running on port 5000
+[2025-07-24 14:25:35] [32minfo[39m: 🚀 Server running on port 5000
+[2025-07-24 14:28:27] [32minfo[39m: 🚀 Server running on port 5000
+[2025-07-24 14:29:21] [32minfo[39m: 🚀 Server running on port 5000
+
+[2025-07-24 15:58:41] [32minfo[39m: [USER] New user registered: raja@example.com (ID: 68820ad92977b95da4fa266d)
+[2025-07-24 16:00:33] [32minfo[39m: [USER] Login successful for user raja@example.com
+[2025-07-24 16:01:39] [32minfo[39m: 📧 Preparing to send OTP email to: raja@example.com
+[2025-07-24 16:01:42] [32minfo[39m: ✅ Email sent to raja@example.com | MessageId: <b4430f1d-8393-16e2-cf1f-156af5fbad28@gmail.com>
+[2025-07-24 16:01:42] [32minfo[39m: [USER] OTP sent to email raja@example.com
+[2025-07-24 16:03:15] [32minfo[39m: 🚀 Server running on port 5000
+[2025-07-24 16:35:01] [32minfo[39m: 🚀 Server running on port 5000
+[2025-07-24 16:38:50] [32minfo[39m: 📧 Preparing to send OTP email to: raja@example.com
+[2025-07-24 16:38:54] [32minfo[39m: ✅ Email sent to raja@example.com | MessageId: <08ee6427-ccbc-dc88-74e5-46a154b7d1fc@gmail.com>
+[2025-07-24 16:38:54] [32minfo[39m: 📧 Preparing to send OTP email to: raja@example.com
+[2025-07-24 16:38:57] [32minfo[39m: ✅ Email sent to raja@example.com | MessageId: <7592db11-d961-21f4-bc97-e6e5f72eb8bb@gmail.com>
+[2025-07-24 16:38:57] [31merror[39m: [USER] Forgot password error for raja@example.com: logger is not defined
+[2025-07-24 16:40:55] [32minfo[39m: 🚀 Server running on port 5000
+[2025-07-24 16:41:17] [32minfo[39m: 📧 Preparing to send OTP email to: raja@example.com
+[2025-07-24 16:41:20] [32minfo[39m: ✅ Email sent to raja@example.com | MessageId: <8a0f8909-dc8f-12cc-f8f7-a4dc4a6bb2e5@gmail.com>
+[2025-07-24 16:41:20] [32minfo[39m: 📧 Preparing to send OTP email to: raja@example.com
+[2025-07-24 16:41:23] [32minfo[39m: ✅ Email sent to raja@example.com | MessageId: <d81ce392-b95f-469a-6731-a6261e60c591@gmail.com>
+[2025-07-24 16:41:23] [32minfo[39m: [USER] 📤 OTP email sent to raja@example.com in 3066 ms
+[2025-07-24 16:41:23] [32minfo[39m: [USER] OTP sent to email raja@example.com
+[2025-07-24 17:15:17] [32minfo[39m: 🚀 Server running on port 5000
+[2025-07-24 17:16:09] [32minfo[39m: [USER] 📧 Preparing to send OTP email to: raja@example.com
+[2025-07-24 17:16:12] [32minfo[39m: [USER] 📤 OTP email sent to raja@example.com in 3029 ms
+[2025-07-24 17:16:12] [32minfo[39m: [USER] 📧 Preparing to send OTP email to: raja@example.com
+[2025-07-24 17:16:14] [32minfo[39m: [USER] 📤 OTP email sent to raja@example.com in 2669 ms
+[2025-07-24 17:16:14] [32minfo[39m: [USER] 📤 OTP email sent to raja@example.com in 2673 ms
+[2025-07-24 17:16:14] [32minfo[39m: [USER] OTP sent to email raja@example.com
+[2025-07-25 11:13:53] [32minfo[39m: 🚀 Server running on port 5000
+[2025-07-25 11:14:03] [32minfo[39m: [USER] 📧 Preparing to send OTP email to: raja@example.com
+[2025-07-25 11:14:07] [32minfo[39m: [USER] ✅ Email sent to: raja@example.com
+[2025-07-25 11:14:07] [32minfo[39m: [USER] 📤 Gmail response: 250 2.0.0 OK  1753422247 d9443c01a7336-23fa476e9absm28524485ad.61 - gsmtp
+[2025-07-25 11:14:07] [32minfo[39m: [USER] ⏱ OTP email sent in 3573 ms
+[2025-07-25 11:14:07] [32minfo[39m: [USER] 📩 Message ID: <98a39af7-8eb2-8e2f-9a91-f839d3e4530f@gmail.com>
+[2025-07-25 11:14:07] [32minfo[39m: [USER] 📧 Preparing to send OTP email to: raja@example.com
+[2025-07-25 11:14:09] [32minfo[39m: [USER] ✅ Email sent to: raja@example.com
+[2025-07-25 11:14:09] [32minfo[39m: [USER] 📤 Gmail response: 250 2.0.0 OK  1753422249 d9443c01a7336-23fb15bb1e1sm5681535ad.130 - gsmtp
+[2025-07-25 11:14:09] [32minfo[39m: [USER] ⏱ OTP email sent in 2364 ms
+[2025-07-25 11:14:09] [32minfo[39m: [USER] 📩 Message ID: <544056f9-ef63-7204-9469-64142b8fe951@gmail.com>
+[2025-07-25 11:14:09] [32minfo[39m: [USER] 📤 OTP email sent to raja@example.com in 2370 ms
+[2025-07-25 11:14:09] [32minfo[39m: [USER] OTP sent to email raja@example.com
+[2025-07-25 11:20:59] [33mwarn[39m: [USER] Reset password attempt failed: Missing fildes (otp or newPassword or confirmPassword)
+[2025-07-25 11:24:47] [32minfo[39m: [USER] Login successful for user raja@example.com
+[2025-07-25 11:25:24] [32minfo[39m: [USER] 📧 Preparing to send OTP email to: raja@example.com
+[2025-07-25 11:25:27] [32minfo[39m: [USER] ✅ Email sent to: raja@example.com
+[2025-07-25 11:25:27] [32minfo[39m: [USER] 📤 Gmail response: 250 2.0.0 OK  1753422927 d2e1a72fcca58-761b04b350bsm2988372b3a.67 - gsmtp
+[2025-07-25 11:25:27] [32minfo[39m: [USER] ⏱ OTP email sent in 3004 ms
+[2025-07-25 11:25:27] [32minfo[39m: [USER] 📩 Message ID: <d2463753-927d-fe39-c925-6207002ee826@gmail.com>
+[2025-07-25 11:25:27] [32minfo[39m: [USER] 📧 Preparing to send OTP email to: raja@example.com
+[2025-07-25 11:25:30] [32minfo[39m: [USER] ✅ Email sent to: raja@example.com
+[2025-07-25 11:25:30] [32minfo[39m: [USER] 📤 Gmail response: 250 2.0.0 OK  1753422929 d2e1a72fcca58-761b06376e4sm3005445b3a.131 - gsmtp
+[2025-07-25 11:25:30] [32minfo[39m: [USER] ⏱ OTP email sent in 2598 ms
+[2025-07-25 11:25:30] [32minfo[39m: [USER] 📩 Message ID: <aad7022e-aaf2-9de6-1179-b8cb9a485795@gmail.com>
+[2025-07-25 11:25:30] [32minfo[39m: [USER] 📤 OTP email sent to raja@example.com in 2603 ms
+[2025-07-25 11:25:30] [32minfo[39m: [USER] OTP sent to email raja@example.com
+[2025-07-25 11:26:31] [33mwarn[39m: [USER] Reset password attempt failed: Missing fildes (otp or newPassword or confirmPassword)
+[2025-07-25 11:30:22] [32minfo[39m: 🚀 Server running on port 5000
+[2025-07-25 11:30:34] [33mwarn[39m: [USER] Reset password attempt failed: Missing fildes (otp or newPassword or confirmPassword)
+[2025-07-25 11:33:15] [32minfo[39m: 🚀 Server running on port 5000
+[2025-07-25 11:33:21] [33mwarn[39m: [USER] [USER] Reset password attempt failed - Missing fields: otp=undefined, newPassword=1234567, confirmPassword=1234567
+[2025-07-25 11:47:00] [32minfo[39m: 🚀 Server running on port 5000
+[2025-07-25 11:47:07] [32minfo[39m: [USER] Password reset successful for user raja@example.com
+[2025-07-25 11:56:05] [32minfo[39m: [USER] ✅ Token verified for user ID: 68820ad92977b95da4fa266d
+[2025-07-25 12:01:58] [32minfo[39m: [USER] ✅ Token verified for user ID: 68820ad92977b95da4fa266d
+[2025-07-25 12:13:52] [32minfo[39m: [USER] 🟡 Received request to add to cart for userId: user789
+[2025-07-25 12:13:52] [32minfo[39m: [USER] 🛒 Created new cart for userId user789
+[2025-07-25 12:13:52] [32minfo[39m: [USER] ✅ Cart saved successfully for userId user789
+[2025-07-25 12:15:14] [32minfo[39m: [USER] ✅ Token verified for user ID: 68820ad92977b95da4fa266d
+[2025-07-25 12:15:14] [32minfo[39m: [USER] 🛒 Get Cart: Cart fetched successfully for userId user789
+[2025-07-25 12:17:42] [32minfo[39m: [USER] 🟡 Received request to add to cart for userId: user789
+[2025-07-25 12:17:42] [33mwarn[39m: [USER] Invalid input:userId or Products missing or malformed
+[2025-07-25 12:23:24] [32minfo[39m: 🚀 Server running on port 5000
+[2025-07-25 12:23:35] [32minfo[39m: [USER] 🟡 Received request to add to cart for userId: user789
+[2025-07-25 12:23:35] [31merror[39m: [USER] ❌ Error adding to cart for userId user789: Cannot read properties of undefined (reading 'forEach')
+[2025-07-25 12:30:20] [32minfo[39m: 🚀 Server running on port 5000
+[2025-07-25 12:30:29] [32minfo[39m: [USER] 🟡 Received request to add to cart for userId: user789
+[2025-07-25 12:36:28] [32minfo[39m: 🚀 Server running on port 5000
+[2025-07-25 12:36:51] [32minfo[39m: [USER] 🟡 Received request to add to cart for userId: user789
+[2025-07-25 12:39:38] [32minfo[39m: [USER] 🟡 Received request to add to cart for userId: user789
+[2025-07-25 12:42:20] [32minfo[39m: 🚀 Server running on port 5000
+[2025-07-25 12:42:41] [32minfo[39m: [USER] 🟡 Received request to add to cart for userId: user789
+[2025-07-25 12:42:41] [32minfo[39m: [USER] ➕ Updated quantity for product prod001
+[2025-07-25 12:42:41] [32minfo[39m: [USER] ➕ Updated quantity for product prod002
+[2025-07-25 12:42:41] [32minfo[39m: [USER] ➕ Updated quantity for product prod003
+[2025-07-25 12:42:41] [32minfo[39m: [USER] ✅ Cart saved successfully for userId user789
+[2025-07-25 12:44:04] [32minfo[39m: [USER] ✅ Token verified for user ID: 68820ad92977b95da4fa266d
+[2025-07-25 12:44:04] [32minfo[39m: [USER] 🛒 Get Cart: Cart fetched successfully for userId user789
+[2025-07-25 12:54:30] [32minfo[39m: 🚀 Server running on port 5000
+[2025-07-25 12:55:48] [32minfo[39m: 🚀 Server running on port 5000
+[2025-07-25 13:01:28] [32minfo[39m: 🚀 Server running on port 5000
+[2025-07-25 13:13:08] [32minfo[39m: 🚀 Server running on port 5000
+[2025-07-25 13:13:55] [32minfo[39m: 🚀 Server running on port 5000
+[2025-07-25 13:14:19] [32minfo[39m: 🚀 Server running on port 5000
+[2025-07-25 13:15:23] [32minfo[39m: 🚀 Server running on port 5000
+[2025-07-25 13:16:56] [32minfo[39m: 🚀 Server running on port 5000
+[2025-07-25 13:17:01] [32minfo[39m: [USER] ✅ Token verified for user ID: 68820ad92977b95da4fa266d
+[2025-07-25 13:17:01] [32minfo[39m: [USER] 🛒 Get Cart: Cart fetched successfully for userId user789
+[2025-07-25 13:26:33] [32minfo[39m: 🚀 Server running on port 5000
+[2025-07-25 13:27:18] [32minfo[39m: [USER] ✅ Token verified for user ID: 68820ad92977b95da4fa266d
+[2025-07-25 13:27:18] [32minfo[39m: [USER] 🛒 Get Cart: Cart fetched successfully for userId user789
+[2025-07-25 13:30:59] [32minfo[39m: [USER] 🟡 Received request to add to cart for userId: user789
+[2025-07-25 13:30:59] [31merror[39m: [USER] ❌ Error adding to cart for userId user789: Product is not defined
+[2025-07-25 13:34:42] [32minfo[39m: 🚀 Server running on port 5000
+[2025-07-25 13:34:54] [32minfo[39m: 🚀 Server running on port 5000
+[2025-07-25 13:35:58] [32minfo[39m: 🚀 Server running on port 5000
+[2025-07-25 13:36:04] [32minfo[39m: [USER] ✅ Token verified for user ID: 68820ad92977b95da4fa266d
+[2025-07-25 13:36:04] [32minfo[39m: [USER] 🛒 Get Cart: Cart fetched successfully for userId user789
+[2025-07-25 13:36:24] [32minfo[39m: [USER] 🟡 Received request to add to cart for userId: user789
+[2025-07-25 13:36:24] [31merror[39m: [USER] ❌ Error adding to cart for userId user789: Product is not defined
+[2025-07-25 13:37:16] [32minfo[39m: 🚀 Server running on port 5000
+[2025-07-25 13:37:25] [32minfo[39m: 🚀 Server running on port 5000
+[2025-07-25 13:39:16] [32minfo[39m: 🚀 Server running on port 5000
+[2025-07-25 13:39:31] [32minfo[39m: 🚀 Server running on port 5000
+[2025-07-25 13:43:22] [32minfo[39m: 🚀 Server running on port 5000
+[2025-07-25 13:44:57] [32minfo[39m: [USER] 🟡 Received request to add to cart for userId: user999
+[2025-07-25 13:44:57] [31merror[39m: [USER] ❌ Error adding to cart for userId user999: Product is not defined
+[2025-07-25 13:46:13] [32minfo[39m: [USER] 🟡 Received request to add to cart for userId: user999
+[2025-07-25 13:47:48] [32minfo[39m: [USER] 🟡 Received request to add to cart for userId: user999
+[2025-07-25 13:47:48] [31merror[39m: [USER] ❌ Error adding to cart for userId user999: Product is not defined
+[2025-07-25 13:51:47] [32minfo[39m: 🚀 Server running on port 5000
+[2025-07-25 13:52:15] [32minfo[39m: 🟡 Received request to add to cart for userId: user999
+[2025-07-25 13:52:15] [31merror[39m: ❌ Error adding to cart for userId user999: Cast to ObjectId failed for value "prod111" (type string) at path "_id" for model "Product"
+[2025-07-25 13:53:19] [32minfo[39m: 🚀 Server running on port 5000
+[2025-07-25 13:53:26] [32minfo[39m: 🟡 Received request to add to cart for userId: user999
+[2025-07-25 13:53:26] [31merror[39m: ❌ Error adding to cart for userId user999: Product is not defined
+[2025-07-25 14:02:43] [32minfo[39m: 🟡 Received request to add to cart for userId: user456
+[2025-07-25 14:04:05] [32minfo[39m: 🟡 Received request to add to cart for userId: user456
+[2025-07-25 14:05:52] [32minfo[39m: 🚀 Server running on port 5000
+[2025-07-25 14:06:01] [32minfo[39m: 🟡 Received request to add to cart for userId: user456
+[2025-07-25 14:06:01] [31merror[39m: ❌ Error adding to cart for userId user456: Product is not defined
+[2025-07-25 14:09:19] [32minfo[39m: 🚀 Server running on port 5000
+[2025-07-25 14:09:27] [32minfo[39m: 🟡 Received request to add to cart for userId: user456
+[2025-07-25 14:09:27] [31merror[39m: ❌ Error adding to cart for userId user456: Product is not defined
+[2025-07-25 14:11:17] [32minfo[39m: 🚀 Server running on port 5000
+[2025-07-25 14:22:28] [32minfo[39m: 🚀 Server running on port 5000
+[2025-07-25 14:22:48] [32minfo[39m: 🟡 Received request to add to cart for userId: user456
+[2025-07-25 14:22:48] [31merror[39m: ❌ Error adding to cart for userId user456: Product is not defined
+[2025-07-25 14:25:24] [32minfo[39m: 🚀 Server running on port 5000
+[2025-07-25 14:25:54] [32minfo[39m: 🟡 Received request to add to cart for userId: user456
+[2025-07-25 14:25:54] [32minfo[39m: ➕ Updated quantity for product prod123
+[2025-07-25 14:25:54] [32minfo[39m: ➕ Updated quantity for product prod789
+[2025-07-25 14:25:54] [32minfo[39m: ➕ Updated quantity for product prod456
+[2025-07-25 14:25:54] [31merror[39m: ❌ Error adding to cart for userId user456: Cart validation failed: products.0.totalPrice: Cast to Number failed for value "NaN" (type number) at path "totalPrice", products.1.totalPrice: Cast to Number failed for value "NaN" (type number) at path "totalPrice", products.2.totalPrice: Cast to Number failed for value "NaN" (type number) at path "totalPrice", cartTotal: Cast to Number failed for value "NaN" (type number) at path "cartTotal"
+[2025-07-25 14:28:19] [32minfo[39m: 🚀 Server running on port 5000
+[2025-07-25 14:28:51] [32minfo[39m: 🟡 Received request to add to cart for userId: user456
+[2025-07-25 14:28:51] [32minfo[39m: ➕ Updated quantity for product prod123
+[2025-07-25 14:28:51] [32minfo[39m: ➕ Updated quantity for product prod789
+[2025-07-25 14:28:51] [32minfo[39m: ➕ Updated quantity for product prod456
+[2025-07-25 14:28:51] [31merror[39m: ❌ Error adding to cart for userId user456: Cart validation failed: products.0.totalPrice: Cast to Number failed for value "NaN" (type number) at path "totalPrice", products.1.totalPrice: Cast to Number failed for value "NaN" (type number) at path "totalPrice", products.2.totalPrice: Cast to Number failed for value "NaN" (type number) at path "totalPrice", cartTotal: Cast to Number failed for value "NaN" (type number) at path "cartTotal"
+[2025-07-25 14:30:51] [32minfo[39m: 🚀 Server running on port 5000
+[2025-07-25 14:30:58] [32minfo[39m: 🟡 Received request to add to cart for userId: user456
+[2025-07-25 14:30:58] [32minfo[39m: ➕ Updated quantity for product prod123
+[2025-07-25 14:30:58] [32minfo[39m: ➕ Updated quantity for product prod789
+[2025-07-25 14:30:58] [32minfo[39m: ➕ Updated quantity for product prod456
+[2025-07-25 14:30:58] [31merror[39m: ❌ Error adding to cart for userId user456: Cart validation failed: products.0.totalPrice: Cast to Number failed for value "NaN" (type number) at path "totalPrice", products.1.totalPrice: Cast to Number failed for value "NaN" (type number) at path "totalPrice", products.2.totalPrice: Cast to Number failed for value "NaN" (type number) at path "totalPrice", cartTotal: Cast to Number failed for value "NaN" (type number) at path "cartTotal"
+[2025-07-25 14:33:54] [32minfo[39m: 🚀 Server running on port 5000
+[2025-07-25 14:34:33] [32minfo[39m: 🟡 Received request to add to cart for userId: user456
+[2025-07-25 14:34:33] [31merror[39m: ❌ Error adding to cart for userId user456: Cart validation failed: products.0.totalPrice: Cast to Number failed for value "NaN" (type number) at path "totalPrice", products.1.totalPrice: Cast to Number failed for value "NaN" (type number) at path "totalPrice", products.2.totalPrice: Cast to Number failed for value "NaN" (type number) at path "totalPrice", cartTotal: Cast to Number failed for value "NaN" (type number) at path "cartTotal"
+[2025-07-25 14:39:58] [32minfo[39m: 🚀 Server running on port 5000
+[2025-07-25 14:40:06] [32minfo[39m: ➕ Updated quantity for product prod123
+[2025-07-25 14:40:06] [32minfo[39m: ➕ Updated quantity for product prod789
+[2025-07-25 14:40:06] [32minfo[39m: ➕ Updated quantity for product prod456
+[2025-07-25 14:40:06] [32minfo[39m: ✅ Cart saved successfully for user user456
+[2025-07-25 14:40:29] [32minfo[39m: [USER] ✅ Token verified for user ID: 68820ad92977b95da4fa266d
+[2025-07-25 14:40:29] [32minfo[39m: [USER] 🛒 Get Cart: Cart fetched successfully for userId user456
+[2025-07-25 14:52:38] [32minfo[39m: 🚀 Server running on port 5000
+[2025-07-25 14:54:05] [32minfo[39m: ➕ Updated prod123
+[2025-07-25 14:54:05] [32minfo[39m: ➕ Updated prod789
+[2025-07-25 14:54:05] [32minfo[39m: ➕ Updated prod456
+[2025-07-25 14:54:05] [31merror[39m: ❌ Error: Cart validation failed: products.0.totalPrice: Cast to Number failed for value "NaN" (type number) at path "totalPrice", products.1.totalPrice: Cast to Number failed for value "NaN" (type number) at path "totalPrice", products.2.totalPrice: Cast to Number failed for value "NaN" (type number) at path "totalPrice", cartTotal: Cast to Number failed for value "NaN" (type number) at path "cartTotal"
+[2025-07-25 15:01:17] [32minfo[39m: 🚀 Server running on port 5000
+[2025-07-25 15:01:23] [32minfo[39m: ➕ Updated quantity for product prod123
+[2025-07-25 15:01:23] [32minfo[39m: ➕ Updated quantity for product prod456
+[2025-07-25 15:01:23] [32minfo[39m: ✅ Cart saved successfully for user user456
+[2025-07-25 15:01:51] [32minfo[39m: [USER] ✅ Token verified for user ID: 68820ad92977b95da4fa266d
+[2025-07-25 15:01:51] [32minfo[39m: [USER] 🛒 Get Cart: Cart fetched successfully for userId user456
+[2025-07-25 15:07:01] [32minfo[39m: 🚀 Server running on port 5000
+[2025-07-25 15:07:26] [32minfo[39m: 🚀 Server running on port 5000
+[2025-07-25 15:07:39] [32minfo[39m: [USER] ✅ Token verified for user ID: 68820ad92977b95da4fa266d
+[2025-07-25 15:07:40] [32minfo[39m: [USER] 🛒 Get Cart: Cart fetched successfully for userId user456
+[2025-07-25 15:57:32] [32minfo[39m: 🚀 Server running on port 5000
+[2025-07-25 15:57:50] [32minfo[39m: [USER] ✅ Token verified for user ID: 68820ad92977b95da4fa266d
+[2025-07-25 15:57:50] [32minfo[39m: [USER] 🛒 Get Cart: Cart fetched successfully for userId user456
+[2025-07-25 15:58:29] [32minfo[39m: [USER] ✅ Token verified for user ID: 68820ad92977b95da4fa266d
+[2025-07-25 15:58:29] [32minfo[39m: [USER] 🛒 Get Cart: Cart fetched successfully for userId user999
+[2025-07-25 15:58:58] [32minfo[39m: [USER] ✅ Token verified for user ID: 68820ad92977b95da4fa266d
+[2025-07-25 15:58:58] [32minfo[39m: [USER] 🛒 Get Cart: Cart fetched successfully for userId user789
+[2025-07-25 16:01:51] [32minfo[39m: ✅ Cart saved for userId: user456
+[2025-07-25 16:02:19] [32minfo[39m: [USER] ✅ Token verified for user ID: 68820ad92977b95da4fa266d
+[2025-07-25 16:02:19] [32minfo[39m: [USER] 🛒 Get Cart: Cart fetched successfully for userId user456
+[2025-07-25 16:03:39] [32minfo[39m: ✅ Cart saved for userId: user456
+[2025-07-25 16:03:50] [32minfo[39m: [USER] ✅ Token verified for user ID: 68820ad92977b95da4fa266d
+[2025-07-25 16:03:50] [32minfo[39m: [USER] 🛒 Get Cart: Cart fetched successfully for userId user456
+[2025-07-25 16:28:17] [32minfo[39m: [USER] ✅ Token verified for user ID: 68820ad92977b95da4fa266d
+[2025-07-25 16:28:17] [31merror[39m: [USER] Error placing order for userId: 68820ad92977b95da4fa266d - logger is not defined
+[2025-07-25 16:31:58] [32minfo[39m: 🚀 Server running on port 5000
+[2025-07-25 16:38:28] [32minfo[39m: 🚀 Server running on port 5000
+[2025-07-25 16:38:36] [32minfo[39m: [USER] ✅ Token verified for user ID: 68820ad92977b95da4fa266d
+[2025-07-25 16:38:36] [32minfo[39m: [USER] Order placed successfully by userId: 68820ad92977b95da4fa266d, orderId: 688365b4d34dba92993eda1b
+[2025-07-25 16:40:27] [32minfo[39m: [USER] ✅ Token verified for user ID: 68820ad92977b95da4fa266d
+[2025-07-25 16:40:27] [32minfo[39m: [USER] Found 1 orders for userId:68820ad92977b95da4fa266d
+[2025-07-25 16:43:34] [32minfo[39m: [ADMIN] Admin Login Successful:admin@example.com
+[2025-07-25 18:06:22] [32minfo[39m: 🚀 Server running on port 5000
+[2025-07-25 18:07:59] [32minfo[39m: [ADMIN] Admin Login Successful:admin@example.com
+[2025-07-25 18:08:07] [32minfo[39m: [ADMIN] Connecting to DB for admin forgot Password
+[2025-07-25 18:08:11] [32minfo[39m: [ADMIN] OTP sent admin email:admin@example.com
+[2025-07-25 18:14:19] [32minfo[39m: 🚀 Server running on port 5000
+[2025-07-25 18:25:54] [32minfo[39m: 🚀 Server running on port 5000
+[2025-07-25 18:26:16] [32minfo[39m: 🚀 Server running on port 5000
+[2025-07-25 18:30:25] [32minfo[39m: 🚀 Server running on port 5000
+[2025-07-25 18:32:24] [32minfo[39m: 🚀 Server running on port 5000
+[2025-07-25 18:37:55] [32minfo[39m: 🚀 Server running on port 5000
+[2025-07-25 18:38:17] [32minfo[39m: [ADMIN] Connecting to DB for admin forgot Password
+[2025-07-25 18:38:21] [32minfo[39m: [ADMIN] OTP sent admin email:admin@example.com
+[2025-07-25 18:47:14] [32minfo[39m: 🚀 Server running on port 5000
+[2025-07-25 18:47:28] [32minfo[39m: [ADMIN] Connecting to DB for admin forgot password
+[2025-07-25 18:47:28] [33mwarn[39m: ⚠️ Missing toEmail or OTP in sendEmail
+[2025-07-25 18:47:28] [31merror[39m: ❌ Email send failed to unknown: Missing toEmail or OTP
+[2025-07-25 18:47:28] [31merror[39m: [ADMIN] Forgot Password OTP Error: Missing toEmail or OTP
+[2025-07-25 18:53:04] [32minfo[39m: 🚀 Server running on port 5000
+[2025-07-25 18:53:29] [32minfo[39m: [ADMIN] Connecting to DB for admin forgot password
+[2025-07-25 18:53:29] [33mwarn[39m: ⚠️ Missing toEmail or OTP in sendEmail
+[2025-07-25 18:53:29] [31merror[39m: ❌ Email send failed to unknown: Missing toEmail or OTP
+[2025-07-25 18:53:29] [31merror[39m: [ADMIN] Forgot Password OTP Error: Missing toEmail or OTP
+[2025-07-25 18:55:09] [32minfo[39m: 🚀 Server running on port 5000
+[2025-07-25 21:18:01] [32minfo[39m: 🚀 Server running on port 5000
+[2025-07-25 21:18:57] [32minfo[39m: [ADMIN] Connecting to DB for admin forgot password
+[2025-07-25 21:18:57] [33mwarn[39m: ⚠️ Missing toEmail or OTP in sendEmail
+[2025-07-25 21:18:57] [31merror[39m: ❌ Email send failed to unknown: Missing toEmail or OTP
+[2025-07-25 21:18:57] [31merror[39m: [ADMIN] Forgot Password OTP Error: Missing toEmail or OTP
+[2025-07-25 21:22:02] [32minfo[39m: 🚀 Server running on port 5000
+[2025-07-25 21:22:10] [32minfo[39m: [ADMIN] Connecting to DB for admin forgot password
+[2025-07-25 21:22:10] [32minfo[39m: [USER] 📧 Preparing to send OTP email to: admin@example.com
+[2025-07-25 21:22:13] [32minfo[39m: [USER] ✅ Email sent to: admin@example.com
+[2025-07-25 21:22:13] [32minfo[39m: [USER] 📤 Gmail response: 250 2.0.0 OK  1753458733 98e67ed59e1d1-31e6625052asm3846689a91.6 - gsmtp
+[2025-07-25 21:22:13] [32minfo[39m: [USER] ⏱ OTP email sent in 3749 ms
+[2025-07-25 21:22:13] [32minfo[39m: [USER] 📩 Message ID: <ff864464-4d92-a882-569e-8cf06566e4af@gmail.com>
+[2025-07-25 21:22:13] [32minfo[39m: [ADMIN] OTP sent to admin email: admin@example.com
+[2025-07-25 21:23:42] [32minfo[39m: 🚀 Server running on port 5000
+[2025-07-25 21:29:10] [32minfo[39m: 🚀 Server running on port 5000
+[2025-07-25 21:29:32] [32minfo[39m: [ADMIN] Connecting to DB for admin forgot password
+[2025-07-25 21:29:32] [32minfo[39m: [EMAIL] 📧 Preparing to send OTP email to: admin@example.com
+[2025-07-25 21:29:36] [32minfo[39m: [EMAIL] ✅ Email sent to: admin@example.com
+[2025-07-25 21:29:36] [32minfo[39m: [EMAIL] 📤 Gmail response: 250 2.0.0 OK  1753459175 d2e1a72fcca58-76408cf7460sm70959b3a.54 - gsmtp
+[2025-07-25 21:29:36] [32minfo[39m: [EMAIL] ⏱ Email sent in 3805 ms
+[2025-07-25 21:29:36] [32minfo[39m: [EMAIL] 📩 Message ID: <ba58c96e-7495-a850-e0c4-5e042f7db1f5@gmail.com>
+[2025-07-25 21:29:36] [32minfo[39m: [ADMIN] OTP sent to admin email: admin@example.com
+[2025-07-25 21:36:41] [32minfo[39m: 🚀 Server running on port 5000
+[2025-07-25 21:37:19] [32minfo[39m: 🚀 Server running on port 5000
+[2025-07-25 21:38:45] [32minfo[39m: [ADMIN] Admin Login Successful:admin@example.com
+[2025-07-25 21:38:52] [32minfo[39m: [ADMIN] Connecting to DB for admin forgot password
+[2025-07-25 21:38:52] [32minfo[39m: [EMAIL] 📧 Preparing to send OTP email to: admin@example.com
+[2025-07-25 21:38:55] [32minfo[39m: [EMAIL] ✅ Email sent to: admin@example.com
+[2025-07-25 21:38:55] [32minfo[39m: [EMAIL] 📤 Gmail response: 250 2.0.0 OK  1753459735 d9443c01a7336-23fbe4fd43dsm547705ad.81 - gsmtp
+[2025-07-25 21:38:55] [32minfo[39m: [EMAIL] ⏱ Email sent in 2824 ms
+[2025-07-25 21:38:55] [32minfo[39m: [EMAIL] 📩 Message ID: <0ffbdd08-0e6e-a62f-44ed-35eff76e4699@gmail.com>
+[2025-07-25 21:38:55] [32minfo[39m: [ADMIN] OTP sent to admin email: admin@example.com
+[2025-07-25 21:41:35] [32minfo[39m: 🚀 Server running on port 5000
+[2025-07-25 21:41:46] [32minfo[39m: [ADMIN] [ADMIN] Connecting to DB for admin forgot password. Email: admin@example.com
+[2025-07-25 21:41:46] [32minfo[39m: [EMAIL] 📧 Preparing to send OTP email to: admin@example.com
+[2025-07-25 21:41:49] [32minfo[39m: [EMAIL] ✅ Email sent to: admin@example.com
+[2025-07-25 21:41:49] [32minfo[39m: [EMAIL] 📤 Gmail response: 250 2.0.0 OK  1753459909 d2e1a72fcca58-7640b8b0911sm62348b3a.124 - gsmtp
+[2025-07-25 21:41:49] [32minfo[39m: [EMAIL] ⏱ Email sent in 3797 ms
+[2025-07-25 21:41:49] [32minfo[39m: [EMAIL] 📩 Message ID: <894113ce-e03a-45ee-75c9-af18974dd4a4@gmail.com>
+[2025-07-25 21:41:49] [32minfo[39m: [ADMIN] [ADMIN] OTP sent to admin email: admin@example.com
+[2025-07-25 21:44:38] [32minfo[39m: 🚀 Server running on port 5000
+[2025-07-25 21:45:44] [32minfo[39m: 🚀 Server running on port 5000
+[2025-07-25 21:45:50] [32minfo[39m: [ADMIN] [ADMIN] Connecting to DB for admin forgot password. Email: admin@example.com
+[2025-07-25 21:45:50] [32minfo[39m: [EMAIL] 📧 Preparing to send OTP email to: admin@example.com
+[2025-07-25 21:45:50] [31merror[39m: ❌ Email send failed to admin@example.com: admin is not defined
+[2025-07-25 21:45:50] [31merror[39m: [ADMIN] [ADMIN] Forgot Password OTP Error: admin is not defined
+[2025-07-25 21:46:28] [32minfo[39m: 🚀 Server running on port 5000
+[2025-07-25 21:46:33] [32minfo[39m: [ADMIN] [ADMIN] Connecting to DB for admin forgot password. Email: admin@example.com
+[2025-07-25 21:46:34] [32minfo[39m: [EMAIL] 📧 Preparing to send OTP email to: admin@example.com
+[2025-07-25 21:46:36] [32minfo[39m: [EMAIL] ✅ Email sent to: admin@example.com
+[2025-07-25 21:46:36] [32minfo[39m: [EMAIL] 📤 Gmail response: 250 2.0.0 OK  1753460196 41be03b00d2f7-b3f7f568b7csm202855a12.2 - gsmtp
+[2025-07-25 21:46:36] [32minfo[39m: [EMAIL] ⏱ Email sent in 2868 ms
+[2025-07-25 21:46:36] [32minfo[39m: [EMAIL] 📩 Message ID: <043f50ca-309c-2f94-d733-470ec97b1d61@gmail.com>
+[2025-07-25 21:46:36] [32minfo[39m: [ADMIN] [ADMIN] OTP sent to admin email: admin@example.com
+[2025-07-25 21:51:08] [32minfo[39m: [ADMIN] [ADMIN] Connecting to DB for admin forgot password. Email: admin@example.com
+[2025-07-25 21:51:08] [32minfo[39m: [EMAIL] 📧 Preparing to send OTP email to: admin@example.com
+[2025-07-25 21:51:11] [32minfo[39m: [EMAIL] ✅ Email sent to: admin@example.com
+[2025-07-25 21:51:11] [32minfo[39m: [EMAIL] 📤 Gmail response: 250 2.0.0 OK  1753460471 d9443c01a7336-23fbe33eeabsm898975ad.70 - gsmtp
+[2025-07-25 21:51:11] [32minfo[39m: [EMAIL] ⏱ Email sent in 2628 ms
+[2025-07-25 21:51:11] [32minfo[39m: [EMAIL] 📩 Message ID: <f1961733-4b41-eeba-9d34-1102a952e6f1@gmail.com>
+[2025-07-25 21:51:11] [32minfo[39m: [ADMIN] [ADMIN] OTP sent to admin email: admin@example.com
+[2025-07-25 21:57:23] [32minfo[39m: 🚀 Server running on port 5000
+[2025-07-25 21:57:36] [32minfo[39m: [ADMIN] [ADMIN] Connecting to DB for admin forgot password. Email: admin@example.com
+[2025-07-25 21:57:36] [32minfo[39m: [EMAIL] 📧 Preparing to send OTP email to: admin@example.com
+[2025-07-25 21:57:39] [32minfo[39m: [EMAIL] ✅ Email sent to: admin@example.com
+[2025-07-25 21:57:39] [32minfo[39m: [EMAIL] 📤 Gmail response: 250 2.0.0 OK  1753460859 d2e1a72fcca58-7640863503csm114027b3a.5 - gsmtp
+[2025-07-25 21:57:39] [32minfo[39m: [EMAIL] ⏱ Email sent in 3530 ms
+[2025-07-25 21:57:39] [32minfo[39m: [EMAIL] 📩 Message ID: <f9e231d8-5365-3429-6c6d-7c6dd3ca2b28@gmail.com>
+[2025-07-25 21:57:39] [32minfo[39m: [ADMIN] [ADMIN] OTP sent to admin email: admin@example.com
+[2025-07-25 22:01:29] [32minfo[39m: 🚀 Server running on port 5000
+[2025-07-25 22:02:41] [32minfo[39m: [ADMIN] [ADMIN] Connecting to DB for admin forgot password. Email: admin@example.com
+[2025-07-25 22:02:41] [32minfo[39m: [EMAIL] 📧 Preparing to send OTP email to: admin@example.com
+[2025-07-25 22:02:44] [32minfo[39m: [EMAIL] ✅ Email sent to: admin@example.com
+[2025-07-25 22:02:44] [32minfo[39m: [EMAIL] 📤 Gmail response: 250 2.0.0 OK  1753461164 d2e1a72fcca58-7640872a209sm120670b3a.4 - gsmtp
+[2025-07-25 22:02:44] [32minfo[39m: [EMAIL] ⏱ Email sent in 2749 ms
+[2025-07-25 22:02:44] [32minfo[39m: [EMAIL] 📩 Message ID: <ad7d2151-5934-1d7b-1747-c750b0bfe3c8@gmail.com>
+[2025-07-25 22:02:44] [32minfo[39m: [ADMIN] [ADMIN] OTP sent to admin email: admin@example.com
+[2025-07-25 22:05:43] [32minfo[39m: [ADMIN] [ADMIN] Connecting to DB for admin forgot password. Email: admin@example.com
+[2025-07-25 22:05:43] [32minfo[39m: [EMAIL] 📧 Preparing to send OTP email to: admin@example.com
+[2025-07-25 22:05:47] [32minfo[39m: [EMAIL] ✅ Email sent to: admin@example.com
+[2025-07-25 22:05:47] [32minfo[39m: [EMAIL] 📤 Gmail response: 250 2.0.0 OK  1753461347 d9443c01a7336-23fbe30f3a4sm1145805ad.3 - gsmtp
+[2025-07-25 22:05:47] [32minfo[39m: [EMAIL] ⏱ Email sent in 3313 ms
+[2025-07-25 22:05:47] [32minfo[39m: [EMAIL] 📩 Message ID: <fb0bd80c-81ab-4299-4e13-de4fb56039dc@gmail.com>
+[2025-07-25 22:05:47] [32minfo[39m: [ADMIN] [ADMIN] OTP sent to admin email: admin@example.com
+[2025-07-25 22:07:58] [32minfo[39m: [ADMIN] [ADMIN] Connecting to DB for admin forgot password. Email: admin@example.com
+[2025-07-25 22:07:58] [32minfo[39m: [EMAIL] 📧 Preparing to send OTP email to: admin@example.com
+[2025-07-25 22:08:01] [32minfo[39m: [EMAIL] ✅ Email sent to: admin@example.com
+[2025-07-25 22:08:01] [32minfo[39m: [EMAIL] 📤 Gmail response: 250 2.0.0 OK  1753461481 d2e1a72fcca58-7640adfeb83sm108772b3a.66 - gsmtp
+[2025-07-25 22:08:01] [32minfo[39m: [EMAIL] ⏱ Email sent in 2559 ms
+[2025-07-25 22:08:01] [32minfo[39m: [EMAIL] 📩 Message ID: <2b84848e-135c-10f9-0aef-285d763ad2e4@gmail.com>
+[2025-07-25 22:08:01] [32minfo[39m: [ADMIN] [ADMIN] OTP sent to admin email: admin@example.com
+[2025-07-26 19:52:48] [32minfo[39m: 🚀 Server running on port 5000
+[2025-07-26 19:52:57] [32minfo[39m: [ADMIN] [ADMIN] Connecting to DB for admin forgot password. Email: admin@example.com
+[2025-07-26 19:52:57] [32minfo[39m: [EMAIL] 📧 Preparing to send OTP email to: admin@example.com
+[2025-07-26 19:53:02] [32minfo[39m: [EMAIL] ✅ Email sent to: admin@example.com
+[2025-07-26 19:53:02] [32minfo[39m: [EMAIL] 📤 Gmail response: 250 2.0.0 OK  1753539781 d9443c01a7336-23fbe53b546sm18237015ad.177 - gsmtp
+[2025-07-26 19:53:02] [32minfo[39m: [EMAIL] ⏱ Email sent in 4335 ms
+[2025-07-26 19:53:02] [32minfo[39m: [EMAIL] 📩 Message ID: <8ef7a4de-5d53-8eb7-8f8b-989d12395c53@gmail.com>
+[2025-07-26 19:53:02] [32minfo[39m: [ADMIN] [ADMIN] OTP sent to admin email: admin@example.com
+[2025-07-26 20:03:14] [32minfo[39m: 🚀 Server running on port 5000
+[2025-07-26 20:03:39] [32minfo[39m: [ADMIN] [ADMIN] Connecting to DB for admin forgot password. Email: admin@example.com
+[2025-07-26 20:03:39] [32minfo[39m: [EMAIL] 📧 Preparing to send OTP email to: admin@example.com
+[2025-07-26 20:03:43] [32minfo[39m: [EMAIL] ✅ Email sent to: admin@example.com
+[2025-07-26 20:03:43] [32minfo[39m: [EMAIL] 📤 Gmail response: 250 2.0.0 OK  1753540422 d9443c01a7336-23fbe30f342sm18915215ad.36 - gsmtp
+[2025-07-26 20:03:43] [32minfo[39m: [EMAIL] ⏱ Email sent in 3905 ms
+[2025-07-26 20:03:43] [32minfo[39m: [EMAIL] 📩 Message ID: <224ab863-0490-5e70-2ece-d788dbeb7974@gmail.com>
+[2025-07-26 20:03:43] [32minfo[39m: [ADMIN] [ADMIN] OTP sent to admin email: admin@example.com
+[2025-07-26 20:17:06] [32minfo[39m: 🚀 Server running on port 5000
+[2025-07-26 20:18:16] [32minfo[39m: [ADMIN] [ADMIN] Connecting to DB for admin forgot password. Email: admin@example.com
+[2025-07-26 20:18:16] [32minfo[39m: [EMAIL] 📧 Preparing to send OTP email to: admin@example.com
+[2025-07-26 20:18:19] [32minfo[39m: [EMAIL] ✅ Email sent to: admin@example.com
+[2025-07-26 20:18:19] [32minfo[39m: [EMAIL] 📤 Gmail response: 250 2.0.0 OK  1753541299 d9443c01a7336-23fbe30bbdasm18787995ad.1 - gsmtp
+[2025-07-26 20:18:19] [32minfo[39m: [EMAIL] ⏱ Email sent in 3770 ms
+[2025-07-26 20:18:19] [32minfo[39m: [EMAIL] 📩 Message ID: <85111ca1-6c7f-08ff-15ea-b0f87f78ee49@gmail.com>
+[2025-07-26 20:18:19] [32minfo[39m: [ADMIN] [ADMIN] OTP sent to admin email: admin@example.com
+[2025-07-26 20:32:14] [32minfo[39m: [ADMIN] [ADMIN] Connecting to DB for admin forgot password. Email: admin@example.com
+[2025-07-26 20:32:14] [32minfo[39m: [EMAIL] 📧 Preparing to send OTP email to: admin@example.com
+[2025-07-26 20:33:47] [32minfo[39m: [ADMIN] [ADMIN] Connecting to DB for admin forgot password. Email: admin@example.com
+[2025-07-26 20:33:47] [32minfo[39m: [EMAIL] 📧 Preparing to send OTP email to: admin@example.com
+[2025-07-26 20:33:56] [31merror[39m: ❌ Email send failed to admin@example.com: Client network socket disconnected before secure TLS connection was established
+[2025-07-26 20:33:56] [31merror[39m: [ADMIN] [ADMIN] Forgot Password OTP Error: Client network socket disconnected before secure TLS connection was established
+[2025-07-26 20:33:57] [31merror[39m: ❌ Email send failed to admin@example.com: Client network socket disconnected before secure TLS connection was established
+[2025-07-26 20:33:57] [31merror[39m: [ADMIN] [ADMIN] Forgot Password OTP Error: Client network socket disconnected before secure TLS connection was established
+[2025-07-26 20:39:20] [32minfo[39m: 🚀 Server running on port 5000
+[2025-07-26 20:39:33] [32minfo[39m: [ADMIN] [ADMIN] Connecting to DB for admin forgot password. Email: admin@example.com
+[2025-07-26 20:39:33] [32minfo[39m: [EMAIL] 📧 Preparing to send OTP email to: admin@example.com
+[2025-07-26 20:39:39] [32minfo[39m: [EMAIL] ✅ Email sent to: admin@example.com
+[2025-07-26 20:39:39] [32minfo[39m: [EMAIL] 📤 Gmail response: 250 2.0.0 OK  1753542578 d9443c01a7336-23fd45617efsm12395785ad.176 - gsmtp
+[2025-07-26 20:39:39] [32minfo[39m: [EMAIL] ⏱ Email sent in 6095 ms
+[2025-07-26 20:39:39] [32minfo[39m: [EMAIL] 📩 Message ID: <989e96b4-87bd-d823-4dca-84b873d17bc0@gmail.com>
+[2025-07-26 20:39:39] [32minfo[39m: [ADMIN] [ADMIN] OTP sent to admin email: admin@example.com
+[2025-07-26 20:46:39] [32minfo[39m: 🚀 Server running on port 5000
+[2025-07-26 20:47:22] [32minfo[39m: 🚀 Server running on port 5000
+[2025-07-26 20:47:34] [32minfo[39m: [ADMIN] [ADMIN] Connecting to DB for admin forgot password. Email: admin@example.com
+[2025-07-26 20:47:34] [32minfo[39m: [EMAIL] 📧 Preparing to send OTP email to: admin@example.com
+[2025-07-26 20:47:38] [32minfo[39m: [EMAIL] ✅ Email sent to: admin@example.com
+[2025-07-26 20:47:38] [32minfo[39m: [EMAIL] 📤 Gmail response: 250 2.0.0 OK  1753543058 d2e1a72fcca58-7640872a618sm1911212b3a.25 - gsmtp
+[2025-07-26 20:47:38] [32minfo[39m: [EMAIL] ⏱ Email sent in 3958 ms
+[2025-07-26 20:47:38] [32minfo[39m: [EMAIL] 📩 Message ID: <3d5654e6-b44b-04cd-ca5e-264321f91855@gmail.com>
+[2025-07-26 20:47:38] [32minfo[39m: [ADMIN] [ADMIN] OTP sent to admin email: admin@example.com
+[2025-07-26 20:49:43] [32minfo[39m: 🚀 Server running on port 5000
+[2025-07-26 20:50:16] [32minfo[39m: [ADMIN] [ADMIN] Connecting to DB for admin forgot password. Email: manithotabharat@gmail.com
+[2025-07-26 20:50:16] [33mwarn[39m: [ADMIN] [ADMIN] Admin not found: manithotabharat@gmail.com
+[2025-07-26 20:50:51] [33mwarn[39m: [ADMIN] Admin is not found with eamil:manithotabharat@gmail.com
+[2025-07-26 20:56:51] [32minfo[39m: 🚀 Server running on port 5000
+[2025-07-26 20:56:56] [32minfo[39m: [ADMIN] Admin Login Successful:manithotabharat@gmail.com
+[2025-07-26 20:57:05] [32minfo[39m: [ADMIN] [ADMIN] Connecting to DB for admin forgot password. Email: manithotabharat@gmail.com
+[2025-07-26 20:57:05] [32minfo[39m: [EMAIL] 📧 Preparing to send OTP email to: manithotabharat@gmail.com
+[2025-07-26 20:57:09] [32minfo[39m: [EMAIL] ✅ Email sent to: manithotabharat@gmail.com
+[2025-07-26 20:57:09] [32minfo[39m: [EMAIL] 📤 Gmail response: 250 2.0.0 OK  1753543629 d9443c01a7336-23fbe343836sm19305865ad.73 - gsmtp
+[2025-07-26 20:57:09] [32minfo[39m: [EMAIL] ⏱ Email sent in 3716 ms
+[2025-07-26 20:57:09] [32minfo[39m: [EMAIL] 📩 Message ID: <c2c9ff7f-65b5-dda4-4d4b-e68c9725b86d@gmail.com>
+[2025-07-26 20:57:09] [32minfo[39m: [ADMIN] [ADMIN] OTP sent to admin email: manithotabharat@gmail.com
+[2025-07-26 20:58:11] [32minfo[39m: 🚀 Server running on port 5000
+[2025-07-26 20:59:24] [32minfo[39m: 🚀 Server running on port 5000
+[2025-07-26 21:00:10] [32minfo[39m: [ADMIN] Admin Login Successful:admin@example.com
+[2025-07-26 21:00:29] [32minfo[39m: [ADMIN] [ADMIN] Connecting to DB for admin forgot password. Email: admin@example.com
+[2025-07-26 21:00:29] [32minfo[39m: [EMAIL] 📧 Preparing to send OTP email to: admin@example.com
+[2025-07-26 21:00:33] [32minfo[39m: [EMAIL] ✅ Email sent to: admin@example.com
+[2025-07-26 21:00:33] [32minfo[39m: [EMAIL] 📤 Gmail response: 250 2.0.0 OK  1753543832 d2e1a72fcca58-7640b4c850bsm1791886b3a.112 - gsmtp
+[2025-07-26 21:00:33] [32minfo[39m: [EMAIL] ⏱ Email sent in 3877 ms
+[2025-07-26 21:00:33] [32minfo[39m: [EMAIL] 📩 Message ID: <35cd9c51-9af7-a4a8-9b0a-251dd7a782cc@gmail.com>
+[2025-07-26 21:00:33] [32minfo[39m: [ADMIN] [ADMIN] OTP sent to admin email: admin@example.com
+[2025-07-26 21:03:22] [32minfo[39m: 🚀 Server running on port 5000
+[2025-07-26 21:03:56] [32minfo[39m: [ADMIN] Admin Login Successful:manithotabharat@gmail.com
+[2025-07-26 21:04:22] [32minfo[39m: [ADMIN] [ADMIN] Connecting to DB for admin forgot password. Email: manithotabharat@gmail.com
+[2025-07-26 21:04:22] [32minfo[39m: [EMAIL] 📧 Preparing to send OTP email to: manithotabharat@gmail.com
+[2025-07-26 21:04:28] [32minfo[39m: [EMAIL] ✅ Email sent to: manithotabharat@gmail.com
+[2025-07-26 21:04:28] [32minfo[39m: [EMAIL] 📤 Gmail response: 250 2.0.0 OK  1753544068 d2e1a72fcca58-7640b3d3d3csm1926731b3a.111 - gsmtp
+[2025-07-26 21:04:28] [32minfo[39m: [EMAIL] ⏱ Email sent in 5946 ms
+[2025-07-26 21:04:28] [32minfo[39m: [EMAIL] 📩 Message ID: <4e6e985f-d573-18b7-0701-fc2a2c0e0a9a@gmail.com>
+[2025-07-26 21:04:28] [32minfo[39m: [ADMIN] [ADMIN] OTP sent to admin email: manithotabharat@gmail.com
+[2025-07-26 21:05:26] [31merror[39m: [ADMIN] Error reseting password for admin:email is not defined
+[2025-07-26 21:08:22] [31merror[39m: [ADMIN] Error reseting password for admin:email is not defined
+[2025-07-26 21:09:43] [32minfo[39m: 🚀 Server running on port 5000
+[2025-07-26 21:11:37] [32minfo[39m: [ADMIN] [ADMIN] Connecting to DB for admin forgot password. Email: manithotabharat@gmail.com
+[2025-07-26 21:11:37] [32minfo[39m: [EMAIL] 📧 Preparing to send OTP email to: manithotabharat@gmail.com
+[2025-07-26 21:11:42] [32minfo[39m: [EMAIL] ✅ Email sent to: manithotabharat@gmail.com
+[2025-07-26 21:11:42] [32minfo[39m: [EMAIL] 📤 Gmail response: 250 2.0.0 OK  1753544501 d9443c01a7336-23fbe543145sm19134405ad.166 - gsmtp
+[2025-07-26 21:11:42] [32minfo[39m: [EMAIL] ⏱ Email sent in 4528 ms
+[2025-07-26 21:11:42] [32minfo[39m: [EMAIL] 📩 Message ID: <de70ef9e-e0b2-ffdd-8be8-ab30f8e1bb56@gmail.com>
+[2025-07-26 21:11:42] [32minfo[39m: [ADMIN] [ADMIN] OTP sent to admin email: manithotabharat@gmail.com
+[2025-07-26 21:12:20] [31merror[39m: [ADMIN] Error reseting password for admin:email is not defined
+[2025-07-26 21:16:50] [32minfo[39m: 🚀 Server running on port 5000
+[2025-07-26 21:16:57] [32minfo[39m: [ADMIN] Admin password reset request for email: manithotabharat@gmail.com
+[2025-07-26 21:16:57] [32minfo[39m: [ADMIN] Password reset successful for admin email: manithotabharat@gmail.com
+[2025-07-26 21:22:25] [32minfo[39m: 🚀 Server running on port 5000
+[2025-07-26 21:23:20] [32minfo[39m: [ADMIN] Admin verified: manithotabharat@gmail.com (ID: 6884f39649089102c4c04df2)
+[2025-07-26 21:23:20] [32minfo[39m: [ADMIN] Admin requested to fetch all users
+[2025-07-26 21:23:20] [32minfo[39m: [ADMIN] ✅ Fetched 12 users from database
+[2025-07-26 21:27:27] [32minfo[39m: 🚀 Server running on port 5000
+[2025-07-26 21:29:54] [32minfo[39m: 🚀 Server running on port 5000
+[2025-07-26 21:30:26] [33mwarn[39m: [ADMIN] Unauthorized access attempt: No token provided
+[2025-07-26 21:30:48] [32minfo[39m: [ADMIN] Admin verified: manithotabharat@gmail.com (ID: 6884f39649089102c4c04df2)
+[2025-07-26 21:30:48] [33mwarn[39m: [ADMIN] Add Category Failed:Missing ID or Name
+[2025-07-26 21:34:03] [32minfo[39m: 🚀 Server running on port 5000
+[2025-07-26 21:34:09] [32minfo[39m: [ADMIN] Admin verified: manithotabharat@gmail.com (ID: 6884f39649089102c4c04df2)
+[2025-07-26 21:34:09] [31merror[39m: [ADMIN] [ADMIN] Add Category Error: Category validation failed: id: Path `id` is required.
+[2025-07-26 21:36:22] [32minfo[39m: [ADMIN] Admin verified: manithotabharat@gmail.com (ID: 6884f39649089102c4c04df2)
+[2025-07-26 21:36:22] [31merror[39m: [ADMIN] [ADMIN] Add Category Error: Category validation failed: id: Path `id` is required.
+[2025-07-26 21:36:47] [32minfo[39m: [ADMIN] Admin verified: manithotabharat@gmail.com (ID: 6884f39649089102c4c04df2)
+[2025-07-26 21:36:47] [31merror[39m: [ADMIN] [ADMIN] Add Category Error: Category validation failed: id: Path `id` is required.
+[2025-07-26 21:38:05] [32minfo[39m: 🚀 Server running on port 5000
+[2025-07-26 21:41:42] [32minfo[39m: 🚀 Server running on port 5000
+[2025-07-26 21:42:21] [32minfo[39m: [ADMIN] Admin verified: manithotabharat@gmail.com (ID: 6884f39649089102c4c04df2)
+[2025-07-26 21:42:21] [32minfo[39m: [ADMIN] Category added successfully: 6884fe65bf75ddb52918bdda
+[2025-07-26 21:50:06] [32minfo[39m: 🚀 Server running on port 5000
+[2025-07-26 21:50:26] [32minfo[39m: 🚀 Server running on port 5000
+[2025-07-26 21:53:07] [32minfo[39m: 🚀 Server running on port 5000
+[2025-07-26 21:56:02] [32minfo[39m: 🚀 Server running on port 5000
+[2025-07-26 21:59:50] [32minfo[39m: 🚀 Server running on port 5000
+[2025-07-26 22:00:49] [33mwarn[39m: [ADMIN] Unauthorized access attempt: No token provided
+[2025-07-26 22:01:38] [32minfo[39m: [ADMIN] Admin verified: manithotabharat@gmail.com (ID: 6884f39649089102c4c04df2)
+[2025-07-26 22:01:38] [32minfo[39m: [ADMIN] Category added successfully: 688502eace65b8337f9bd5f9
+[2025-07-26 22:02:32] [32minfo[39m: 🚀 Server running on port 5000
+[2025-07-27 11:20:12] [32minfo[39m: 🚀 Server running on port 5000
+[2025-07-27 11:21:48] [33mwarn[39m: [ADMIN] Incorrect password attempt for admin:manithotabharat@gmail.com
+[2025-07-27 11:22:28] [33mwarn[39m: [ADMIN] Incorrect password attempt for admin:manithotabharat@gmail.com
+[2025-07-27 11:25:15] [32minfo[39m: 🚀 Server running on port 5000
+[2025-07-27 11:25:24] [32minfo[39m: [ADMIN] Admin Login Successful:manithotabharat@gmail.com
+[2025-07-27 11:25:50] [31merror[39m: [ADMIN] JWT verification failed: invalid token
+[2025-07-27 11:26:37] [32minfo[39m: [ADMIN] Admin verified: manithotabharat@gmail.com (ID: 6885bf391ecac8da11710908)
+[2025-07-27 11:26:37] [32minfo[39m: [ADMIN] Admin requested to fetch all users
+[2025-07-27 11:26:37] [32minfo[39m: [ADMIN] ✅ Fetched 12 users from database
+[2025-07-27 11:27:23] [32minfo[39m: [ADMIN] [ADMIN] Connecting to DB for admin forgot password. Email: manithotabharat@gmail.com
+[2025-07-27 11:27:23] [32minfo[39m: [EMAIL] 📧 Preparing to send OTP email to: manithotabharat@gmail.com
+[2025-07-27 11:27:27] [32minfo[39m: [EMAIL] ✅ Email sent to: manithotabharat@gmail.com
+[2025-07-27 11:27:27] [32minfo[39m: [EMAIL] 📤 Gmail response: 250 2.0.0 OK  1753595846 d2e1a72fcca58-7640b8b06ddsm2853621b3a.121 - gsmtp
+[2025-07-27 11:27:27] [32minfo[39m: [EMAIL] ⏱ Email sent in 3810 ms
+[2025-07-27 11:27:27] [32minfo[39m: [EMAIL] 📩 Message ID: <b9b26713-034c-97e3-2767-abfce406d9eb@gmail.com>
+[2025-07-27 11:27:27] [32minfo[39m: [ADMIN] [ADMIN] OTP sent to admin email: manithotabharat@gmail.com
+[2025-07-27 11:28:35] [32minfo[39m: [ADMIN] Admin password reset request for email: manithotabharat@gmail.com
+[2025-07-27 11:28:35] [32minfo[39m: [ADMIN] Password reset successful for admin email: manithotabharat@gmail.com
+[2025-07-27 11:28:47] [32minfo[39m: [ADMIN] Admin verified: manithotabharat@gmail.com (ID: 6885bf391ecac8da11710908)
+[2025-07-27 11:28:47] [32minfo[39m: [ADMIN] Category added successfully: 6885c0178e257f37d1a7dac2
+[2025-07-27 11:41:21] [32minfo[39m: 🚀 Server running on port 5000
+[2025-07-27 11:46:36] [32minfo[39m: 🚀 Server running on port 5000
+[2025-07-27 11:47:35] [32minfo[39m: 🚀 Server running on port 5000
+[2025-07-27 11:48:59] [32minfo[39m: [ADMIN] Admin verified: manithotabharat@gmail.com (ID: 6885bf391ecac8da11710908)
+[2025-07-27 11:48:59] [32minfo[39m: [ADMIN] Category updated successfully: ID = cat123
+[2025-07-27 11:54:14] [32minfo[39m: [ADMIN] Admin verified: manithotabharat@gmail.com (ID: 6885bf391ecac8da11710908)
+[2025-07-27 11:54:14] [32minfo[39m: [ADMIN] Category deleted successfully: ID=cat123
+[2025-07-27 11:54:41] [32minfo[39m: [ADMIN] Admin verified: manithotabharat@gmail.com (ID: 6885bf391ecac8da11710908)
+[2025-07-27 11:54:41] [32minfo[39m: [ADMIN] Fetched all categories successfully
+[2025-07-27 12:10:56] [32minfo[39m: [ADMIN] Admin verified: manithotabharat@gmail.com (ID: 6885bf391ecac8da11710908)
+[2025-07-27 12:10:56] [32minfo[39m: [ADMIN] Product added: prod_e523b3b2 - iPhone 14
+[2025-07-27 12:12:42] [32minfo[39m: [ADMIN] Admin verified: manithotabharat@gmail.com (ID: 6885bf391ecac8da11710908)
+[2025-07-27 12:12:42] [32minfo[39m: [ADMIN] Incoming Product ID from params: cat_abc123
+[2025-07-27 12:12:42] [33mwarn[39m: [ADMIN] Product not found for update: cat_abc123
+[2025-07-27 12:13:03] [32minfo[39m: [ADMIN] Admin verified: manithotabharat@gmail.com (ID: 6885bf391ecac8da11710908)
+[2025-07-27 12:13:03] [32minfo[39m: [ADMIN] Incoming Product ID from params: prod_1234abcd
+[2025-07-27 12:13:03] [33mwarn[39m: [ADMIN] Product not found for update: prod_1234abcd
+[2025-07-27 12:14:16] [32minfo[39m: [ADMIN] Admin verified: manithotabharat@gmail.com (ID: 6885bf391ecac8da11710908)
+[2025-07-27 12:14:16] [32minfo[39m: [ADMIN] Fetching products - Page: 1, Limit: 10
+[2025-07-27 12:14:16] [32minfo[39m: [ADMIN] Successfully fetched 6 products
+[2025-07-27 12:15:59] [32minfo[39m: [ADMIN] Admin verified: manithotabharat@gmail.com (ID: 6885bf391ecac8da11710908)
+[2025-07-27 12:15:59] [32minfo[39m: [ADMIN] Incoming Product ID from params: prod_123abc
+[2025-07-27 12:16:00] [33mwarn[39m: [ADMIN] Product not found for update: prod_123abc
+[2025-07-27 12:17:51] [32minfo[39m: [ADMIN] Admin verified: manithotabharat@gmail.com (ID: 6885bf391ecac8da11710908)
+[2025-07-27 12:17:51] [32minfo[39m: [ADMIN] Incoming Product ID from params: prod_e523b3b2
+[2025-07-27 12:17:51] [32minfo[39m: [ADMIN] Product updated successfully: prod_e523b3b2
+[2025-07-27 12:18:06] [32minfo[39m: [ADMIN] Admin verified: manithotabharat@gmail.com (ID: 6885bf391ecac8da11710908)
+[2025-07-27 12:18:06] [32minfo[39m: [ADMIN] Attempting to delete product with ID: prod_e523b3b2
+[2025-07-27 12:18:07] [32minfo[39m: [ADMIN] Product deleted successfully: prod_e523b3b2
+[2025-07-27 12:26:36] [33mwarn[39m: [ADMIN] Incorrect password attempt for admin:manithotabharat@gmail.com
+[2025-07-27 12:27:39] [33mwarn[39m: [ADMIN] Incorrect password attempt for admin:manithotabharat@gmail.com
+[2025-07-27 12:28:40] [32minfo[39m: 🚀 Server running on port 5000
+[2025-07-27 12:28:42] [33mwarn[39m: [ADMIN] Incorrect password attempt for admin:manithotabharat@gmail.com
+[2025-07-27 12:29:17] [32minfo[39m: [ADMIN] Admin verified: manithotabharat@gmail.com (ID: 6885bf391ecac8da11710908)
+[2025-07-27 12:29:17] [32minfo[39m: [ADMIN] Admin requested to fetch all users
+[2025-07-27 12:29:17] [32minfo[39m: [ADMIN] ✅ Fetched 12 users from database
+[2025-07-27 12:29:43] [32minfo[39m: [ADMIN] [ADMIN] Connecting to DB for admin forgot password. Email: manithotabharat@gmail.com
+[2025-07-27 12:29:43] [32minfo[39m: [EMAIL] 📧 Preparing to send OTP email to: manithotabharat@gmail.com
+[2025-07-27 12:29:46] [32minfo[39m: [EMAIL] ✅ Email sent to: manithotabharat@gmail.com
+[2025-07-27 12:29:46] [32minfo[39m: [EMAIL] 📤 Gmail response: 250 2.0.0 OK  1753599586 98e67ed59e1d1-31ec1c5cfc9sm992738a91.28 - gsmtp
+[2025-07-27 12:29:46] [32minfo[39m: [EMAIL] ⏱ Email sent in 2985 ms
+[2025-07-27 12:29:46] [32minfo[39m: [EMAIL] 📩 Message ID: <56700317-4fe7-b27a-9939-64789b12978e@gmail.com>
+[2025-07-27 12:29:46] [32minfo[39m: [ADMIN] [ADMIN] OTP sent to admin email: manithotabharat@gmail.com
+[2025-07-27 12:30:31] [32minfo[39m: [ADMIN] Admin password reset request for email: manithotabharat@gmail.com
+[2025-07-27 12:30:31] [32minfo[39m: [ADMIN] Password reset successful for admin email: manithotabharat@gmail.com
+[2025-07-27 12:31:34] [32minfo[39m: [USER] New user registered: paddu@example.com (ID: 6885cecee970e5d43e2ad498)
+[2025-07-27 12:32:28] [32minfo[39m: [USER] Login successful for user paddu@example.com
+[2025-07-27 12:33:09] [33mwarn[39m: ⚠️ Missing toEmail, subject, or html in sendEmail
+[2025-07-27 12:33:09] [31merror[39m: ❌ Email send failed to paddu@example.com: Missing toEmail, subject, or html
+[2025-07-27 12:33:09] [31merror[39m: [USER] Forgot password error for paddu@example.com: Missing toEmail, subject, or html
+[2025-07-27 12:45:52] [32minfo[39m: 🚀 Server running on port 5000
+[2025-07-27 12:46:03] [33mwarn[39m: ⚠️ Missing toEmail, subject, or html in sendEmail
+[2025-07-27 12:46:03] [31merror[39m: ❌ Email send failed to paddu@example.com: Missing toEmail, subject, or html
+[2025-07-27 12:46:03] [31merror[39m: [USER] Forgot password error for paddu@example.com: Missing toEmail, subject, or html
+[2025-07-27 12:48:42] [32minfo[39m: 🚀 Server running on port 5000
+[2025-07-27 12:50:04] [32minfo[39m: 🚀 Server running on port 5000
+[2025-07-27 12:50:12] [32minfo[39m: [EMAIL] 📧 Preparing to send OTP email to: paddu@example.com
+[2025-07-27 12:50:16] [32minfo[39m: [EMAIL] ✅ Email sent to: paddu@example.com
+[2025-07-27 12:50:16] [32minfo[39m: [EMAIL] 📤 Gmail response: 250 2.0.0 OK  1753600815 d9443c01a7336-23fbe546cfesm29147955ad.180 - gsmtp
+[2025-07-27 12:50:16] [32minfo[39m: [EMAIL] ⏱ Email sent in 3454 ms
+[2025-07-27 12:50:16] [32minfo[39m: [EMAIL] 📩 Message ID: <09f82b54-677a-302c-c41e-1ceb308f25b2@gmail.com>
+[2025-07-27 12:50:16] [32minfo[39m: [USER] 📤 OTP email sent to paddu@example.com in 3458 ms
+[2025-07-27 12:54:27] [32minfo[39m: 🚀 Server running on port 5000
+[2025-07-27 12:54:33] [32minfo[39m: [EMAIL] 📧 Preparing to send OTP email to: paddu@example.com
+[2025-07-27 12:54:36] [32minfo[39m: [EMAIL] ✅ Email sent to: paddu@example.com
+[2025-07-27 12:54:36] [32minfo[39m: [EMAIL] 📤 Gmail response: 250 2.0.0 OK  1753601075 d9443c01a7336-23fbe546bebsm29342735ad.179 - gsmtp
+[2025-07-27 12:54:36] [32minfo[39m: [EMAIL] ⏱ Email sent in 2697 ms
+[2025-07-27 12:54:36] [32minfo[39m: [EMAIL] 📩 Message ID: <9eea0177-b1f9-853a-90c2-754f32739254@gmail.com>
+[2025-07-27 12:54:36] [32minfo[39m: [USER] 📤 OTP email sent to paddu@example.com in 2706 ms
+[2025-07-27 12:56:20] [32minfo[39m: [USER] New user registered: manithotabharat@gmail.com (ID: 6885d49c60ddabce2fa84cc4)
+[2025-07-27 12:56:40] [32minfo[39m: [USER] Login successful for user manithotabharat@gmail.com
+[2025-07-27 12:56:59] [32minfo[39m: [EMAIL] 📧 Preparing to send OTP email to: manithotabharat@gmail.com
+[2025-07-27 12:57:02] [32minfo[39m: [EMAIL] ✅ Email sent to: manithotabharat@gmail.com
+[2025-07-27 12:57:02] [32minfo[39m: [EMAIL] 📤 Gmail response: 250 2.0.0 OK  1753601221 98e67ed59e1d1-31ecb0a59easm784831a91.32 - gsmtp
+[2025-07-27 12:57:02] [32minfo[39m: [EMAIL] ⏱ Email sent in 2424 ms
+[2025-07-27 12:57:02] [32minfo[39m: [EMAIL] 📩 Message ID: <4e745b29-1bed-726a-8673-b7375c047f67@gmail.com>
+[2025-07-27 12:57:02] [32minfo[39m: [USER] 📤 OTP email sent to manithotabharat@gmail.com in 2429 ms
+[2025-07-27 12:58:07] [32minfo[39m: [USER] Password reset successful for user manithotabharat@gmail.com
+[2025-07-27 12:58:32] [32minfo[39m: 🚀 Server running on port 5000
+[2025-07-27 12:59:03] [32minfo[39m: [USER] ✅ Token verified for user ID: 6885bf391ecac8da11710908
+[2025-07-27 12:59:03] [33mwarn[39m: [USER] Get profile failed: User not found for ID 6885bf391ecac8da11710908
+[2025-07-27 13:00:19] [32minfo[39m: [USER] ✅ Token verified for user ID: 6885d49c60ddabce2fa84cc4
+[2025-07-27 13:00:58] [32minfo[39m: [USER] ✅ Token verified for user ID: 6885d49c60ddabce2fa84cc4
+[2025-07-27 13:02:32] [31merror[39m: ❌ Error in addToCart: Cart validation failed: products.0.price: Cast to Number failed for value "NaN" (type number) at path "price", products.0.totalPrice: Cast to Number failed for value "NaN" (type number) at path "totalPrice", products.1.price: Cast to Number failed for value "NaN" (type number) at path "price", products.1.totalPrice: Cast to Number failed for value "NaN" (type number) at path "totalPrice", products.2.price: Cast to Number failed for value "NaN" (type number) at path "price", products.2.totalPrice: Cast to Number failed for value "NaN" (type number) at path "totalPrice", cartTotal: Cast to Number failed for value "NaN" (type number) at path "cartTotal"
+[2025-07-27 13:03:20] [32minfo[39m: ✅ Cart saved for userId: user789
+[2025-07-27 13:03:51] [32minfo[39m: [USER] ✅ Token verified for user ID: 6885d49c60ddabce2fa84cc4
+[2025-07-27 13:03:51] [32minfo[39m: [USER] 🛒 Get Cart: Cart fetched successfully for userId user789
+[2025-07-27 13:05:19] [32minfo[39m: [USER] ✅ Token verified for user ID: 6885d49c60ddabce2fa84cc4
+[2025-07-27 13:05:19] [32minfo[39m: [USER] Order placed successfully by userId: 6885d49c60ddabce2fa84cc4, orderId: 6885d6b7edc175c093691260
+[2025-07-27 13:05:32] [32minfo[39m: [USER] ✅ Token verified for user ID: 6885d49c60ddabce2fa84cc4
+[2025-07-27 13:05:32] [32minfo[39m: [USER] Found 1 orders for userId:6885d49c60ddabce2fa84cc4
+[2025-07-27 13:15:51] [32minfo[39m: 🚀 Server running on port 5000
+[2025-07-28 12:56:34] [32minfo[39m: 🚀 Server running on port 5000
+[2025-07-28 12:57:30] [32minfo[39m: 🚀 Server running on port 5000
+[2025-07-28 12:57:30] [32minfo[39m: ✅ MongoDB connected
+[2025-07-28 12:58:54] [32minfo[39m: 🚀 Server running on port 5000
+[2025-07-28 12:58:54] [32minfo[39m: ✅ MongoDB connected
+[2025-07-28 12:59:57] [32minfo[39m: 🚀 Server running on port 5000
+[2025-07-28 12:59:57] [32minfo[39m: ✅ MongoDB connected
+[2025-07-28 13:00:43] [32minfo[39m: 🚀 Server running on port 5000
+[2025-07-28 13:00:43] [32minfo[39m: ✅ MongoDB connected
+[2025-07-28 13:05:57] [32minfo[39m: 🚀 Server running on port 5000
+[2025-07-28 13:05:57] [32minfo[39m: ✅ MongoDB connected
+[2025-07-28 13:09:33] [32minfo[39m: 🚀 Server running on port 5000
+[2025-07-28 13:09:33] [32minfo[39m: ✅ MongoDB connected
+[2025-07-28 13:10:45] [32minfo[39m: 🚀 Server running on port 5000
+[2025-07-28 13:10:45] [32minfo[39m: ✅ MongoDB connected
+[2025-07-28 13:35:43] [32minfo[39m: 🚀 Server running on port 5000
+[2025-07-28 13:35:43] [32minfo[39m: ✅ MongoDB connected
+[2025-07-28 13:40:46] [32minfo[39m: 🚀 Server running on port 5000
+[2025-07-28 13:40:46] [32minfo[39m: ✅ MongoDB connected
+[2025-07-28 13:40:53] [32minfo[39m: 🚀 Server running on port 5000
+[2025-07-28 13:40:53] [32minfo[39m: ✅ MongoDB connected
+[2025-07-28 15:18:19] [32minfo[39m: [USER] New user registered: laffekekussou-5239@yopmail.com (ID: 688747630d1412c22bfb79d0)
+[2025-07-28 15:18:39] [33mwarn[39m: [USER] Login failed: No user found with email laffekekussou-5239@yopmail.comm
+[2025-07-28 15:19:14] [33mwarn[39m: [USER] Login failed: No user found with email laffekekussou-5239@yopmail.comm
+[2025-07-28 15:24:54] [32minfo[39m: [USER] Login successful for user laffekekussou-5239@yopmail.com
+[2025-07-28 15:25:21] [32minfo[39m: [EMAIL] 📧 Preparing to send OTP email to: laffekekussou-5239@yopmail.com
+[2025-07-28 15:25:24] [32minfo[39m: [EMAIL] ✅ Email sent to: laffekekussou-5239@yopmail.com
+[2025-07-28 15:25:24] [32minfo[39m: [EMAIL] 📤 Gmail response: 250 2.0.0 OK  1753696524 d9443c01a7336-23fbe572274sm50784565ad.193 - gsmtp
+[2025-07-28 15:25:24] [32minfo[39m: [EMAIL] ⏱ Email sent in 3225 ms
+[2025-07-28 15:25:24] [32minfo[39m: [EMAIL] 📩 Message ID: <2982f722-36e4-14fc-0c3b-49610228695a@gmail.com>
+[2025-07-28 15:25:24] [32minfo[39m: [USER] Sending to:
+[2025-07-28 15:25:24] [32minfo[39m: [USER] 📤 OTP email sent to laffekekussou-5239@yopmail.com in 3233 ms
+[2025-07-28 15:33:59] [32minfo[39m: [USER] Password reset successful for user laffekekussou-5239@yopmail.com
+[2025-07-28 15:34:59] [33mwarn[39m: [ADMIN] Admin is not found with eamil:laffekekussou-5239@yopmail.com
+[2025-07-28 15:35:51] [32minfo[39m: 🚀 Server running on port 5000
+[2025-07-28 15:35:51] [32minfo[39m: ✅ MongoDB connected
+[2025-07-28 15:36:08] [32minfo[39m: ✅ Admin created successfully
+[2025-07-28 15:36:19] [32minfo[39m: 🚀 Server running on port 5000
+[2025-07-28 15:36:19] [32minfo[39m: ✅ MongoDB connected
+[2025-07-28 15:36:24] [32minfo[39m: [ADMIN] Admin Login Successful:laffekekussou-5239@yopmail.com
+[2025-07-28 15:36:52] [32minfo[39m: [ADMIN] [ADMIN] Connecting to DB for admin forgot password. Email: laffekekussou-5239@yopmail.com
+[2025-07-28 15:36:52] [32minfo[39m: [EMAIL] 📧 Preparing to send OTP email to: laffekekussou-5239@yopmail.com
+[2025-07-28 15:36:54] [32minfo[39m: [EMAIL] ✅ Email sent to: laffekekussou-5239@yopmail.com
+[2025-07-28 15:36:54] [32minfo[39m: [EMAIL] 📤 Gmail response: 250 2.0.0 OK  1753697214 d2e1a72fcca58-7640b2de226sm5109703b3a.107 - gsmtp
+[2025-07-28 15:36:54] [32minfo[39m: [EMAIL] ⏱ Email sent in 2782 ms
+[2025-07-28 15:36:54] [32minfo[39m: [EMAIL] 📩 Message ID: <e72b3599-3226-c2e1-1147-24e130279289@gmail.com>
+[2025-07-28 15:36:54] [32minfo[39m: [ADMIN] [ADMIN] OTP sent to admin email: laffekekussou-5239@yopmail.com
+[2025-07-28 15:39:31] [32minfo[39m: 🚀 Server running on port 5000
+[2025-07-28 15:39:31] [32minfo[39m: ✅ MongoDB connected
+[2025-07-28 15:39:56] [32minfo[39m: [ADMIN] Admin password reset request for email: laffekekussou-5239@yopmail.com
+[2025-07-28 15:39:56] [32minfo[39m: [ADMIN] Password reset successful for admin email: laffekekussou-5239@yopmail.com
+[2025-07-28 21:23:55] [32minfo[39m: 🚀 Server running on port 5000
+[2025-07-28 21:23:55] [32minfo[39m: ✅ MongoDB connected
+[2025-07-28 21:29:50] [32minfo[39m: 🚀 Server running on port 5000
+[2025-07-28 21:29:50] [32minfo[39m: ✅ MongoDB connected
+[2025-07-28 21:29:54] [32minfo[39m: 🚀 Server running on port 5000
+[2025-07-28 21:29:54] [32minfo[39m: ✅ MongoDB connected
+[2025-07-28 21:30:29] [33mwarn[39m: [USER] Registration failed: Email already exists (laffekekussou-5239@yopmail.com)
+[2025-07-28 21:32:02] [32minfo[39m: 🚀 Server running on port 5000
+[2025-07-28 21:32:02] [32minfo[39m: ✅ MongoDB connected
+[2025-07-28 21:50:44] [32minfo[39m: 🚀 Server running on port 5000
+[2025-07-28 21:50:44] [32minfo[39m: ✅ MongoDB connected
+[2025-07-28 22:42:47] [32minfo[39m: 🚀 Server running on port 5000
+[2025-07-28 22:42:47] [32minfo[39m: ✅ MongoDB connected
+[2025-07-28 22:42:51] [32minfo[39m: 🚀 Server running on port 5000
+[2025-07-28 22:42:51] [32minfo[39m: ✅ MongoDB connected
+[2025-07-28 22:44:46] [32minfo[39m: 🚀 Server running on port 5000
+[2025-07-28 22:44:46] [32minfo[39m: ✅ MongoDB connected
+[2025-07-29 10:20:46] [32minfo[39m: 🚀 Server running on port 5000
+[2025-07-29 10:20:46] [32minfo[39m: ✅ MongoDB connected
+[2025-07-29 10:29:44] [32minfo[39m: 🚀 Server running on port 5000
+[2025-07-29 10:29:44] [32minfo[39m: ✅ MongoDB connected
+[2025-07-29 10:35:54] [32minfo[39m: 🚀 Server running on port 5000
+[2025-07-29 10:35:54] [32minfo[39m: ✅ MongoDB connected
+[2025-07-29 10:45:02] [32minfo[39m: 🚀 Server running on port 5000
+[2025-07-29 10:45:02] [32minfo[39m: ✅ MongoDB connected
+[2025-07-29 11:38:12] [32minfo[39m: 🚀 Server running on port 5000
+[2025-07-29 11:38:12] [32minfo[39m: ✅ MongoDB connected
+[2025-07-29 11:44:30] [32minfo[39m: 🚀 Server running on port 5000
+[2025-07-29 11:44:30] [32minfo[39m: ✅ MongoDB connected
+[2025-07-29 12:11:40] [32minfo[39m: 🚀 Server running on port 5000
+[2025-07-29 12:11:40] [32minfo[39m: ✅ MongoDB connected
+[2025-07-29 12:40:15] [32minfo[39m: 🚀 Server running on port 5000
+[2025-07-29 12:40:15] [32minfo[39m: ✅ MongoDB connected
+[2025-07-29 12:42:00] [32minfo[39m: 🚀 Server running on port 5000
+[2025-07-29 12:42:00] [32minfo[39m: ✅ MongoDB connected
+[2025-07-29 12:42:44] [32minfo[39m: 🚀 Server running on port 5000
+[2025-07-29 12:42:44] [32minfo[39m: ✅ MongoDB connected
+[2025-07-29 12:45:58] [31merror[39m: ❌ Error in addToCart: Cart validation failed: products.0.totalPrice: Cast to Number failed for value "NaN" (type number) at path "totalPrice", products.1.totalPrice: Cast to Number failed for value "NaN" (type number) at path "totalPrice", products.2.totalPrice: Cast to Number failed for value "NaN" (type number) at path "totalPrice"
+[2025-07-29 16:11:10] [32minfo[39m: 🚀 Server running on port 5000
+[2025-07-29 16:11:10] [32minfo[39m: ✅ MongoDB connected
+[2025-07-29 16:11:36] [32minfo[39m: 🚀 Server running on port 5000
+[2025-07-29 16:11:36] [32minfo[39m: ✅ MongoDB connected
+[2025-07-29 16:12:39] [32minfo[39m: 🚀 Server running on port 5000
+[2025-07-29 16:12:39] [32minfo[39m: ✅ MongoDB connected
+[2025-07-29 16:14:04] [32minfo[39m: 🚀 Server running on port 5000
+[2025-07-29 16:14:04] [32minfo[39m: ✅ MongoDB connected
+[2025-07-29 16:15:20] [32minfo[39m: 🚀 Server running on port 5000
+[2025-07-29 16:15:20] [32minfo[39m: ✅ MongoDB connected
+[2025-07-29 16:15:47] [32minfo[39m: 🚀 Server running on port 5000
+[2025-07-29 16:15:47] [32minfo[39m: ✅ MongoDB connected
+[2025-07-29 16:16:08] [32minfo[39m: 🚀 Server running on port 5000
+[2025-07-29 16:16:08] [32minfo[39m: ✅ MongoDB connected
+[2025-07-29 16:16:25] [32minfo[39m: 🚀 Server running on port 5000
+[2025-07-29 16:16:26] [32minfo[39m: ✅ MongoDB connected
+[2025-07-29 16:25:38] [32minfo[39m: 🚀 Server running on port 5000
+[2025-07-29 16:25:38] [32minfo[39m: ✅ MongoDB connected
+[2025-07-29 16:28:15] [32minfo[39m: 🚀 Server running on port 5000
+[2025-07-29 16:28:15] [32minfo[39m: ✅ MongoDB connected
+[2025-07-29 16:33:06] [32minfo[39m: 🚀 Server running on port 5000
+[2025-07-29 16:33:06] [32minfo[39m: ✅ MongoDB connected
+[2025-07-29 16:43:24] [32minfo[39m: 🚀 Server running on port 5000
+[2025-07-29 16:43:24] [32minfo[39m: ✅ MongoDB connected
+[2025-07-29 16:47:55] [32minfo[39m: 🚀 Server running on port 5000
+[2025-07-29 16:47:55] [32minfo[39m: ✅ MongoDB connected
+[2025-07-29 17:07:09] [32minfo[39m: 🚀 Server running on port 5000
+[2025-07-29 17:07:09] [32minfo[39m: ✅ MongoDB connected
+[2025-07-29 17:08:18] [32minfo[39m: 🚀 Server running on port 5000
+[2025-07-29 17:08:18] [32minfo[39m: ✅ MongoDB connected
+[2025-07-29 17:12:15] [32minfo[39m: 🚀 Server running on port 5000
+[2025-07-29 17:12:15] [32minfo[39m: ✅ MongoDB connected
+[2025-07-29 17:13:10] [32minfo[39m: 🚀 Server running on port 5000
+[2025-07-29 17:13:11] [32minfo[39m: ✅ MongoDB connected
+[2025-07-30 11:31:00] [32minfo[39m: 🚀 Server running on port 5000
+[2025-07-30 11:31:00] [32minfo[39m: ✅ MongoDB connected
+[2025-07-30 11:34:46] [32minfo[39m: 🚀 Server running on port 5000
+[2025-07-30 11:34:46] [32minfo[39m: ✅ MongoDB connected
+[2025-07-30 11:35:02] [32minfo[39m: 🚀 Server running on port 5000
+[2025-07-30 11:35:02] [32minfo[39m: ✅ MongoDB connected
+[2025-07-30 11:36:56] [32minfo[39m: [USER] New user registered: seddomobrippo-5461@yopmail.com (ID: 6889b68030e9dc3cf20b45f9)
+[2025-07-30 11:37:30] [32minfo[39m: [USER] Login successful for user seddomobrippo-5461@yopmail.com
+[2025-07-30 11:37:50] [32minfo[39m: [EMAIL] 📧 Preparing to send OTP email to: seddomobrippo-5461@yopmail.com
+[2025-07-30 11:37:54] [32minfo[39m: [EMAIL] ✅ Email sent to: seddomobrippo-5461@yopmail.com
+[2025-07-30 11:37:54] [32minfo[39m: [EMAIL] 📤 Gmail response: 250 2.0.0 OK  1753855673 d2e1a72fcca58-764088219e5sm9064251b3a.14 - gsmtp
+[2025-07-30 11:37:54] [32minfo[39m: [EMAIL] ⏱ Email sent in 3810 ms
+[2025-07-30 11:37:54] [32minfo[39m: [EMAIL] 📩 Message ID: <86d21d1f-64d5-eaf0-a9be-cbf7f09fc974@gmail.com>
+[2025-07-30 11:37:54] [32minfo[39m: [USER] Sending to:
+[2025-07-30 11:37:54] [32minfo[39m: [USER] 📤 OTP email sent to seddomobrippo-5461@yopmail.com in 3818 ms
+[2025-07-30 11:39:23] [32minfo[39m: [USER] Password reset successful for user seddomobrippo-5461@yopmail.com
+[2025-07-30 11:40:03] [32minfo[39m: [USER] ✅ Token verified for user ID: 6889b68030e9dc3cf20b45f9
+[2025-07-30 11:40:27] [32minfo[39m: [USER] ✅ Token verified for user ID: 6889b68030e9dc3cf20b45f9
+[2025-07-30 11:42:07] [32minfo[39m: ✅ Cart saved for userId: user456
+[2025-07-30 11:43:30] [32minfo[39m: [USER] ✅ Token verified for user ID: 6889b68030e9dc3cf20b45f9
+[2025-07-30 11:43:30] [32minfo[39m: [USER] 🛒 Get Cart: Cart fetched successfully for userId user456
+[2025-07-30 11:44:58] [32minfo[39m: [USER] ✅ Token verified for user ID: 6889b68030e9dc3cf20b45f9
+[2025-07-30 11:44:58] [32minfo[39m: [USER] 🧭 Inside POST /order route
+[2025-07-30 11:44:58] [32minfo[39m: [USER] Order placed successfully by userId: 6889b68030e9dc3cf20b45f9, orderId: 6889b86230e9dc3cf20b460b
+[2025-07-30 11:45:07] [32minfo[39m: [USER] ✅ Token verified for user ID: 6889b68030e9dc3cf20b45f9
+[2025-07-30 11:45:07] [32minfo[39m: [USER] Found 1 orders for userId:6889b68030e9dc3cf20b45f9
+[2025-07-30 11:45:36] [33mwarn[39m: ⚠️ Admin already exists. Skipping creation.
+[2025-07-30 11:46:54] [32minfo[39m: 🚀 Server running on port 5000
+[2025-07-30 11:46:54] [32minfo[39m: ✅ MongoDB connected
+[2025-07-30 11:47:01] [33mwarn[39m: [ADMIN] Incorrect password attempt for admin:laffekekussou-5239@yopmail.com
+[2025-07-30 11:48:22] [32minfo[39m: 🚀 Server running on port 5000
+[2025-07-30 11:48:22] [32minfo[39m: ✅ MongoDB connected
+[2025-07-30 11:48:55] [33mwarn[39m: ⚠️ Admin already exists. Skipping creation.
+[2025-07-30 11:50:22] [32minfo[39m: ✅ Admin created successfully
+[2025-07-30 11:51:30] [32minfo[39m: 🚀 Server running on port 5000
+[2025-07-30 11:51:30] [32minfo[39m: ✅ MongoDB connected
+[2025-07-30 11:51:34] [33mwarn[39m: [ADMIN] Incorrect password attempt for admin:jeuwaummukuza-1818@yopmail.com
+[2025-07-30 11:51:54] [32minfo[39m: [ADMIN] Admin Login Successful:jeuwaummukuza-1818@yopmail.com
+[2025-07-30 12:03:18] [32minfo[39m: [ADMIN] Admin verified: jeuwaummukuza-1818@yopmail.com (ID: 6889b9a64357ab2d11d2e8e3)
+[2025-07-30 12:03:18] [32minfo[39m: [ADMIN] Admin requested to fetch all users
+[2025-07-30 12:03:18] [32minfo[39m: [ADMIN] ✅ Fetched 14 users from database
+[2025-07-30 12:07:14] [32minfo[39m: [ADMIN] [ADMIN] Connecting to DB for admin forgot password. Email: jeuwaummukuza-1818@yopmail.com
+[2025-07-30 12:07:14] [32minfo[39m: [EMAIL] 📧 Preparing to send OTP email to: jeuwaummukuza-1818@yopmail.com
+[2025-07-30 12:07:16] [32minfo[39m: [EMAIL] ✅ Email sent to: jeuwaummukuza-1818@yopmail.com
+[2025-07-30 12:07:16] [32minfo[39m: [EMAIL] 📤 Gmail response: 250 2.0.0 OK  1753857436 98e67ed59e1d1-31f63ddfb2asm1039787a91.22 - gsmtp
+[2025-07-30 12:07:16] [32minfo[39m: [EMAIL] ⏱ Email sent in 2651 ms
+[2025-07-30 12:07:16] [32minfo[39m: [EMAIL] 📩 Message ID: <3a41597f-91e6-3d60-3f1e-300874d605f3@gmail.com>
+[2025-07-30 12:07:16] [32minfo[39m: [ADMIN] [ADMIN] OTP sent to admin email: jeuwaummukuza-1818@yopmail.com
+[2025-07-30 12:08:18] [32minfo[39m: [ADMIN] Admin password reset request for email: jeuwaummukuza-1818@yopmail.com
+[2025-07-30 12:08:19] [32minfo[39m: [ADMIN] Password reset successful for admin email: jeuwaummukuza-1818@yopmail.com
+[2025-07-30 12:08:34] [32minfo[39m: [ADMIN] Admin verified: jeuwaummukuza-1818@yopmail.com (ID: 6889b9a64357ab2d11d2e8e3)
+[2025-07-30 12:08:34] [32minfo[39m: [ADMIN] Category added successfully: 6889bdea2002041fe12ec6b8
+[2025-07-30 12:08:47] [32minfo[39m: [ADMIN] Admin verified: jeuwaummukuza-1818@yopmail.com (ID: 6889b9a64357ab2d11d2e8e3)
+[2025-07-30 12:08:47] [32minfo[39m: [ADMIN] Fetched all categories successfully
+[2025-07-30 12:10:25] [32minfo[39m: [ADMIN] Admin verified: jeuwaummukuza-1818@yopmail.com (ID: 6889b9a64357ab2d11d2e8e3)
+[2025-07-30 12:10:25] [32minfo[39m: [ADMIN] Category updated successfully: ID = cat123
+[2025-07-30 12:11:02] [32minfo[39m: [ADMIN] Admin verified: jeuwaummukuza-1818@yopmail.com (ID: 6889b9a64357ab2d11d2e8e3)
+[2025-07-30 12:11:02] [32minfo[39m: [ADMIN] Category deleted successfully: ID=cat123
+[2025-07-30 12:11:43] [32minfo[39m: [ADMIN] Admin verified: jeuwaummukuza-1818@yopmail.com (ID: 6889b9a64357ab2d11d2e8e3)
+[2025-07-30 12:11:43] [32minfo[39m: [ADMIN] Product added: prod_a4c38852 - iPhone 15
+[2025-07-30 12:12:09] [32minfo[39m: [ADMIN] Admin verified: jeuwaummukuza-1818@yopmail.com (ID: 6889b9a64357ab2d11d2e8e3)
+[2025-07-30 12:12:09] [32minfo[39m: [ADMIN] Fetching products - Page: 1, Limit: 10
+[2025-07-30 12:12:09] [32minfo[39m: [ADMIN] Successfully fetched 6 products
+[2025-07-30 12:12:42] [32minfo[39m: [ADMIN] Admin verified: jeuwaummukuza-1818@yopmail.com (ID: 6889b9a64357ab2d11d2e8e3)
+[2025-07-30 12:12:42] [32minfo[39m: [ADMIN] Incoming Product ID from params: prod_a4c38852
+[2025-07-30 12:12:42] [32minfo[39m: [ADMIN] Updated Product result:
+[2025-07-30 12:12:42] [32minfo[39m: [ADMIN] Product updated successfully: prod_a4c38852
+[2025-07-30 12:12:55] [32minfo[39m: [ADMIN] Admin verified: jeuwaummukuza-1818@yopmail.com (ID: 6889b9a64357ab2d11d2e8e3)
+[2025-07-30 12:12:55] [32minfo[39m: [ADMIN] Attempting to delete product with ID: prod_a4c38852
+[2025-07-30 12:12:55] [32minfo[39m: [ADMIN] Product deleted successfully: prod_a4c38852
+[2025-07-30 12:21:17] [32minfo[39m: 🚀 Server running on port 5000
+[2025-07-30 12:21:17] [32minfo[39m: ✅ MongoDB connected
+[2025-07-30 12:21:42] [32minfo[39m: 🚀 Server running on port 5000
+[2025-07-30 12:21:42] [32minfo[39m: ✅ MongoDB connected
+[2025-07-30 12:21:55] [32minfo[39m: 🚀 Server running on port 5000
+[2025-07-30 12:21:55] [32minfo[39m: ✅ MongoDB connected
+[2025-07-30 12:27:18] [32minfo[39m: 🚀 Server running on port 5000
+[2025-07-30 12:27:18] [32minfo[39m: ✅ MongoDB connected
+[2025-07-30 12:37:39] [32minfo[39m: 🚀 Server running on port 5000
+[2025-07-30 12:37:39] [32minfo[39m: ✅ MongoDB connected
+[2025-07-30 12:43:15] [32minfo[39m: 🚀 Server running on port 5000
+[2025-07-30 12:43:15] [32minfo[39m: ✅ MongoDB connected
+[2025-07-30 12:48:14] [32minfo[39m: 🚀 Server running on port 5000
+[2025-07-30 12:48:14] [32minfo[39m: ✅ MongoDB connected
+[2025-07-30 13:21:20] [32minfo[39m: 🚀 Server running on port 5000
+[2025-07-30 13:21:20] [32minfo[39m: ✅ MongoDB connected
+[2025-07-30 13:50:43] [32minfo[39m: 🚀 Server running on port 5000
+[2025-07-30 13:50:43] [32minfo[39m: ✅ MongoDB connected
+[2025-07-30 17:17:35] [32minfo[39m: 🚀 Server running on port 5000
+[2025-07-30 17:17:35] [32minfo[39m: ✅ MongoDB connected
+[2025-07-30 18:04:28] [32minfo[39m: 🚀 Server running on port 5000
+[2025-07-30 18:04:28] [32minfo[39m: ✅ MongoDB connected
+[2025-07-30 18:17:21] [32minfo[39m: 🚀 Server running on port 5000
+[2025-07-30 18:17:21] [32minfo[39m: ✅ MongoDB connected
+[2025-07-30 21:52:13] [32minfo[39m: 🚀 Server running on port 5000
+[2025-07-30 21:52:13] [32minfo[39m: ✅ MongoDB connected
+[2025-07-31 07:43:56] [32minfo[39m: 🚀 Server running on port 5000
+[2025-07-31 07:43:56] [32minfo[39m: ✅ MongoDB connected
+[2025-07-31 10:13:27] [32minfo[39m: 🚀 Server running on port 5000
+[2025-07-31 10:13:27] [32minfo[39m: ✅ MongoDB connected
+[2025-07-31 12:26:44] [33mwarn[39m: [USER] Login failed: Incorrect password for email idea@example.com
+[2025-07-31 12:27:00] [32minfo[39m: [USER] New user registered: amma@example.com (ID: 688b13bcb88074da011ece06)
+[2025-07-31 12:27:06] [33mwarn[39m: [USER] Login failed: Incorrect password for email idea@example.com
+[2025-07-31 12:29:58] [32minfo[39m: [USER] New user registered: yuquazeuhixa-9264@yopmail.com (ID: 688b146eb88074da011ece0a)
+[2025-07-31 12:30:13] [32minfo[39m: [USER] Login successful for user yuquazeuhixa-9264@yopmail.com
+[2025-07-31 13:45:54] [32minfo[39m: 🚀 Server running on port 5000
+[2025-07-31 13:45:54] [32minfo[39m: ✅ MongoDB connected
+[2025-07-31 19:32:00] [32minfo[39m: 🚀 Server running on port 5000
+[2025-07-31 19:32:01] [32minfo[39m: ✅ MongoDB connected
+[2025-08-12 10:42:46] [32minfo[39m: 🚀 Server running on port 5000
+[2025-08-12 10:42:46] [31merror[39m: ❌ MongoDB error The `uri` parameter to `openUri()` must be a string, got "undefined". Make sure the first parameter to `mongoose.connect()` or `mongoose.createConnection()` is a string.
+[2025-08-12 23:18:39] [32minfo[39m: 🚀 Server running on port 5000
+[2025-08-12 23:18:39] [31merror[39m: ❌ MongoDB error The `uri` parameter to `openUri()` must be a string, got "undefined". Make sure the first parameter to `mongoose.connect()` or `mongoose.createConnection()` is a string.
+[2025-08-13 00:18:21] [32minfo[39m: 🚀 Server running on port 5000
+[2025-08-13 00:18:22] [31merror[39m: ❌ MongoDB error bad auth : Authentication failed.
+[2025-08-13 00:23:41] [32minfo[39m: 🚀 Server running on port 5000
+[2025-08-13 00:23:42] [32minfo[39m: ✅ MongoDB connected
+[2025-08-13 06:11:28] [32minfo[39m: 🚀 Server running on port 5000
+[2025-08-13 06:11:28] [32minfo[39m: ✅ MongoDB connected
+[2025-08-13 06:32:36] [32minfo[39m: 🚀 Server running on port 5000
+[2025-08-13 06:32:37] [32minfo[39m: ✅ MongoDB connected
+[2025-08-13 06:43:10] [32minfo[39m: 🚀 Server running on port 5000
+[2025-08-13 06:43:10] [32minfo[39m: ✅ MongoDB connected
+[2025-08-13 06:51:31] [32minfo[39m: 🚀 Server running on port 5000
+[2025-08-13 06:51:31] [32minfo[39m: ✅ MongoDB connected
+[2025-08-13 06:58:12] [32minfo[39m: 🚀 Server running on port 5000
+[2025-08-13 06:58:13] [32minfo[39m: ✅ MongoDB connected
+[2025-08-13 08:19:51] [32minfo[39m: 🚀 Server running on port 5000
+[2025-08-13 08:19:52] [32minfo[39m: ✅ MongoDB connected
+[2025-08-13 08:24:58] [32minfo[39m: 🚀 Server running on port 5000
+[2025-08-13 08:24:59] [32minfo[39m: ✅ MongoDB connected
+[2025-08-13 08:27:17] [32minfo[39m: 🚀 Server running on port 5000
+[2025-08-13 08:27:17] [32minfo[39m: ✅ MongoDB connected
+[2025-08-13 08:47:16] [32minfo[39m: 🚀 Server running on port 5000
+[2025-08-13 08:47:16] [32minfo[39m: ✅ MongoDB connected
+[2025-08-13 09:13:13] [32minfo[39m: 🚀 Server running on port 5000
+[2025-08-13 09:13:14] [32minfo[39m: ✅ MongoDB connected
+[2025-08-13 09:16:21] [32minfo[39m: 🚀 Server running on port 5000
+[2025-08-13 09:16:21] [32minfo[39m: ✅ MongoDB connected
+[2025-08-13 09:27:14] [32minfo[39m: 🚀 Server running on port 5000
+[2025-08-13 09:27:14] [32minfo[39m: ✅ MongoDB connected
+[2025-08-13 09:32:30] [32minfo[39m: 🚀 Server running on port 5000
+[2025-08-13 09:32:31] [32minfo[39m: ✅ MongoDB connected
+[2025-08-13 09:32:44] [32minfo[39m: 🚀 Server running on port 5000
+[2025-08-13 09:32:45] [32minfo[39m: ✅ MongoDB connected
+[2025-08-13 09:36:34] [32minfo[39m: 🚀 Server running on port 5000
+[2025-08-13 09:36:35] [32minfo[39m: ✅ MongoDB connected
+[2025-08-13 09:42:50] [32minfo[39m: 🚀 Server running on port 5000
+[2025-08-13 09:42:51] [32minfo[39m: ✅ MongoDB connected
+[2025-08-13 09:52:31] [32minfo[39m: 🚀 Server running on port 5000
+[2025-08-13 09:52:31] [32minfo[39m: ✅ MongoDB connected
+[2025-08-13 10:10:49] [32minfo[39m: 🚀 Server running on port 5000
+[2025-08-13 10:10:49] [32minfo[39m: ✅ MongoDB connected
+[2025-08-13 10:12:57] [32minfo[39m: 🚀 Server running on port 5000
+[2025-08-13 10:12:58] [32minfo[39m: ✅ MongoDB connected
+[2025-08-13 10:13:13] [32minfo[39m: 🚀 Server running on port 5000
+[2025-08-13 10:13:14] [32minfo[39m: ✅ MongoDB connected
+[2025-08-13 10:14:32] [32minfo[39m: 🚀 Server running on port 5000
+[2025-08-13 10:14:33] [32minfo[39m: ✅ MongoDB connected
+[2025-08-13 10:14:35] [32minfo[39m: 🚀 Server running on port 5000
+[2025-08-13 10:14:36] [32minfo[39m: ✅ MongoDB connected
+[2025-08-13 10:20:09] [32minfo[39m: 🚀 Server running on port 5000
+[2025-08-13 10:20:10] [32minfo[39m: ✅ MongoDB connected
+[2025-08-13 10:22:10] [32minfo[39m: 🚀 Server running on port 5000
+[2025-08-13 10:22:11] [32minfo[39m: ✅ MongoDB connected
+[2025-08-13 21:32:24] [32minfo[39m: 🚀 Server running on port 5000
+[2025-08-13 21:32:24] [32minfo[39m: ✅ MongoDB connected
+[2025-08-13 21:46:12] [32minfo[39m: 🚀 Server running on port 5000
+[2025-08-13 21:46:12] [32minfo[39m: ✅ MongoDB connected
+[2025-08-13 21:48:34] [32minfo[39m: 🚀 Server running on port 5000
+[2025-08-13 21:48:35] [32minfo[39m: ✅ MongoDB connected
+[2025-08-13 21:55:53] [32minfo[39m: 🚀 Server running on port 5000
+[2025-08-13 21:55:54] [32minfo[39m: ✅ MongoDB connected
+[2025-08-13 21:57:54] [32minfo[39m: 🚀 Server running on port 5000
+[2025-08-13 21:57:54] [32minfo[39m: ✅ MongoDB connected
+[2025-08-13 22:02:21] [32minfo[39m: 🚀 Server running on port 5000
+[2025-08-13 22:02:21] [32minfo[39m: ✅ MongoDB connected
+[2025-08-13 22:15:44] [32minfo[39m: 🚀 Server running on port 5000
+[2025-08-13 22:15:44] [32minfo[39m: ✅ MongoDB connected
+[2025-08-13 22:15:55] [32minfo[39m: 🚀 Server running on port 5000
+[2025-08-13 22:15:55] [32minfo[39m: ✅ MongoDB connected
+[2025-08-13 22:20:52] [32minfo[39m: 🚀 Server running on port 5000
+[2025-08-13 22:20:53] [32minfo[39m: ✅ MongoDB connected
+[2025-08-13 22:21:25] [32minfo[39m: 🚀 Server running on port 5000
+[2025-08-13 22:21:26] [32minfo[39m: ✅ MongoDB connected
+[2025-08-13 22:24:55] [32minfo[39m: 🚀 Server running on port 5000
+[2025-08-13 22:24:55] [32minfo[39m: ✅ MongoDB connected
+[2025-08-13 22:33:27] [32minfo[39m: 🚀 Server running on port 5000
+[2025-08-13 22:33:28] [32minfo[39m: ✅ MongoDB connected
+[2025-08-13 22:35:06] [32minfo[39m: 🚀 Server running on port 5000
+[2025-08-13 22:35:06] [32minfo[39m: ✅ MongoDB connected
+[2025-08-13 22:35:33] [32minfo[39m: 🚀 Server running on port 5000
+[2025-08-13 22:35:33] [32minfo[39m: ✅ MongoDB connected
+[2025-08-13 22:38:44] [32minfo[39m: 🚀 Server running on port 5000
+[2025-08-13 22:38:45] [32minfo[39m: ✅ MongoDB connected
+[2025-08-13 22:39:19] [32minfo[39m: 🚀 Server running on port 5000
+[2025-08-13 22:39:20] [32minfo[39m: ✅ MongoDB connected
+[2025-08-13 22:43:32] [32minfo[39m: 🚀 Server running on port 5000
+[2025-08-13 22:43:33] [32minfo[39m: ✅ MongoDB connected
+[2025-08-13 22:44:07] [32minfo[39m: 🚀 Server running on port 5000
+[2025-08-13 22:44:07] [32minfo[39m: ✅ MongoDB connected
+[2025-08-13 22:46:08] [32minfo[39m: 🚀 Server running on port 5000
+[2025-08-13 22:46:09] [32minfo[39m: ✅ MongoDB connected
+[2025-08-13 22:46:44] [32minfo[39m: 🚀 Server running on port 5000
+[2025-08-13 22:46:44] [32minfo[39m: ✅ MongoDB connected
+[2025-08-13 23:00:21] [32minfo[39m: 🚀 Server running on port 5000
+[2025-08-13 23:00:21] [32minfo[39m: ✅ MongoDB connected
+[2025-08-13 23:02:42] [33mwarn[39m: [USER] Registration failed: Email already exists (heuddoimissodu-9958@yopmail.com)
+[2025-08-13 23:03:27] [33mwarn[39m: [USER] Login failed: Incorrect password for email heuddoimissodu-9958@yopmail.com
+[2025-08-13 23:05:32] [32minfo[39m: [USER] New user registered: gruddajuttahe-3789@yopmail.com (ID: 689d7cacde111fb939c0f5a4)
+[2025-08-13 23:06:02] [32minfo[39m: [USER] Login successful for user gruddajuttahe-3789@yopmail.com
+[2025-08-13 23:06:22] [32minfo[39m: [EMAIL] 📧 Preparing to send OTP email to: gruddajuttahe-3789@yopmail.com
+[2025-08-13 23:06:26] [32minfo[39m: [EMAIL] ✅ Email sent to: gruddajuttahe-3789@yopmail.com
+[2025-08-13 23:06:26] [32minfo[39m: [EMAIL] 📤 Gmail response: 250 2.0.0 OK  1755151585 98e67ed59e1d1-3232ae14f6dsm343683a91.6 - gsmtp
+[2025-08-13 23:06:26] [32minfo[39m: [EMAIL] ⏱ Email sent in 3524 ms
+[2025-08-13 23:06:26] [32minfo[39m: [EMAIL] 📩 Message ID: <4934fdac-cb1b-27fb-89b3-aa6fa6ff195a@gmail.com>
+[2025-08-13 23:06:26] [32minfo[39m: [USER] Sending to:
+[2025-08-13 23:06:26] [32minfo[39m: [USER] 📤 OTP email sent to gruddajuttahe-3789@yopmail.com in 3536 ms
+[2025-08-13 23:07:25] [32minfo[39m: [USER] [USER] OTP verified successfully for gruddajuttahe-3789@yopmail.com
+[2025-08-13 23:14:18] [32minfo[39m: 🚀 Server running on port 5000
+[2025-08-13 23:14:18] [32minfo[39m: ✅ MongoDB connected
+[2025-08-13 23:15:42] [32minfo[39m: [USER] Password reset successful for user gruddajuttahe-3789@yopmail.com
+[2025-08-13 23:23:08] [33mwarn[39m: [USER] [USER] OTP verification failed for gruddajuttahe-3789@yopmail.com - Invalid or expired OTP
+[2025-08-13 23:29:28] [32minfo[39m: 🚀 Server running on port 5000
+[2025-08-13 23:29:29] [32minfo[39m: ✅ MongoDB connected
+[2025-08-13 23:30:07] [32minfo[39m: 🚀 Server running on port 5000
+[2025-08-13 23:30:08] [32minfo[39m: ✅ MongoDB connected
+[2025-08-13 23:44:33] [32minfo[39m: 🚀 Server running on port 5000
+[2025-08-13 23:44:34] [32minfo[39m: ✅ MongoDB connected

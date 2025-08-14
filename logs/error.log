@@ -1,0 +1,45 @@
+[2025-07-24 16:38:57] [31merror[39m: [USER] Forgot password error for raja@example.com: logger is not defined
+[2025-07-25 12:23:35] [31merror[39m: [USER] ❌ Error adding to cart for userId user789: Cannot read properties of undefined (reading 'forEach')
+[2025-07-25 13:30:59] [31merror[39m: [USER] ❌ Error adding to cart for userId user789: Product is not defined
+[2025-07-25 13:36:24] [31merror[39m: [USER] ❌ Error adding to cart for userId user789: Product is not defined
+[2025-07-25 13:44:57] [31merror[39m: [USER] ❌ Error adding to cart for userId user999: Product is not defined
+[2025-07-25 13:47:48] [31merror[39m: [USER] ❌ Error adding to cart for userId user999: Product is not defined
+[2025-07-25 13:52:15] [31merror[39m: ❌ Error adding to cart for userId user999: Cast to ObjectId failed for value "prod111" (type string) at path "_id" for model "Product"
+[2025-07-25 13:53:26] [31merror[39m: ❌ Error adding to cart for userId user999: Product is not defined
+[2025-07-25 14:06:01] [31merror[39m: ❌ Error adding to cart for userId user456: Product is not defined
+[2025-07-25 14:09:27] [31merror[39m: ❌ Error adding to cart for userId user456: Product is not defined
+[2025-07-25 14:22:48] [31merror[39m: ❌ Error adding to cart for userId user456: Product is not defined
+[2025-07-25 14:25:54] [31merror[39m: ❌ Error adding to cart for userId user456: Cart validation failed: products.0.totalPrice: Cast to Number failed for value "NaN" (type number) at path "totalPrice", products.1.totalPrice: Cast to Number failed for value "NaN" (type number) at path "totalPrice", products.2.totalPrice: Cast to Number failed for value "NaN" (type number) at path "totalPrice", cartTotal: Cast to Number failed for value "NaN" (type number) at path "cartTotal"
+[2025-07-25 14:28:51] [31merror[39m: ❌ Error adding to cart for userId user456: Cart validation failed: products.0.totalPrice: Cast to Number failed for value "NaN" (type number) at path "totalPrice", products.1.totalPrice: Cast to Number failed for value "NaN" (type number) at path "totalPrice", products.2.totalPrice: Cast to Number failed for value "NaN" (type number) at path "totalPrice", cartTotal: Cast to Number failed for value "NaN" (type number) at path "cartTotal"
+[2025-07-25 14:30:58] [31merror[39m: ❌ Error adding to cart for userId user456: Cart validation failed: products.0.totalPrice: Cast to Number failed for value "NaN" (type number) at path "totalPrice", products.1.totalPrice: Cast to Number failed for value "NaN" (type number) at path "totalPrice", products.2.totalPrice: Cast to Number failed for value "NaN" (type number) at path "totalPrice", cartTotal: Cast to Number failed for value "NaN" (type number) at path "cartTotal"
+[2025-07-25 14:34:33] [31merror[39m: ❌ Error adding to cart for userId user456: Cart validation failed: products.0.totalPrice: Cast to Number failed for value "NaN" (type number) at path "totalPrice", products.1.totalPrice: Cast to Number failed for value "NaN" (type number) at path "totalPrice", products.2.totalPrice: Cast to Number failed for value "NaN" (type number) at path "totalPrice", cartTotal: Cast to Number failed for value "NaN" (type number) at path "cartTotal"
+[2025-07-25 14:54:05] [31merror[39m: ❌ Error: Cart validation failed: products.0.totalPrice: Cast to Number failed for value "NaN" (type number) at path "totalPrice", products.1.totalPrice: Cast to Number failed for value "NaN" (type number) at path "totalPrice", products.2.totalPrice: Cast to Number failed for value "NaN" (type number) at path "totalPrice", cartTotal: Cast to Number failed for value "NaN" (type number) at path "cartTotal"
+[2025-07-25 16:28:17] [31merror[39m: [USER] Error placing order for userId: 68820ad92977b95da4fa266d - logger is not defined
+[2025-07-25 18:47:28] [31merror[39m: ❌ Email send failed to unknown: Missing toEmail or OTP
+[2025-07-25 18:47:28] [31merror[39m: [ADMIN] Forgot Password OTP Error: Missing toEmail or OTP
+[2025-07-25 18:53:29] [31merror[39m: ❌ Email send failed to unknown: Missing toEmail or OTP
+[2025-07-25 18:53:29] [31merror[39m: [ADMIN] Forgot Password OTP Error: Missing toEmail or OTP
+[2025-07-25 21:18:57] [31merror[39m: ❌ Email send failed to unknown: Missing toEmail or OTP
+[2025-07-25 21:18:57] [31merror[39m: [ADMIN] Forgot Password OTP Error: Missing toEmail or OTP
+[2025-07-25 21:45:50] [31merror[39m: ❌ Email send failed to admin@example.com: admin is not defined
+[2025-07-25 21:45:50] [31merror[39m: [ADMIN] [ADMIN] Forgot Password OTP Error: admin is not defined
+[2025-07-26 20:33:56] [31merror[39m: ❌ Email send failed to admin@example.com: Client network socket disconnected before secure TLS connection was established
+[2025-07-26 20:33:56] [31merror[39m: [ADMIN] [ADMIN] Forgot Password OTP Error: Client network socket disconnected before secure TLS connection was established
+[2025-07-26 20:33:57] [31merror[39m: ❌ Email send failed to admin@example.com: Client network socket disconnected before secure TLS connection was established
+[2025-07-26 20:33:57] [31merror[39m: [ADMIN] [ADMIN] Forgot Password OTP Error: Client network socket disconnected before secure TLS connection was established
+[2025-07-26 21:05:26] [31merror[39m: [ADMIN] Error reseting password for admin:email is not defined
+[2025-07-26 21:08:22] [31merror[39m: [ADMIN] Error reseting password for admin:email is not defined
+[2025-07-26 21:12:20] [31merror[39m: [ADMIN] Error reseting password for admin:email is not defined
+[2025-07-26 21:34:09] [31merror[39m: [ADMIN] [ADMIN] Add Category Error: Category validation failed: id: Path `id` is required.
+[2025-07-26 21:36:22] [31merror[39m: [ADMIN] [ADMIN] Add Category Error: Category validation failed: id: Path `id` is required.
+[2025-07-26 21:36:47] [31merror[39m: [ADMIN] [ADMIN] Add Category Error: Category validation failed: id: Path `id` is required.
+[2025-07-27 11:25:50] [31merror[39m: [ADMIN] JWT verification failed: invalid token
+[2025-07-27 12:33:09] [31merror[39m: ❌ Email send failed to paddu@example.com: Missing toEmail, subject, or html
+[2025-07-27 12:33:09] [31merror[39m: [USER] Forgot password error for paddu@example.com: Missing toEmail, subject, or html
+[2025-07-27 12:46:03] [31merror[39m: ❌ Email send failed to paddu@example.com: Missing toEmail, subject, or html
+[2025-07-27 12:46:03] [31merror[39m: [USER] Forgot password error for paddu@example.com: Missing toEmail, subject, or html
+[2025-07-27 13:02:32] [31merror[39m: ❌ Error in addToCart: Cart validation failed: products.0.price: Cast to Number failed for value "NaN" (type number) at path "price", products.0.totalPrice: Cast to Number failed for value "NaN" (type number) at path "totalPrice", products.1.price: Cast to Number failed for value "NaN" (type number) at path "price", products.1.totalPrice: Cast to Number failed for value "NaN" (type number) at path "totalPrice", products.2.price: Cast to Number failed for value "NaN" (type number) at path "price", products.2.totalPrice: Cast to Number failed for value "NaN" (type number) at path "totalPrice", cartTotal: Cast to Number failed for value "NaN" (type number) at path "cartTotal"
+[2025-07-29 12:45:58] [31merror[39m: ❌ Error in addToCart: Cart validation failed: products.0.totalPrice: Cast to Number failed for value "NaN" (type number) at path "totalPrice", products.1.totalPrice: Cast to Number failed for value "NaN" (type number) at path "totalPrice", products.2.totalPrice: Cast to Number failed for value "NaN" (type number) at path "totalPrice"
+[2025-08-12 10:42:46] [31merror[39m: ❌ MongoDB error The `uri` parameter to `openUri()` must be a string, got "undefined". Make sure the first parameter to `mongoose.connect()` or `mongoose.createConnection()` is a string.
+[2025-08-12 23:18:39] [31merror[39m: ❌ MongoDB error The `uri` parameter to `openUri()` must be a string, got "undefined". Make sure the first parameter to `mongoose.connect()` or `mongoose.createConnection()` is a string.
+[2025-08-13 00:18:22] [31merror[39m: ❌ MongoDB error bad auth : Authentication failed.
