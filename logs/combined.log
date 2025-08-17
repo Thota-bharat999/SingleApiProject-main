@@ -969,3 +969,262 @@
 [2025-08-13 23:30:08] [32minfo[39m: ✅ MongoDB connected
 [2025-08-13 23:44:33] [32minfo[39m: 🚀 Server running on port 5000
 [2025-08-13 23:44:34] [32minfo[39m: ✅ MongoDB connected
+[2025-08-14 00:06:14] [32minfo[39m: 🚀 Server running on port 5000
+[2025-08-14 00:06:15] [32minfo[39m: ✅ MongoDB connected
+[2025-08-14 00:47:05] [32minfo[39m: 🚀 Server running on port 5000
+[2025-08-14 00:47:06] [32minfo[39m: ✅ MongoDB connected
+[2025-08-14 00:49:33] [32minfo[39m: [EMAIL] 📧 Preparing to send OTP email to: gruddajuttahe-3789@yopmail.com
+[2025-08-14 00:49:36] [32minfo[39m: [EMAIL] ✅ Email sent to: gruddajuttahe-3789@yopmail.com
+[2025-08-14 00:49:36] [32minfo[39m: [EMAIL] 📤 Gmail response: 250 2.0.0 OK  1755157775 d9443c01a7336-24300f8c998sm61646345ad.134 - gsmtp
+[2025-08-14 00:49:36] [32minfo[39m: [EMAIL] ⏱ Email sent in 2750 ms
+[2025-08-14 00:49:36] [32minfo[39m: [EMAIL] 📩 Message ID: <58a9e328-7285-c1f9-d737-68bdea2cf73d@gmail.com>
+[2025-08-14 00:49:36] [32minfo[39m: [USER] Sending to:
+[2025-08-14 00:49:36] [32minfo[39m: [USER] 📤 OTP email sent to gruddajuttahe-3789@yopmail.com in 2755 ms
+[2025-08-14 00:51:48] [33mwarn[39m: [USER] [USER] OTP verification failed for gruddajuttahe-3789@yopmail.com - Invalid or expired OTP
+[2025-08-14 00:52:38] [32minfo[39m: [EMAIL] 📧 Preparing to send OTP email to: gruddajuttahe-3789@yopmail.com
+[2025-08-14 00:52:40] [32minfo[39m: [EMAIL] ✅ Email sent to: gruddajuttahe-3789@yopmail.com
+[2025-08-14 00:52:40] [32minfo[39m: [EMAIL] 📤 Gmail response: 250 2.0.0 OK  1755157959 98e67ed59e1d1-32330fff0aesm975745a91.15 - gsmtp
+[2025-08-14 00:52:40] [32minfo[39m: [EMAIL] ⏱ Email sent in 2442 ms
+[2025-08-14 00:52:40] [32minfo[39m: [EMAIL] 📩 Message ID: <53f01f35-c447-aa7e-dec4-797eacacd65d@gmail.com>
+[2025-08-14 00:52:40] [32minfo[39m: [USER] Sending to:
+[2025-08-14 00:52:40] [32minfo[39m: [USER] 📤 OTP email sent to gruddajuttahe-3789@yopmail.com in 2446 ms
+[2025-08-14 00:53:13] [32minfo[39m: [USER] [USER] OTP verified successfully for gruddajuttahe-3789@yopmail.com
+[2025-08-14 00:53:55] [32minfo[39m: [USER] Password reset successful for user gruddajuttahe-3789@yopmail.com
+[2025-08-14 04:12:20] [33mwarn[39m: [USER] Login failed: Incorrect password for email gruddajuttahe-3789@yopmail.com
+[2025-08-14 04:13:10] [33mwarn[39m: [USER] Login failed: Incorrect password for email gruddajuttahe-3789@yopmail.com
+[2025-08-14 04:13:19] [33mwarn[39m: [USER] Login failed: Incorrect password for email gruddajuttahe-3789@yopmail.com
+[2025-08-14 04:14:05] [32minfo[39m: [USER] New user registered: sitreprougreru-8499@yopmail.com (ID: 689dc4fd3c3060eec290a072)
+[2025-08-14 04:14:36] [32minfo[39m: [USER] Login successful for user sitreprougreru-8499@yopmail.com
+[2025-08-14 04:14:54] [32minfo[39m: [EMAIL] 📧 Preparing to send OTP email to: sitreprougreru-8499@yopmail.com
+[2025-08-14 04:14:57] [32minfo[39m: [EMAIL] ✅ Email sent to: sitreprougreru-8499@yopmail.com
+[2025-08-14 04:14:57] [32minfo[39m: [EMAIL] 📤 Gmail response: 250 2.0.0 OK  1755170096 98e67ed59e1d1-32330fc4719sm1526408a91.10 - gsmtp
+[2025-08-14 04:14:57] [32minfo[39m: [EMAIL] ⏱ Email sent in 2802 ms
+[2025-08-14 04:14:57] [32minfo[39m: [EMAIL] 📩 Message ID: <27eeec5c-5ea1-1a19-a811-741cfdbfa1af@gmail.com>
+[2025-08-14 04:14:57] [32minfo[39m: [USER] Sending to:
+[2025-08-14 04:14:57] [32minfo[39m: [USER] 📤 OTP email sent to sitreprougreru-8499@yopmail.com in 2804 ms
+[2025-08-14 04:15:39] [32minfo[39m: [USER] [USER] OTP verified successfully for sitreprougreru-8499@yopmail.com
+[2025-08-14 04:16:14] [32minfo[39m: [USER] Password reset successful for user sitreprougreru-8499@yopmail.com
+[2025-08-14 04:18:26] [32minfo[39m: ✅ Cart saved for userId: user456
+[2025-08-14 04:20:13] [32minfo[39m: [USER] ✅ Token verified for user ID: 689dc4fd3c3060eec290a072
+[2025-08-14 04:20:13] [32minfo[39m: [USER] 🛒 Get Cart: Cart fetched successfully for userId user456
+[2025-08-14 04:22:04] [32minfo[39m: [USER] ✅ Token verified for user ID: 689dc4fd3c3060eec290a072
+[2025-08-14 04:22:04] [32minfo[39m: [USER] 🧭 Inside POST /order route
+[2025-08-14 04:22:04] [32minfo[39m: [USER] Order placed successfully by userId: 689dc4fd3c3060eec290a072, orderId: 689dc6dc3c3060eec290a084
+[2025-08-14 04:22:16] [32minfo[39m: [USER] ✅ Token verified for user ID: 689dc4fd3c3060eec290a072
+[2025-08-14 04:22:16] [32minfo[39m: [USER] Found 1 orders for userId:689dc4fd3c3060eec290a072
+[2025-08-14 04:27:12] [32minfo[39m: ✅ Cart saved for userId: user456
+[2025-08-14 04:27:26] [32minfo[39m: [USER] ✅ Token verified for user ID: 689dc4fd3c3060eec290a072
+[2025-08-14 04:27:26] [32minfo[39m: [USER] 🛒 Get Cart: Cart fetched successfully for userId user456
+[2025-08-14 04:32:25] [32minfo[39m: [USER] ✅ Token verified for user ID: 689dc4fd3c3060eec290a072
+[2025-08-14 04:32:25] [32minfo[39m: [USER] 🧭 Inside POST /order route
+[2025-08-14 04:32:25] [32minfo[39m: [USER] Order placed successfully by userId: 689dc4fd3c3060eec290a072, orderId: 689dc9493c3060eec290a0b9
+[2025-08-14 04:33:26] [32minfo[39m: [USER] ✅ Token verified for user ID: 689dc4fd3c3060eec290a072
+[2025-08-14 04:33:26] [32minfo[39m: [USER] 🧭 Inside POST /order route
+[2025-08-14 04:33:26] [32minfo[39m: [USER] Order placed successfully by userId: 689dc4fd3c3060eec290a072, orderId: 689dc9863c3060eec290a0bc
+[2025-08-14 04:34:57] [32minfo[39m: [USER] ✅ Token verified for user ID: 689dc4fd3c3060eec290a072
+[2025-08-14 04:34:57] [32minfo[39m: [USER] 🧭 Inside POST /order route
+[2025-08-14 04:34:57] [32minfo[39m: [USER] Order placed successfully by userId: 689dc4fd3c3060eec290a072, orderId: 689dc9e13c3060eec290a0bf
+[2025-08-14 04:36:07] [32minfo[39m: [USER] ✅ Token verified for user ID: 689dc4fd3c3060eec290a072
+[2025-08-14 04:36:07] [32minfo[39m: [USER] 🧭 Inside POST /order route
+[2025-08-14 04:36:07] [32minfo[39m: [USER] Order placed successfully by userId: 689dc4fd3c3060eec290a072, orderId: 689dca273c3060eec290a0c2
+[2025-08-14 04:36:43] [32minfo[39m: [USER] ✅ Token verified for user ID: 689dc4fd3c3060eec290a072
+[2025-08-14 04:36:43] [32minfo[39m: [USER] 🧭 Inside POST /order route
+[2025-08-14 04:36:44] [32minfo[39m: [USER] Order placed successfully by userId: 689dc4fd3c3060eec290a072, orderId: 689dca4b3c3060eec290a0c5
+[2025-08-14 04:37:30] [32minfo[39m: [USER] ✅ Token verified for user ID: 689dc4fd3c3060eec290a072
+[2025-08-14 04:37:30] [32minfo[39m: [USER] 🧭 Inside POST /order route
+[2025-08-14 04:37:30] [32minfo[39m: [USER] Order placed successfully by userId: 689dc4fd3c3060eec290a072, orderId: 689dca7a3c3060eec290a0c8
+[2025-08-14 04:39:00] [32minfo[39m: [USER] ✅ Token verified for user ID: 689dc4fd3c3060eec290a072
+[2025-08-14 04:39:00] [32minfo[39m: [USER] 🧭 Inside POST /order route
+[2025-08-14 04:39:01] [32minfo[39m: [USER] Order placed successfully by userId: 689dc4fd3c3060eec290a072, orderId: 689dcad43c3060eec290a0cb
+[2025-08-14 04:39:40] [32minfo[39m: [USER] ✅ Token verified for user ID: 689dc4fd3c3060eec290a072
+[2025-08-14 04:39:40] [32minfo[39m: [USER] 🧭 Inside POST /order route
+[2025-08-14 04:39:40] [32minfo[39m: [USER] Order placed successfully by userId: 689dc4fd3c3060eec290a072, orderId: 689dcafc3c3060eec290a0ce
+[2025-08-14 04:40:14] [32minfo[39m: [USER] ✅ Token verified for user ID: 689dc4fd3c3060eec290a072
+[2025-08-14 04:40:14] [32minfo[39m: [USER] 🧭 Inside POST /order route
+[2025-08-14 04:40:14] [32minfo[39m: [USER] Order placed successfully by userId: 689dc4fd3c3060eec290a072, orderId: 689dcb1e3c3060eec290a0d1
+[2025-08-14 04:40:49] [32minfo[39m: [USER] ✅ Token verified for user ID: 689dc4fd3c3060eec290a072
+[2025-08-14 04:40:49] [32minfo[39m: [USER] 🧭 Inside POST /order route
+[2025-08-14 04:40:49] [32minfo[39m: [USER] Order placed successfully by userId: 689dc4fd3c3060eec290a072, orderId: 689dcb413c3060eec290a0d4
+[2025-08-14 04:41:34] [32minfo[39m: [USER] ✅ Token verified for user ID: 689dc4fd3c3060eec290a072
+[2025-08-14 04:41:34] [32minfo[39m: [USER] 🧭 Inside POST /order route
+[2025-08-14 04:41:34] [32minfo[39m: [USER] Order placed successfully by userId: 689dc4fd3c3060eec290a072, orderId: 689dcb6e3c3060eec290a0d7
+[2025-08-14 04:41:58] [32minfo[39m: [USER] ✅ Token verified for user ID: 689dc4fd3c3060eec290a072
+[2025-08-14 04:41:58] [32minfo[39m: [USER] 🧭 Inside POST /order route
+[2025-08-14 04:41:58] [32minfo[39m: [USER] Order placed successfully by userId: 689dc4fd3c3060eec290a072, orderId: 689dcb863c3060eec290a0da
+[2025-08-14 04:42:37] [32minfo[39m: [USER] ✅ Token verified for user ID: 689dc4fd3c3060eec290a072
+[2025-08-14 04:42:37] [32minfo[39m: [USER] 🧭 Inside POST /order route
+[2025-08-14 04:42:37] [32minfo[39m: [USER] Order placed successfully by userId: 689dc4fd3c3060eec290a072, orderId: 689dcbad3c3060eec290a0dd
+[2025-08-14 04:43:09] [32minfo[39m: [USER] ✅ Token verified for user ID: 689dc4fd3c3060eec290a072
+[2025-08-14 04:43:09] [32minfo[39m: [USER] 🧭 Inside POST /order route
+[2025-08-14 04:43:09] [32minfo[39m: [USER] Order placed successfully by userId: 689dc4fd3c3060eec290a072, orderId: 689dcbcd3c3060eec290a0e0
+[2025-08-14 04:43:47] [32minfo[39m: [USER] ✅ Token verified for user ID: 689dc4fd3c3060eec290a072
+[2025-08-14 04:43:47] [32minfo[39m: [USER] 🧭 Inside POST /order route
+[2025-08-14 04:43:47] [32minfo[39m: [USER] Order placed successfully by userId: 689dc4fd3c3060eec290a072, orderId: 689dcbf33c3060eec290a0e3
+[2025-08-14 04:44:09] [32minfo[39m: [USER] ✅ Token verified for user ID: 689dc4fd3c3060eec290a072
+[2025-08-14 04:44:09] [32minfo[39m: [USER] 🧭 Inside POST /order route
+[2025-08-14 04:44:09] [32minfo[39m: [USER] Order placed successfully by userId: 689dc4fd3c3060eec290a072, orderId: 689dcc093c3060eec290a0e6
+[2025-08-14 04:45:05] [32minfo[39m: [USER] ✅ Token verified for user ID: 689dc4fd3c3060eec290a072
+[2025-08-14 04:45:05] [32minfo[39m: [USER] 🧭 Inside POST /order route
+[2025-08-14 04:45:05] [32minfo[39m: [USER] Order placed successfully by userId: 689dc4fd3c3060eec290a072, orderId: 689dcc413c3060eec290a0e9
+[2025-08-14 04:45:33] [32minfo[39m: [USER] ✅ Token verified for user ID: 689dc4fd3c3060eec290a072
+[2025-08-14 04:45:33] [32minfo[39m: [USER] 🧭 Inside POST /order route
+[2025-08-14 04:45:33] [32minfo[39m: [USER] Order placed successfully by userId: 689dc4fd3c3060eec290a072, orderId: 689dcc5d3c3060eec290a0ec
+[2025-08-14 04:45:58] [32minfo[39m: [USER] ✅ Token verified for user ID: 689dc4fd3c3060eec290a072
+[2025-08-14 04:45:58] [32minfo[39m: [USER] 🧭 Inside POST /order route
+[2025-08-14 04:45:58] [32minfo[39m: [USER] Order placed successfully by userId: 689dc4fd3c3060eec290a072, orderId: 689dcc763c3060eec290a0ef
+[2025-08-14 04:46:35] [32minfo[39m: [USER] ✅ Token verified for user ID: 689dc4fd3c3060eec290a072
+[2025-08-14 04:46:35] [32minfo[39m: [USER] 🧭 Inside POST /order route
+[2025-08-14 04:46:35] [32minfo[39m: [USER] Order placed successfully by userId: 689dc4fd3c3060eec290a072, orderId: 689dcc9b3c3060eec290a0f2
+[2025-08-14 04:46:55] [32minfo[39m: [USER] ✅ Token verified for user ID: 689dc4fd3c3060eec290a072
+[2025-08-14 04:46:55] [32minfo[39m: [USER] 🧭 Inside POST /order route
+[2025-08-14 04:46:55] [32minfo[39m: [USER] Order placed successfully by userId: 689dc4fd3c3060eec290a072, orderId: 689dccaf3c3060eec290a0f5
+[2025-08-14 04:47:36] [32minfo[39m: [USER] ✅ Token verified for user ID: 689dc4fd3c3060eec290a072
+[2025-08-14 04:47:36] [32minfo[39m: [USER] 🧭 Inside POST /order route
+[2025-08-14 04:47:36] [32minfo[39m: [USER] Order placed successfully by userId: 689dc4fd3c3060eec290a072, orderId: 689dccd83c3060eec290a0f8
+[2025-08-14 04:48:59] [32minfo[39m: [USER] ✅ Token verified for user ID: 689dc4fd3c3060eec290a072
+[2025-08-14 04:49:25] [32minfo[39m: [USER] ✅ Token verified for user ID: 689dc4fd3c3060eec290a072
+[2025-08-14 04:49:31] [32minfo[39m: [USER] ✅ Token verified for user ID: 689dc4fd3c3060eec290a072
+[2025-08-14 05:01:40] [32minfo[39m: ✅ Cart saved for userId: user456
+[2025-08-14 05:01:51] [32minfo[39m: [USER] ✅ Token verified for user ID: 689dc4fd3c3060eec290a072
+[2025-08-14 05:01:51] [32minfo[39m: [USER] 🛒 Get Cart: Cart fetched successfully for userId user456
+[2025-08-14 05:02:20] [32minfo[39m: [USER] ✅ Token verified for user ID: 689dc4fd3c3060eec290a072
+[2025-08-14 05:02:20] [32minfo[39m: [USER] 🛒 Get Cart: Cart fetched successfully for userId user456
+[2025-08-14 05:11:13] [32minfo[39m: 🚀 Server running on port 5000
+[2025-08-14 05:11:14] [32minfo[39m: ✅ MongoDB connected
+[2025-08-14 05:14:23] [32minfo[39m: 🚀 Server running on port 5000
+[2025-08-14 05:14:23] [32minfo[39m: ✅ MongoDB connected
+[2025-08-16 10:21:04] [32minfo[39m: 🚀 Server running on port 5000
+[2025-08-16 10:21:04] [32minfo[39m: ✅ MongoDB connected
+[2025-08-16 19:56:33] [32minfo[39m: 🚀 Server running on port 5000
+[2025-08-16 19:56:34] [32minfo[39m: ✅ MongoDB connected
+[2025-08-16 20:05:41] [32minfo[39m: 🚀 Server running on port 5000
+[2025-08-16 20:05:42] [32minfo[39m: ✅ MongoDB connected
+[2025-08-16 20:16:42] [32minfo[39m: 🚀 Server running on port 5000
+[2025-08-16 20:16:43] [32minfo[39m: ✅ MongoDB connected
+[2025-08-16 20:18:58] [32minfo[39m: 🚀 Server running on port 5000
+[2025-08-16 20:18:58] [32minfo[39m: ✅ MongoDB connected
+[2025-08-16 20:21:01] [32minfo[39m: [USER] New user registered: tufaunetrujo-6828@yopmail.com (ID: 68a09ad5727782e2b41ed5a5)
+[2025-08-16 20:49:42] [32minfo[39m: 🚀 Server running on port 5000
+[2025-08-16 20:49:43] [32minfo[39m: ✅ MongoDB connected
+[2025-08-16 21:09:08] [32minfo[39m: 🚀 Server running on port 5000
+[2025-08-16 21:09:09] [32minfo[39m: ✅ MongoDB connected
+[2025-08-16 21:13:26] [32minfo[39m: 🚀 Server running on port 5000
+[2025-08-16 21:13:26] [32minfo[39m: ✅ MongoDB connected
+[2025-08-16 21:16:22] [32minfo[39m: 🚀 Server running on port 5000
+[2025-08-16 21:16:23] [32minfo[39m: ✅ MongoDB connected
+[2025-08-16 21:33:07] [32minfo[39m: 🚀 Server running on port 5000
+[2025-08-16 21:33:08] [32minfo[39m: ✅ MongoDB connected
+[2025-08-16 21:36:03] [32minfo[39m: 🚀 Server running on port 5000
+[2025-08-16 21:36:04] [32minfo[39m: ✅ MongoDB connected
+[2025-08-16 21:40:35] [32minfo[39m: 🚀 Server running on port 5000
+[2025-08-16 21:40:36] [32minfo[39m: ✅ MongoDB connected
+[2025-08-16 21:56:17] [32minfo[39m: 🚀 Server running on port 5000
+[2025-08-16 21:56:18] [32minfo[39m: ✅ MongoDB connected
+[2025-08-16 22:09:29] [32minfo[39m: 🚀 Server running on port 5000
+[2025-08-16 22:09:30] [32minfo[39m: ✅ MongoDB connected
+[2025-08-16 22:15:32] [32minfo[39m: 🚀 Server running on port 5000
+[2025-08-16 22:15:33] [32minfo[39m: ✅ MongoDB connected
+[2025-08-16 22:16:15] [32minfo[39m: 🚀 Server running on port 5000
+[2025-08-16 22:16:16] [32minfo[39m: ✅ MongoDB connected
+[2025-08-16 22:19:46] [32minfo[39m: 🚀 Server running on port 5000
+[2025-08-16 22:19:47] [32minfo[39m: ✅ MongoDB connected
+[2025-08-16 22:22:32] [32minfo[39m: 🚀 Server running on port 5000
+[2025-08-16 22:22:33] [32minfo[39m: ✅ MongoDB connected
+[2025-08-17 15:58:40] [32minfo[39m: 🚀 Server running on port 5000
+[2025-08-17 15:58:41] [32minfo[39m: ✅ MongoDB connected
+[2025-08-17 16:08:44] [32minfo[39m: 🚀 Server running on port 5000
+[2025-08-17 16:08:45] [32minfo[39m: ✅ MongoDB connected
+[2025-08-17 16:09:29] [32minfo[39m: 🚀 Server running on port 5000
+[2025-08-17 16:09:30] [32minfo[39m: ✅ MongoDB connected
+[2025-08-17 16:12:38] [32minfo[39m: 🚀 Server running on port 5000
+[2025-08-17 16:12:39] [32minfo[39m: ✅ MongoDB connected
+[2025-08-17 16:18:47] [32minfo[39m: 🚀 Server running on port 5000
+[2025-08-17 16:18:48] [32minfo[39m: ✅ MongoDB connected
+[2025-08-17 16:26:22] [32minfo[39m: 🚀 Server running on port 5000
+[2025-08-17 16:26:22] [32minfo[39m: ✅ MongoDB connected
+[2025-08-17 16:27:34] [32minfo[39m: 🚀 Server running on port 5000
+[2025-08-17 16:27:35] [32minfo[39m: ✅ MongoDB connected
+[2025-08-17 16:32:42] [32minfo[39m: 🚀 Server running on port 5000
+[2025-08-17 16:32:43] [32minfo[39m: ✅ MongoDB connected
+[2025-08-17 16:34:45] [32minfo[39m: 🚀 Server running on port 5000
+[2025-08-17 16:34:46] [32minfo[39m: ✅ MongoDB connected
+[2025-08-17 16:37:26] [32minfo[39m: 🚀 Server running on port 5000
+[2025-08-17 16:37:27] [32minfo[39m: ✅ MongoDB connected
+[2025-08-17 16:44:58] [32minfo[39m: [USER] New user registered: foxalucezoi-4287@yopmail.com (ID: 68a1b9b2f3cea6e67255c1e8)
+[2025-08-17 16:45:50] [32minfo[39m: [USER] Login successful for user foxalucezoi-4287@yopmail.com
+[2025-08-17 16:46:41] [32minfo[39m: [EMAIL] 📧 Preparing to send OTP email to: foxalucezoi-4287@yopmail.com
+[2025-08-17 16:46:43] [32minfo[39m: [EMAIL] ✅ Email sent to: foxalucezoi-4287@yopmail.com
+[2025-08-17 16:46:43] [32minfo[39m: [EMAIL] 📤 Gmail response: 250 2.0.0 OK  1755429403 d2e1a72fcca58-76e452b40d3sm4847470b3a.51 - gsmtp
+[2025-08-17 16:46:43] [32minfo[39m: [EMAIL] ⏱ Email sent in 2452 ms
+[2025-08-17 16:46:44] [32minfo[39m: [EMAIL] 📩 Message ID: <e69a7e6e-ec44-4220-f10d-614d8347af09@gmail.com>
+[2025-08-17 16:46:44] [32minfo[39m: [USER] Sending to:
+[2025-08-17 16:46:44] [32minfo[39m: [USER] 📤 OTP email sent to foxalucezoi-4287@yopmail.com in 2457 ms
+[2025-08-17 16:47:39] [32minfo[39m: [USER] Password reset successful for user foxalucezoi-4287@yopmail.com
+[2025-08-17 17:05:20] [32minfo[39m: 🚀 Server running on port 5000
+[2025-08-17 17:05:21] [32minfo[39m: ✅ MongoDB connected
+[2025-08-17 17:05:52] [32minfo[39m: [EMAIL] 📧 Preparing to send OTP email to: foxalucezoi-4287@yopmail.com
+[2025-08-17 17:05:54] [32minfo[39m: [EMAIL] ✅ Email sent to: foxalucezoi-4287@yopmail.com
+[2025-08-17 17:05:54] [32minfo[39m: [EMAIL] 📤 Gmail response: 250 2.0.0 OK  1755430554 98e67ed59e1d1-3234368aeadsm5434194a91.0 - gsmtp
+[2025-08-17 17:05:54] [32minfo[39m: [EMAIL] ⏱ Email sent in 2610 ms
+[2025-08-17 17:05:54] [32minfo[39m: [EMAIL] 📩 Message ID: <551b064d-1556-6299-a4aa-5bb1f6cd3f9c@gmail.com>
+[2025-08-17 17:05:54] [32minfo[39m: [USER] Sending to:
+[2025-08-17 17:05:54] [32minfo[39m: [USER] 📤 OTP email sent to foxalucezoi-4287@yopmail.com in 2615 ms
+[2025-08-17 17:06:48] [32minfo[39m: [USER] Password reset successful for user foxalucezoi-4287@yopmail.com
+[2025-08-17 17:10:53] [32minfo[39m: 🚀 Server running on port 5000
+[2025-08-17 17:10:54] [32minfo[39m: ✅ MongoDB connected
+[2025-08-17 17:12:07] [32minfo[39m: 🚀 Server running on port 5000
+[2025-08-17 17:12:07] [32minfo[39m: ✅ MongoDB connected
+[2025-08-17 17:12:40] [32minfo[39m: [EMAIL] 📧 Preparing to send OTP email to: foxalucezoi-4287@yopmail.com
+[2025-08-17 17:12:42] [32minfo[39m: [EMAIL] ✅ Email sent to: foxalucezoi-4287@yopmail.com
+[2025-08-17 17:12:42] [32minfo[39m: [EMAIL] 📤 Gmail response: 250 2.0.0 OK  1755430962 d9443c01a7336-2446d50f71bsm53423235ad.80 - gsmtp
+[2025-08-17 17:12:42] [32minfo[39m: [EMAIL] ⏱ Email sent in 2414 ms
+[2025-08-17 17:12:42] [32minfo[39m: [EMAIL] 📩 Message ID: <33fb03b6-852c-d87a-4628-e163729072dd@gmail.com>
+[2025-08-17 17:12:42] [32minfo[39m: [USER] Sending to:
+[2025-08-17 17:12:42] [32minfo[39m: [USER] 📤 OTP email sent to foxalucezoi-4287@yopmail.com in 2433 ms
+[2025-08-17 17:13:20] [32minfo[39m: [USER] Password reset successful for user foxalucezoi-4287@yopmail.com
+[2025-08-17 17:15:34] [32minfo[39m: 🚀 Server running on port 5000
+[2025-08-17 17:15:35] [32minfo[39m: ✅ MongoDB connected
+[2025-08-17 17:23:57] [32minfo[39m: 🚀 Server running on port 5000
+[2025-08-17 17:23:58] [32minfo[39m: ✅ MongoDB connected
+[2025-08-17 17:32:39] [32minfo[39m: 🚀 Server running on port 5000
+[2025-08-17 17:32:40] [32minfo[39m: ✅ MongoDB connected
+[2025-08-17 17:33:16] [32minfo[39m: 🚀 Server running on port 5000
+[2025-08-17 17:33:17] [32minfo[39m: ✅ MongoDB connected
+[2025-08-17 17:51:58] [32minfo[39m: 🚀 Server running on port 5000
+[2025-08-17 17:51:59] [32minfo[39m: ✅ MongoDB connected
+[2025-08-17 17:52:50] [32minfo[39m: 🚀 Server running on port 5000
+[2025-08-17 17:52:50] [32minfo[39m: ✅ MongoDB connected
+[2025-08-17 18:01:32] [32minfo[39m: 🚀 Server running on port 5000
+[2025-08-17 18:01:33] [32minfo[39m: ✅ MongoDB connected
+[2025-08-17 18:07:14] [32minfo[39m: 🚀 Server running on port 5000
+[2025-08-17 18:07:15] [32minfo[39m: ✅ MongoDB connected
+[2025-08-17 18:24:55] [32minfo[39m: 🚀 Server running on port 5000
+[2025-08-17 18:24:55] [32minfo[39m: ✅ MongoDB connected
+[2025-08-17 18:38:03] [32minfo[39m: 🚀 Server running on port 5000
+[2025-08-17 18:38:04] [32minfo[39m: ✅ MongoDB connected
+[2025-08-17 18:43:50] [32minfo[39m: 🚀 Server running on port 5000
+[2025-08-17 18:43:51] [32minfo[39m: ✅ MongoDB connected
+[2025-08-17 19:00:09] [32minfo[39m: 🚀 Server running on port 5000
+[2025-08-17 19:00:10] [32minfo[39m: ✅ MongoDB connected
+[2025-08-17 19:20:25] [32minfo[39m: 🚀 Server running on port 5000
+[2025-08-17 19:29:53] [31merror[39m: ❌ MongoDB error querySrv ETIMEOUT _mongodb._tcp.cluster0.ciqbnzp.mongodb.net
+[2025-08-17 19:33:50] [32minfo[39m: 🚀 Server running on port 5000
+[2025-08-17 19:33:51] [32minfo[39m: ✅ MongoDB connected
+[2025-08-17 19:47:58] [32minfo[39m: 🚀 Server running on port 5000
+[2025-08-17 19:47:59] [32minfo[39m: ✅ MongoDB connected
+[2025-08-17 19:48:19] [32minfo[39m: 🚀 Server running on port 5000
+[2025-08-17 19:48:20] [32minfo[39m: ✅ MongoDB connected
+[2025-08-17 19:55:53] [32minfo[39m: 🚀 Server running on port 5000
+[2025-08-17 19:55:55] [32minfo[39m: ✅ MongoDB connected
+[2025-08-17 19:56:51] [32minfo[39m: 🚀 Server running on port 5000
+[2025-08-17 19:56:52] [32minfo[39m: ✅ MongoDB connected
+[2025-08-17 20:08:30] [32minfo[39m: [USER] Login successful for user jeittaginnofre-7050@yopmail.com
+[2025-08-17 20:09:30] [32minfo[39m: [EMAIL] 📧 Preparing to send OTP email to: jeittaginnofre-7050@yopmail.com
+[2025-08-17 20:09:33] [32minfo[39m: [EMAIL] ✅ Email sent to: jeittaginnofre-7050@yopmail.com
+[2025-08-17 20:09:33] [32minfo[39m: [EMAIL] 📤 Gmail response: 250 2.0.0 OK  1755441573 98e67ed59e1d1-32328d0a204sm3869557a91.3 - gsmtp
+[2025-08-17 20:09:33] [32minfo[39m: [EMAIL] ⏱ Email sent in 3036 ms
+[2025-08-17 20:09:33] [32minfo[39m: [EMAIL] 📩 Message ID: <1f56ba77-f4f5-1fdc-3116-d2a55ccd1769@gmail.com>
+[2025-08-17 20:09:33] [32minfo[39m: [USER] Sending to:
+[2025-08-17 20:09:33] [32minfo[39m: [USER] 📤 OTP email sent to jeittaginnofre-7050@yopmail.com in 3041 ms
+[2025-08-17 20:13:20] [32minfo[39m: 🚀 Server running on port 5000
+[2025-08-17 20:13:21] [32minfo[39m: ✅ MongoDB connected

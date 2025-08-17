@@ -5,7 +5,7 @@ const {
   registerUser,
   loginUser,
   forgotPassword,
-  verifyOtp,
+  // verifyOtp,
   resetPassword,
   getAllUsers,
   getUserById,
@@ -106,33 +106,33 @@ router.post("/login", loginUser);
  *         description: Server error
  */
 router.post("/forgot-password", forgotPassword);
-/**
- * @swagger
- * /api/user/verify-otp:
- *   post:
- *     summary: Verify the OTP for password reset or account verification
- *     tags:
- *       - "Users"
- *     requestBody:
- *       required: true
- *       content:
- *         application/json:
- *           schema:
- *             type: object
- *             properties:
- *               otp:
- *                 type: string
- *                 example: "756110"
- *               email:
- *                 type: string
- *                 example: "user@example.com"
- *     responses:
- *       200:
- *         description: OTP verified successfully
- *       400:
- *         description: Invalid OTP or expired
- */
-router.post('/verify-otp', verifyOtp);
+// /**
+//  * @swagger
+//  * /api/user/verify-otp:
+//  *   post:
+//  *     summary: Verify the OTP for password reset or account verification
+//  *     tags:
+//  *       - "Users"
+//  *     requestBody:
+//  *       required: true
+//  *       content:
+//  *         application/json:
+//  *           schema:
+//  *             type: object
+//  *             properties:
+//  *               otp:
+//  *                 type: string
+//  *                 example: "756110"
+//  *               email:
+//  *                 type: string
+//  *                 example: "user@example.com"
+//  *     responses:
+//  *       200:
+//  *         description: OTP verified successfully
+//  *       400:
+//  *         description: Invalid OTP or expired
+//  */
+// router.post('/verify-otp', verifyOtp);
 
 /**
  * @swagger

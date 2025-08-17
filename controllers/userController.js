@@ -15,29 +15,24 @@ exports.registerUser = async (req, res) => {
 
     const existing = await User.findOne({ email });
     if (existing) {
-      userLogger.warn(`Registration failed: Email already exists (${email})`);
-      return res.status(400).json({ message: Messages.USER.SUCCESS.USER_EXIST});
+      return res.status(400).json({ message: Messages.USER.SUCCESS.USER_EXIST });
     }
 
-    const hashed = await bcrypt.hash(password, 10);
-    const user = await User.create({ name, email, password: hashed });
-
-    userLogger.info(`New user registered: ${user.email} (ID: ${user._id})`);
+    const user = await User.create({ name, email, password }); // no manual hash
 
     const token = jwt.sign({ id: user._id }, process.env.JWT_SECRET, {
       expiresIn: "1h",
     });
 
     res.status(201).json({
-      messag: Messages.USER.SUCCESS.REGISTER,
+      message: Messages.USER.SUCCESS.REGISTER,
       userId: user._id,
       token,
     });
   } catch (err) {
-    userLogger.error(`Registration error: ${err.message}`);
-    res.status(500).json({ message:Messages.COMMON.ERROR.SERVER_ERROR});
+    res.status(500).json({ message: Messages.COMMON.ERROR.SERVER_ERROR });
   }
-};
+}
 
 exports.getAllUsers = async (req, res) => {
   const users = await User.find().select('-password');
@@ -67,13 +62,13 @@ exports.loginUser = async (req, res) => {
 
     if (!email || !password) {
       userLogger.warn("Login failed: Missing email or password");
-      return res.status(400).json({ message: Messages.USER.ERROR. EMAIL_PASSWORD_REQUIRED });
+      return res.status(400).json({ message: Messages.USER.ERROR.EMAIL_PASSWORD_REQUIRED });
     }
 
     const user = await User.findOne({ email });
     if (!user) {
        userLogger.warn(`Login failed: No user found with email ${email}`);
-      return res.status(401).json({ message: Messages.USER.ERROR.EMAIL_PASSWORD_REQUIRED });
+      return res.status(401).json({ message: Messages.USER.ERROR.INVALID_PASSWORD });
     }
 
     // If passwords are hashed, use bcrypt:
@@ -160,38 +155,38 @@ exports.forgotPassword = async (req, res) => {
 };
 
 // verifyOtp Controller
-exports.verifyOtp = async (req, res) => {
-  try {
-    const { email, otp } = req.body;
+// exports.verifyOtp = async (req, res) => {
+//   try {
+//     const { email, otp } = req.body;
 
-    if (!email || !otp) {
-      userLogger.warn(`[USER] OTP verification failed - Missing email or otp`);
-      return res.status(400).json({ message: Messages.USER.ERROR.MISSING_FIELDS });
-    }
+//     if (!email || !otp) {
+//       userLogger.warn(`[USER] OTP verification failed - Missing email or otp`);
+//       return res.status(400).json({ message: Messages.USER.ERROR.MISSING_FIELDS });
+//     }
 
-    // Hash the OTP to match stored hashed token
-    const hashedOTP = crypto.createHash("sha256").update(otp).digest("hex");
+//     // Hash the OTP to match stored hashed token
+//     const hashedOTP = crypto.createHash("sha256").update(otp).digest("hex");
 
-    // Find user with this email and valid OTP
-    const user = await User.findOne({
-      email,
-      resetPasswordToken: hashedOTP,
-      resetPasswordExpires: { $gt: Date.now() }, // not expired
-    });
+//     // Find user with this email and valid OTP
+//     const user = await User.findOne({
+//       email,
+//       resetPasswordToken: hashedOTP,
+//       resetPasswordExpires: { $gt: Date.now() }, // not expired
+//     });
 
-    if (!user) {
-      userLogger.warn(`[USER] OTP verification failed for ${email} - Invalid or expired OTP`);
-      return res.status(400).json({ message: Messages.USER.ERROR.OTP_EXPIRED });
-    }
+//     if (!user) {
+//       userLogger.warn(`[USER] OTP verification failed for ${email} - Invalid or expired OTP`);
+//       return res.status(400).json({ message: Messages.USER.ERROR.OTP_EXPIRED });
+//     }
 
-    userLogger.info(`[USER] OTP verified successfully for ${email}`);
-    return res.status(200).json({ message: Messages.USER.SUCCESS.OTP_VERIFIED });
+//     userLogger.info(`[USER] OTP verified successfully for ${email}`);
+//     return res.status(200).json({ message: Messages.USER.SUCCESS.OTP_VERIFIED });
 
-  } catch (err) {
-    userLogger.error(`OTP verification error: ${err.message}`);
-    return res.status(500).json({ message: Messages.COMMON.ERROR.SERVER_ERROR });
-  }
-};
+//   } catch (err) {
+//     userLogger.error(`OTP verification error: ${err.message}`);
+//     return res.status(500).json({ message: Messages.COMMON.ERROR.SERVER_ERROR });
+//   }
+// };
 
 
 
@@ -199,44 +194,38 @@ exports.verifyOtp = async (req, res) => {
 exports.resetPassword = async (req, res) => {
   try {
     const { OTP, newPassword, confirmPassword } = req.body;
-    userLogger.debug('Reset password body:', req.body);
 
     if (!OTP || !newPassword || !confirmPassword) {
-       userLogger.warn(`[USER] Reset password attempt failed - Missing fields: otp=${OTP}, newPassword=${newPassword}, confirmPassword=${confirmPassword}`);
       return res.status(400).json({ message: Messages.USER.ERROR.MISSING_FIELDS });
     }
 
     if (newPassword !== confirmPassword) {
-      userLogger.warn("Reset password failed: Passwords do not match");
       return res.status(400).json({ message: Messages.USER.ERROR.INVALID_PASSWORD });
     }
 
-    // Hash the OTP to match what was stored
     const hashedOTP = crypto.createHash("sha256").update(OTP).digest("hex");
 
-    // Find user by matching hashed OTP
     const user = await User.findOne({
       resetPasswordToken: hashedOTP,
       resetPasswordExpires: { $gt: Date.now() },
     });
 
     if (!user) {
-       userLogger.warn("Reset password failed: Invalid or expired OTP");
       return res.status(400).json({ message: Messages.USER.ERROR.OTP_EXPIRED });
     }
 
-    // Update password and clear OTP fields
-    user.password = newPassword;
+    user.password = newPassword; 
+    user.markModified("password"); // plain assignment
     user.resetPasswordToken = undefined;
     user.resetPasswordExpires = undefined;
-    await user.save();
-     userLogger.info(`Password reset successful for user ${user.email}`);
-    return res.status(200).json({ message:Messages.USER.SUCCESS.PASSWORD_RESET });
+    await user.save(); // schema hook hashes
+
+    return res.status(200).json({ message: Messages.USER.SUCCESS.PASSWORD_RESET });
   } catch (err) {
-    userLogger.error(`Reset password error: ${err.message}`);
-    return res.status(500).json({ message: Messages.COMMON.ERROR.SERVER_ERROR, error: err.message });
+    return res.status(500).json({ message: Messages.COMMON.ERROR.SERVER_ERROR });
   }
 };
+
 
 // View Profile Functionality
 exports.getProfile = async (req, res) => {
@@ -309,7 +298,3 @@ exports.getProfile = async (req, res) => {
     res.status(500).json({ message:Messages.COMMON.ERROR.SERVER_ERROR, error: err.message });
   }
 };
-
-
-
-

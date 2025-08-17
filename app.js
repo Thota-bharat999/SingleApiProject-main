@@ -20,6 +20,7 @@ const app = express();
 // Middleware
 app.use(cors()); // Enable CORS
 app.use(express.json());
+app.use(express.urlencoded({ extended: true }))
 
 // Route Middlewares
 app.use('/api/user', userRoutes);
