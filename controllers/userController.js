@@ -8,7 +8,7 @@ const jwt = require('jsonwebtoken');
 const sendEmail = require("../utils/sendEmail");
 const mongoose = require("mongoose");
 const Cart = require("../models/cartModel");
-
+const Product = require("../Admin/productModel"); 
 exports.registerUser = async (req, res) => {
   try {
     const { name, email, password } = req.body;
@@ -250,25 +250,34 @@ exports.getProfile = async (req, res) => {
   }
 };
 // View Carts
- exports.getCartByUserId = async (req, res) => {
+exports.getCartByUserId = async (req, res) => {
   try {
     const { userId } = req.params;
+    const { limit = 10, offset = 0, search = "" } = req.query; // 👈 pagination + search
 
     if (!userId) {
       userLogger.warn("🛒 Get Cart: Missing userId in request");
-      return res.status(400).json({ message:Messages.USER.ERROR.VIEW_USERS_REQUIRED });
+      return res.status(400).json({ message: Messages.USER.ERROR.VIEW_USERS_REQUIRED });
     }
 
     const cart = await Cart.findOne({ userId });
 
     if (!cart || cart.products.length === 0) {
       userLogger.info(`🛒 Get Cart: No items found for userId ${userId}`);
-      return res.status(404).json({ message:Messages.USER.ERROR.CART_USER_REQUIED });
+      return res.status(404).json({ message: Messages.USER.ERROR.CART_USER_REQUIED });
     }
 
     let cartTotal = 0;
 
-    const enrichedCart = cart.products.map((product) => {
+    // 🔍 Apply search filter (by product name or ID)
+    let filteredProducts = cart.products.filter((product) => {
+      const nameMatch = product.name?.toLowerCase().includes(search.toLowerCase());
+      const idMatch = product.productId?.toString().includes(search);
+      return nameMatch || idMatch;
+    });
+
+    // Calculate total after filter
+    filteredProducts = filteredProducts.map((product) => {
       const price = Number(product.price) || 0;
       const quantity = Number(product.quantity) || 0;
       const totalPrice = price * quantity;
@@ -277,24 +286,85 @@ exports.getProfile = async (req, res) => {
 
       return {
         productId: product.productId,
-        name: product.name, // corrected field
+        name: product.name,
         price,
         quantity,
-        totalPrice: Number(totalPrice.toFixed(2))
+        totalPrice: Number(totalPrice.toFixed(2)),
       };
     });
 
-    userLogger.info(`🛒 Get Cart: Cart fetched successfully for userId ${userId}`);
+    // 📜 Apply pagination (infinite scroll style)
+    const totalProducts = filteredProducts.length;
+    const paginatedProducts = filteredProducts.slice(
+      parseInt(offset),
+      parseInt(offset) + parseInt(limit)
+    );
+
+    userLogger.info(
+      `🛒 Get Cart: Cart fetched for userId ${userId}, showing ${paginatedProducts.length}/${totalProducts} items`
+    );
 
     res.status(200).json({
       userId: cart.userId,
-      cart: enrichedCart,
+      products: paginatedProducts, // only return requested slice
+      totalProducts,
       cartTotal: Number(cartTotal.toFixed(2)),
-      currency: cart.currency || "INR"
+      currency: cart.currency || "INR",
+      hasMore: parseInt(offset) + parseInt(limit) < totalProducts, // 👈 for infinite scroll
     });
 
   } catch (err) {
-    userLogger.error(`❌ Get Cart Error for userId ${req.params.userId || "unknown"}: ${err.message}`);
-    res.status(500).json({ message:Messages.COMMON.ERROR.SERVER_ERROR, error: err.message });
+    userLogger.error(
+      `❌ Get Cart Error for userId ${req.params.userId || "unknown"}: ${err.message}`
+    );
+    res.status(500).json({ message: Messages.COMMON.ERROR.SERVER_ERROR, error: err.message });
+  }
+};
+// controllers/productController.js
+
+exports.getProducts = async (req, res) => {
+  try {
+    let { search, limit, offset } = req.query;
+
+    // defaults
+    limit = parseInt(limit) || 10;
+    offset = parseInt(offset) || 0;
+
+    // Build query
+    const query = {};
+    if (search) {
+      query.$or = [
+        { name: { $regex: search, $options: "i" } },
+        { brand: { $regex: search, $options: "i" } },
+        { description: { $regex: search, $options: "i" } },
+        { category: { $regex: search, $options: "i" } }
+      ];
+    }
+
+    // Fetch products with pagination
+    const products = await Product.find(query)
+      .skip(offset)
+      .limit(limit)
+      .sort({ createdAt: -1 }); // newest first
+
+    // Count total matching products
+    const total = await Product.countDocuments(query);
+
+    logger.info(`✅ Products fetched: ${products.length}/${total}`);
+
+    res.status(200).json({
+      products,
+      pagination: {
+        total,
+        limit,
+        offset,
+        hasMore: offset + products.length < total
+      }
+    });
+  } catch (err) {
+    logger.error(`❌ Get Products Error: ${err.message}`);
+    res
+      .status(500)
+      .json({ message: Messages.COMMON.ERROR.SERVER_ERROR, error: err.message });
   }
 };

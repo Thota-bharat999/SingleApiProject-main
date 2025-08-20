@@ -11,7 +11,7 @@ const options = {
     },
     servers: [
       {
-        url: 'https://singleapiproject-main-6.onrender.com', // Local root
+        url: 'https://singleapiproject-main-7.onrender.com', // Local root
         description: 'Local API Server',
       },
     ],

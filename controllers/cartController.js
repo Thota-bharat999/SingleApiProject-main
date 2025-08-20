@@ -5,6 +5,7 @@ const Messages = require("../utils/messages");
 exports.addToCart = async (req, res) => {
   try {
     const { userId, products } = req.body;
+    const { limit = 10, offset = 0 } = req.query; // 👈 pagination params (defaults)
 
     if (!userId || !Array.isArray(products) || products.length === 0) {
       return res.status(400).json({ message: Messages.USER.ERROR.ADD_TO_CART_INVALID });
@@ -23,22 +24,24 @@ exports.addToCart = async (req, res) => {
 
       return {
         productId: item.productId,
-        name: item.name || "", // Always keep name
+        name: item.name || "",
         price,
         quantity,
-        totalPrice
+        totalPrice,
       };
     });
 
     if (cart) {
       // Merge existing items
       updatedProducts.forEach((newItem) => {
-        const existingItem = cart.products.find(p => p.productId === newItem.productId);
+        const existingItem = cart.products.find(
+          (p) => p.productId === newItem.productId
+        );
         if (existingItem) {
           existingItem.quantity += newItem.quantity;
           existingItem.totalPrice += newItem.totalPrice;
           if (!existingItem.name && newItem.name) {
-            existingItem.name = newItem.name; // Ensure name is filled
+            existingItem.name = newItem.name;
           }
         } else {
           cart.products.push(newItem);
@@ -57,13 +60,25 @@ exports.addToCart = async (req, res) => {
 
     await cart.save();
 
+    // ✅ Pagination logic for infinite scrolling
+    const totalProducts = cart.products.length;
+    const paginatedProducts = cart.products.slice(
+      parseInt(offset),
+      parseInt(offset) + parseInt(limit)
+    );
+
     res.status(200).json({
       message: Messages.USER.SUCCESS.ADD_TO_CART,
-      cart // Send updated cart in response
+      cartTotal: cart.cartTotal,
+      totalProducts,
+      products: paginatedProducts, // only send the current page
+      hasMore: parseInt(offset) + parseInt(limit) < totalProducts, // 👈 helpful for infinite scroll
     });
-
   } catch (err) {
     logger.error(`❌ Error in addToCart: ${err.message}`);
-    res.status(500).json({ message: Messages.COMMON.ERROR.SERVER_ERROR, error: err.message });
+    res
+      .status(500)
+      .json({ message: Messages.COMMON.ERROR.SERVER_ERROR, error: err.message });
   }
 };
+
