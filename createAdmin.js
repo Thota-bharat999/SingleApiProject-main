@@ -1,28 +1,36 @@
 const mongoose = require("mongoose");
 const bcrypt = require("bcryptjs");
 const Admin = require("./Admin/authModel"); // Adjust path
-const logger=require('./utils/logger');
+const logger = require("./utils/logger");
 const adminLogger = require("./utils/adminLogger");
+require("dotenv").config();
 
 mongoose.connect(process.env.MONGO_URI)
   .then(async () => {
-    const existing = await Admin.findOne({ email: "jeuwaummukuza-1818@yopmail.com" });
-    if (existing) {
-      logger.warn("⚠️ Admin already exists. Skipping creation.");
+    try {
+      const existing = await Admin.findOne({ email: "doframmattissa-9908@yopmail.com" });
+      if (existing) {
+        logger.warn("⚠️ Admin already exists. Skipping creation.");
+        process.exit();
+      }
+
+      const hashedPassword = await bcrypt.hash("admin@1234", 10);
+      const admin = new Admin({
+        email: "doframmattissa-9908@yopmail.com",
+        password: hashedPassword
+      });
+
+      await admin.save();
+      logger.info("✅ Admin created successfully");
       process.exit();
+    } catch (err) {
+      console.error(`[ADMIN] ❌ Error creating admin (inside then): ${err.message}`);
+      console.error(err.stack);
+      process.exit(1);
     }
-
-    const hashedPassword = await bcrypt.hash("admin@123", 10);
-    const admin = new Admin({
-      email: "jeuwaummukuza-1818@yopmail.com",
-      password: hashedPassword
-    });
-
-    await admin.save();
-    logger.info("✅ Admin created successfully");
-    process.exit();
   })
-  .catch(err => {
-    adminLogger.error("❌ Error creating admin:", err);
+  .catch((err) => {
+    console.error(`[ADMIN] ❌ Error connecting to DB: ${err.message}`);
+    console.error(err.stack);
     process.exit(1);
   });
