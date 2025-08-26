@@ -12,11 +12,15 @@ const sendEmail = async ({ toEmail, subject, html }) => {
     logger.info(`[EMAIL] 📧 Preparing to send OTP email to: ${toEmail}`);
     const start = Date.now();
 
-    // 🔍 Debug environment values
+    // 🔍 Support both upper & camelcase env names
+    const SENDGRID_API_KEY = process.env.SendMoonApi || process.env.SENDMOONAPI;
+    const SUPPORT_EMAIL = process.env.SUPPORT_EMAIL;
+
+    // Debugging logs
     console.log("=== EMAIL DEBUG START ===");
-    console.log("SUPPORT_EMAIL:", process.env.SUPPORT_EMAIL || "❌ Not set");
-    console.log("SendMoonApi exists?:", !!process.env.SendMoonApi);
-    console.log("SendMoonApi (first 6 chars):", process.env.SendMoonApi ? process.env.SendMoonApi.slice(0, 6) + "..." : "❌ Not set");
+    console.log("SUPPORT_EMAIL:", SUPPORT_EMAIL || "❌ Not set");
+    console.log("SENDGRID_API_KEY exists?:", !!SENDGRID_API_KEY);
+    console.log("SENDGRID_API_KEY (first 6 chars):", SENDGRID_API_KEY ? SENDGRID_API_KEY.slice(0, 6) + "..." : "❌ Not set");
     console.log("=== EMAIL DEBUG END ===");
 
     const transporter = nodemailer.createTransport({
@@ -24,19 +28,17 @@ const sendEmail = async ({ toEmail, subject, html }) => {
       port: 587,
       secure: false,
       auth: {
-        user: "apikey", // ✅ this must literally be "apikey"
-        pass: process.env.SendMoonApi,
+        user: "apikey", // ✅ always "apikey"
+        pass: SENDGRID_API_KEY,
       },
     });
-console.log("=== TRANSPORTER CONFIG ===");
-console.log(transporter.options);
 
     const mailOptions = {
-      from: `"APP Support" <${process.env.SUPPORT_EMAIL}>`,
+      from: `"APP Support" <${SUPPORT_EMAIL}>`,
       to: toEmail,
       subject,
       html,
-      text: html.replace(/<[^>]+>/g, ""),
+      text: html.replace(/<[^>]+>/g, ""), // fallback plain text
     };
 
     const result = await transporter.sendMail(mailOptions);
@@ -48,7 +50,7 @@ console.log(transporter.options);
     logger.info(`[EMAIL] 📩 Message ID: ${result.messageId}`);
 
   } catch (error) {
-    console.error("❌ EMAIL ERROR STACK:", error); // 🔍 full error
+    console.error("❌ EMAIL ERROR STACK:", error);
     logger.error(`❌ Email send failed to ${toEmail || "unknown"}: ${error.message}`);
     throw error;
   }
