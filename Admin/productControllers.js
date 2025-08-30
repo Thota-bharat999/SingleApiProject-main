@@ -30,20 +30,23 @@ exports.addProduct = async (req, res) => {
     adminLogger.info(`Product added: ${saved.productId} - ${saved.name}`);
 
     // fetch categoryName from Category collection
-    const category = await Category.findOne({ id: saved.categoryId });
 
-    res.status(201).json({
-      message: Messages.ADMIN.SUCCESS.ADD_PRODUCT,
-      product: {
-        productId: saved.productId,
-        name: saved.name,
-        description: saved.description,
-        price: saved.price,
-        stock: saved.stock,
-        categoryId: saved.categoryId,
-        categoryName: category ? category.name : null,
-      },
-    });
+// populate categoryName dynamically
+const productWithCategory = await Product.findById(saved._id)
+  .populate("categoryId", "name");
+
+res.status(201).json({
+  message: Messages.ADMIN.SUCCESS.ADD_PRODUCT,
+  product: {
+    productId: productWithCategory.productId,
+    name: productWithCategory.name,
+    description: productWithCategory.description,
+    price: productWithCategory.price,
+    stock: productWithCategory.stock,
+    categoryId: productWithCategory.categoryId?._id,
+    categoryName: productWithCategory.categoryId?.name || null,
+  },
+});
   } catch (err) {
     adminLogger.error(`Add Product Error: ${err.message}`);
     res.status(500).json({

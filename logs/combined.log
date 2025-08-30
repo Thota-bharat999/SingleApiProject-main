@@ -1313,3 +1313,9 @@
 [2025-08-30 11:14:06] [32minfo[39m: ✅ MongoDB connected
 [2025-08-30 11:15:35] [32minfo[39m: 🚀 Server running on port 5000
 [2025-08-30 11:15:36] [32minfo[39m: ✅ MongoDB connected
+[2025-08-30 11:31:15] [32minfo[39m: 🚀 Server running on port 5000
+[2025-08-30 11:31:16] [32minfo[39m: ✅ MongoDB connected
+[2025-08-30 11:39:15] [32minfo[39m: 🚀 Server running on port 5000
+[2025-08-30 11:39:19] [31merror[39m: ❌ MongoDB error querySrv EREFUSED _mongodb._tcp.cluster0.ciqbnzp.mongodb.net
+[2025-08-30 11:39:51] [32minfo[39m: 🚀 Server running on port 5000
+[2025-08-30 11:39:51] [31merror[39m: ❌ MongoDB error querySrv EREFUSED _mongodb._tcp.cluster0.ciqbnzp.mongodb.net

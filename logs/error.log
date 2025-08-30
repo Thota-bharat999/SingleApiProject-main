@@ -44,3 +44,5 @@
 [2025-08-12 23:18:39] [31merror[39m: ❌ MongoDB error The `uri` parameter to `openUri()` must be a string, got "undefined". Make sure the first parameter to `mongoose.connect()` or `mongoose.createConnection()` is a string.
 [2025-08-13 00:18:22] [31merror[39m: ❌ MongoDB error bad auth : Authentication failed.
 [2025-08-17 19:29:53] [31merror[39m: ❌ MongoDB error querySrv ETIMEOUT _mongodb._tcp.cluster0.ciqbnzp.mongodb.net
+[2025-08-30 11:39:19] [31merror[39m: ❌ MongoDB error querySrv EREFUSED _mongodb._tcp.cluster0.ciqbnzp.mongodb.net
+[2025-08-30 11:39:51] [31merror[39m: ❌ MongoDB error querySrv EREFUSED _mongodb._tcp.cluster0.ciqbnzp.mongodb.net
