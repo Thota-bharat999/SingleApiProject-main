@@ -501,8 +501,7 @@ router.get('/category', verifyAdmin, getAllCategoris)
  *             example:
  *               message: Server error
  */
-
-router.post('/product', verifyAdmin,addProduct)
+router.post('/product', verifyAdmin, addProduct);
 /**
  * @swagger
  * /api/admin/product/{id}:
@@ -581,7 +580,8 @@ router.post('/product', verifyAdmin,addProduct)
  *             example:
  *               message: Server error
  */
-router.put('/product/:id', verifyAdmin,updateProduct);
+router.put('/product/:id', verifyAdmin, updateProduct);
+
 /**
  * @swagger
  * /api/admin/product/{id}:
@@ -629,53 +629,41 @@ router.put('/product/:id', verifyAdmin,updateProduct);
  *             example:
  *               message: Server error
  */
-router.delete('/product/:id', verifyAdmin,deleteProduct);
+router.delete('/product/:id', verifyAdmin, deleteProduct);
 /**
  * @swagger
- * /api/admin/product:
+ * /api/admin/product/{id}:
  *   get:
- *     summary: Get paginated list of products
+ *     summary: Get a product by ID
  *     tags: [Admin - Products]
  *     security:
  *       - bearerAuth: []
  *     parameters:
- *       - in: query
- *         name: page
+ *       - in: path
+ *         name: id
+ *         required: true
  *         schema:
- *           type: integer
- *           default: 1
- *         description: Page number
- *       - in: query
- *         name: limit
- *         schema:
- *           type: integer
- *           default: 10
- *         description: Number of products per page
+ *           type: string
+ *         description: The productId of the product to retrieve
  *     responses:
  *       200:
- *         description: List of products
+ *         description: Product details
  *         content:
  *           application/json:
  *             example:
- *               page: 1
- *               limit: 10
- *               total: 50
- *               totalPages: 5
- *               products:
- *                 - productId: prod_123abc
- *                   name: iPhone 14
- *                   description: Apple smartphone
- *                   price: 999
- *                   stock: 25
- *                   categoryId: cat_01
- *                   categoryName: Electronics
- *                 - productId: prod_456def
- *                   name: Nike Air Max
- *                   description: Running shoes
- *                   price: 199
- *                   stock: 100
- *                   categoryId: cat_02
- *                   categoryName: Footwear
+ *               productId: prod_123abc
+ *               name: iPhone 14
+ *               description: Latest Apple smartphone
+ *               price: 999.99
+ *               stock: 50
+ *               categoryId: cat_abc123
+ *               categoryName: Electronics
+ *       404:
+ *         description: Product not found
+ *         content:
+ *           application/json:
+ *             example:
+ *               message: Product not found
  *       401:
  *         description: Unauthorized
  *         content:
