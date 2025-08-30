@@ -474,13 +474,14 @@ router.get('/category', verifyAdmin, getAllCategoris)
  *           application/json:
  *             example:
  *               message: Product added successfully
- *               productId: prod_1234abcd
- *       400:
- *         description: Bad request
- *         content:
- *           application/json:
- *             example:
- *               message: All required fields must be filled
+ *               product:
+ *                 productId: prod_1234abcd
+ *                 name: iPhone 14
+ *                 description: Latest Apple smartphone
+ *                 price: 999.99
+ *                 stock: 50
+ *                 categoryId: cat_abc123
+ *                 categoryName: Electronics
  *       401:
  *         description: Unauthorized
  *         content:
@@ -500,6 +501,7 @@ router.get('/category', verifyAdmin, getAllCategoris)
  *             example:
  *               message: Server error
  */
+
 router.post('/product', verifyAdmin,addProduct)
 /**
  * @swagger
@@ -549,8 +551,11 @@ router.post('/product', verifyAdmin,addProduct)
  *               product:
  *                 productId: prod_1234abcd
  *                 name: Updated iPhone 14
+ *                 description: Updated description
  *                 price: 1099.99
  *                 stock: 30
+ *                 categoryId: cat_xyz789
+ *                 categoryName: Mobile Phones
  *       404:
  *         description: Product not found
  *         content:
@@ -663,6 +668,14 @@ router.delete('/product/:id', verifyAdmin,deleteProduct);
  *                   price: 999
  *                   stock: 25
  *                   categoryId: cat_01
+ *                   categoryName: Electronics
+ *                 - productId: prod_456def
+ *                   name: Nike Air Max
+ *                   description: Running shoes
+ *                   price: 199
+ *                   stock: 100
+ *                   categoryId: cat_02
+ *                   categoryName: Footwear
  *       401:
  *         description: Unauthorized
  *         content:

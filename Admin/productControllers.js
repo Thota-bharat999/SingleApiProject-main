@@ -1,39 +1,59 @@
+const Product = require("./productModel");
+const Category = require("./categoryModels");
 const adminLogger = require("../utils/adminLogger");
-const Product=require('./productModel');
-const { v4: uuidv4 } = require('uuid');
+const { v4: uuidv4 } = require("uuid");
 const Messages = require("../utils/messages");
 
-exports.addProduct=async(req,res)=>{
-  try{
-const {name,description,price,stock,categoryId }=req.body;
-if(!name || !price || !stock || !categoryId){
-     adminLogger.warn("Missing required fields in addProduct request");
-    return res.status(400).json({message:Messages.ADMIN.ERROR.MISSING_FIELDS})
-}
-const productId='prod_' + uuidv4().slice(0, 8);
-const newProduct=new Product({
-    name,
-    description,
-    price,
-    stock,
-    categoryId,
-    productId
-});
-const saved=await newProduct.save();
-adminLogger.info(`Product added: ${saved.productId} - ${saved.name}`);
-res.status(201).json({
-     message:Messages.ADMIN.SUCCESS.ADD_PRODUCT,
-     productId: saved.productId,
-})
-    }catch(err){
-    adminLogger.error(`Add Product Error: ${err.message}`);
-    res.status(500).json({ message:Messages.ADMIN.ERROR.SERVER_ERROR, error: err.message });
+// ================== ADD PRODUCT ==================
+exports.addProduct = async (req, res) => {
+  try {
+    const { name, description, price, stock, categoryId } = req.body;
+    if (!name || !price || !stock || !categoryId) {
+      adminLogger.warn("Missing required fields in addProduct request");
+      return res
+        .status(400)
+        .json({ message: Messages.ADMIN.ERROR.MISSING_FIELDS });
     }
-}
 
-// product Update
- // Update the path accordingly
+    const productId = "prod_" + uuidv4().slice(0, 8);
 
+    const newProduct = new Product({
+      name,
+      description,
+      price,
+      stock,
+      categoryId,
+      productId,
+    });
+
+    const saved = await newProduct.save();
+    adminLogger.info(`Product added: ${saved.productId} - ${saved.name}`);
+
+    // fetch categoryName from Category collection
+    const category = await Category.findOne({ id: saved.categoryId });
+
+    res.status(201).json({
+      message: Messages.ADMIN.SUCCESS.ADD_PRODUCT,
+      product: {
+        productId: saved.productId,
+        name: saved.name,
+        description: saved.description,
+        price: saved.price,
+        stock: saved.stock,
+        categoryId: saved.categoryId,
+        categoryName: category ? category.name : null,
+      },
+    });
+  } catch (err) {
+    adminLogger.error(`Add Product Error: ${err.message}`);
+    res.status(500).json({
+      message: Messages.ADMIN.ERROR.SERVER_ERROR,
+      error: err.message,
+    });
+  }
+};
+
+// ================== UPDATE PRODUCT ==================
 exports.updateProduct = async (req, res) => {
   try {
     const productId = req.params.id.trim();
@@ -45,66 +65,125 @@ exports.updateProduct = async (req, res) => {
       { new: true }
     );
 
-    adminLogger.info("Updated Product result:", updatedProduct);
-
     if (!updatedProduct) {
       adminLogger.warn(`Product not found for update: ${productId}`);
-      return res.status(404).json({ message:Messages.ADMIN.ERROR.PRODUCT_NOT_FOUND });
+      return res
+        .status(404)
+        .json({ message: Messages.ADMIN.ERROR.PRODUCT_NOT_FOUND });
     }
-     adminLogger.info(`Product updated successfully: ${productId}`);
-    return res.json({
-      message:Messages.ADMIN.SUCCESS.UPDATE_PRODUCT,
-      product: updatedProduct
+
+    // fetch categoryName from Category collection
+    const category = await Category.findOne({
+      id: updatedProduct.categoryId,
     });
 
+    adminLogger.info(`Product updated successfully: ${productId}`);
+    return res.json({
+      message: Messages.ADMIN.SUCCESS.UPDATE_PRODUCT,
+      product: {
+        productId: updatedProduct.productId,
+        name: updatedProduct.name,
+        description: updatedProduct.description,
+        price: updatedProduct.price,
+        stock: updatedProduct.stock,
+        categoryId: updatedProduct.categoryId,
+        categoryName: category ? category.name : null,
+      },
+    });
   } catch (err) {
-     adminLogger.error(`Update Product Error: ${err.message}`);
-    return res.status(500).json({ message:Messages.ADMIN.ERROR.SERVER_ERROR, error: err.message });
+    adminLogger.error(`Update Product Error: ${err.message}`);
+    return res.status(500).json({
+      message: Messages.ADMIN.ERROR.SERVER_ERROR,
+      error: err.message,
+    });
   }
 };
 
-// Delete Product
-exports.deleteProduct=async(req,res)=>{
-  try{
-    const productId=req.params.id.trim();
+// ================== DELETE PRODUCT ==================
+exports.deleteProduct = async (req, res) => {
+  try {
+    const productId = req.params.id.trim();
     adminLogger.info(`Attempting to delete product with ID: ${productId}`);
-    
-    const deleted=await Product.findOneAndDelete({productId})
-    if(!deleted){
-    adminLogger.warn('product not found:${productId}')
-      return res.status(404).json({message: Messages.ADMIN.ERROR.PRODUCT_NOT_FOUND})
+
+    const deleted = await Product.findOneAndDelete({ productId });
+    if (!deleted) {
+      adminLogger.warn(`Product not found: ${productId}`);
+      return res
+        .status(404)
+        .json({ message: Messages.ADMIN.ERROR.PRODUCT_NOT_FOUND });
     }
-     adminLogger.info(`Product deleted successfully: ${productId}`);
-    res.json({message: Messages.ADMIN.SUCCESS.DELETE_PRODUCT })
 
-  }catch(err){
+    adminLogger.info(`Product deleted successfully: ${productId}`);
+    res.json({ message: Messages.ADMIN.SUCCESS.DELETE_PRODUCT });
+  } catch (err) {
     adminLogger.error(`Delete Product Error: ${err.message}`);
-    res.status(500).json({ message:Messages.ADMIN.ERROR.SERVER_ERROR, error: err.message });
+    res.status(500).json({
+      message: Messages.ADMIN.ERROR.SERVER_ERROR,
+      error: err.message,
+    });
   }
-}
+};
 
-// get products
-exports.getProducts=async(req,res)=>{
-  try{
-const page=parseInt(req.query.page) || 1;
-const limit=parseInt(req.query.limit) || 10;
-const  skip=(page-1)*limit
-adminLogger.info(`Fetching products - Page: ${page}, Limit: ${limit}`);
-const total=await Product.countDocuments();
-const products=await Product.find({},{_id:0,_v:0})
-.skip(skip)
-.limit(limit);
-  adminLogger.info(`Successfully fetched ${products.length} products`);
-return res.status(200).json({
-  page,
-  limit,
-  total,
-  totalPages: Math.ceil(total / limit),
-  products
-})
-  }catch(err){
+// ================== GET PRODUCTS (Paginated with Category Name) ==================
+exports.getProducts = async (req, res) => {
+  try {
+    const page = parseInt(req.query.page) || 1;
+    const limit = parseInt(req.query.limit) || 10;
+    const skip = (page - 1) * limit;
+
+    adminLogger.info(`Fetching products - Page: ${page}, Limit: ${limit}`);
+
+    const total = await Product.countDocuments();
+
+    const products = await Product.aggregate([
+      {
+        $lookup: {
+          from: "categories", // Category collection
+          localField: "categoryId",
+          foreignField: "id",
+          as: "categoryData",
+        },
+      },
+      {
+        $unwind: {
+          path: "$categoryData",
+          preserveNullAndEmptyArrays: true,
+        },
+      },
+      {
+        $project: {
+          _id: 0,
+          __v: 0,
+          "categoryData._id": 0,
+          "categoryData.__v": 0,
+        },
+      },
+      { $skip: skip },
+      { $limit: limit },
+    ]);
+
+    adminLogger.info(`Successfully fetched ${products.length} products`);
+
+    return res.status(200).json({
+      page,
+      limit,
+      total,
+      totalPages: Math.ceil(total / limit),
+      products: products.map((p) => ({
+        productId: p.productId,
+        name: p.name,
+        description: p.description,
+        price: p.price,
+        stock: p.stock,
+        categoryId: p.categoryId,
+        categoryName: p.categoryData ? p.categoryData.name : null,
+      })),
+    });
+  } catch (err) {
     adminLogger.error(`Get Paginated Products Error: ${err.message}`);
-    return res.status(500).json({ message:Messages.ADMIN.ERROR.SERVER_ERROR, error: err.message });
+    return res.status(500).json({
+      message: Messages.ADMIN.ERROR.SERVER_ERROR,
+      error: err.message,
+    });
   }
-}
-
+};

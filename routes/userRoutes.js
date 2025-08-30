@@ -1,4 +1,4 @@
-console.log("✅ Swagger is reading userRoutes.js");
+
 const express = require("express");
 const router = express.Router();
 const {
