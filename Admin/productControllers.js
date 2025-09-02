@@ -5,9 +5,12 @@ const { v4: uuidv4 } = require("uuid");
 const Messages = require("../utils/messages");
 
 // ================== ADD PRODUCT ==================
+
+
 exports.addProduct = async (req, res) => {
   try {
-    const { name, description, price, stock, categoryId } = req.body;
+    const { name, description, price, stock, categoryId, imageUrl, images } = req.body;
+
     if (!name || !price || !stock || !categoryId) {
       adminLogger.warn("Missing required fields in addProduct request");
       return res
@@ -24,29 +27,31 @@ exports.addProduct = async (req, res) => {
       stock,
       categoryId,
       productId,
+      imageUrl: imageUrl || null,   // ✅ add single image
+      images: images || []          // ✅ add multiple images (array)
     });
 
     const saved = await newProduct.save();
     adminLogger.info(`Product added: ${saved.productId} - ${saved.name}`);
 
     // fetch categoryName from Category collection
+    const productWithCategory = await Product.findById(saved._id)
+      .populate("categoryId", "name");
 
-// populate categoryName dynamically
-const productWithCategory = await Product.findById(saved._id)
-  .populate("categoryId", "name");
-
-res.status(201).json({
-  message: Messages.ADMIN.SUCCESS.ADD_PRODUCT,
-  product: {
-    productId: productWithCategory.productId,
-    name: productWithCategory.name,
-    description: productWithCategory.description,
-    price: productWithCategory.price,
-    stock: productWithCategory.stock,
-    categoryId: productWithCategory.categoryId?._id,
-    categoryName: productWithCategory.categoryId?.name || null,
-  },
-});
+    res.status(201).json({
+      message: Messages.ADMIN.SUCCESS.ADD_PRODUCT,
+      product: {
+        productId: productWithCategory.productId,
+        name: productWithCategory.name,
+        description: productWithCategory.description,
+        price: productWithCategory.price,
+        stock: productWithCategory.stock,
+        categoryId: productWithCategory.categoryId?._id,
+        categoryName: productWithCategory.categoryId?.name || null,
+        imageUrl: productWithCategory.imageUrl,  // ✅ return single image
+        images: productWithCategory.images       // ✅ return multiple images
+      },
+    });
   } catch (err) {
     adminLogger.error(`Add Product Error: ${err.message}`);
     res.status(500).json({
@@ -55,6 +60,7 @@ res.status(201).json({
     });
   }
 };
+
 
 // ================== UPDATE PRODUCT ==================
 exports.updateProduct = async (req, res) => {

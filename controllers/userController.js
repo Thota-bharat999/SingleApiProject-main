@@ -324,47 +324,68 @@ exports.getCartByUserId = async (req, res) => {
 
 exports.getProducts = async (req, res) => {
   try {
-    let { search, limit, offset } = req.query;
+    const {
+      search,
+      category,
+      brand,
+      minPrice,
+      maxPrice,
+      page = 1,
+      limit = 10
+    } = req.query;
 
-    // defaults
-    limit = parseInt(limit) || 10;
-    offset = parseInt(offset) || 0;
+    let query = {};
 
-    // Build query
-    const query = {};
+    // Flexible search (case-insensitive)
     if (search) {
       query.$or = [
-        { name: { $regex: search, $options: "i" } },
-        { brand: { $regex: search, $options: "i" } },
-        { description: { $regex: search, $options: "i" } },
-        { category: { $regex: search, $options: "i" } }
+        { name: new RegExp(search, "i") },
+        { description: new RegExp(search, "i") },
+        { brand: new RegExp(search, "i") } // if you have brand field
       ];
     }
 
-    // Fetch products with pagination
-    const products = await Product.find(query)
-      .skip(offset)
-      .limit(limit)
-      .sort({ createdAt: -1 }); // newest first
+    if (category) {
+      query.categoryId = category; // assuming you pass ObjectId from Category
+    }
 
-    // Count total matching products
-    const total = await Product.countDocuments(query);
+    if (minPrice || maxPrice) {
+      query.price = {};
+      if (minPrice) query.price.$gte = Number(minPrice);
+      if (maxPrice) query.price.$lte = Number(maxPrice);
+    }
 
-    userLogger.info(`✅ Products fetched: ${products.length}/${total}`);
+    const skip = (Number(page) - 1) * Number(limit);
 
-    res.status(200).json({
-      products,
+    const [products, total] = await Promise.all([
+      Product.find(query)
+        .populate("categoryId", "name") // ✅ fetch category name
+        .skip(skip)
+        .limit(Number(limit)),
+      Product.countDocuments(query),
+    ]);
+
+    res.json({
+      products: products.map(p => ({
+        productId: p.productId,
+        name: p.name,
+        description: p.description,
+        price: p.price,
+        stock: p.stock,
+        categoryId: p.categoryId?._id,
+        categoryName: p.categoryId?.name || null,
+        imageUrl: p.imageUrl,   // ✅ include main image
+        images: p.images        // ✅ include gallery
+      })),
       pagination: {
         total,
-        limit,
-        offset,
-        hasMore: offset + products.length < total
-      }
+        limit: Number(limit),
+        offset: skip,
+        hasMore: skip + products.length < total,
+      },
     });
   } catch (err) {
-    userLogger.error(`❌ Get Products Error: ${err.message}`);
-    res
-      .status(500)
-      .json({ message: Messages.COMMON.ERROR.SERVER_ERROR, error: err.message });
+    console.error("Error fetching products:", err);
+    res.status(500).json({ message: "Internal Server Error", error: err.message });
   }
 };
