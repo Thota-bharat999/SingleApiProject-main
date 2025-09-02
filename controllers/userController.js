@@ -295,10 +295,31 @@ exports.getCartByUserId = async (req, res) => {
 
     // 📜 Apply pagination (infinite scroll style)
     const totalProducts = filteredProducts.length;
-    const paginatedProducts = filteredProducts.slice(
-      parseInt(offset),
-      parseInt(offset) + parseInt(limit)
+
+    // Enrich cart items with product images
+    const productIds = filteredProducts.map((p) => p.productId);
+    const foundProducts = await Product.find(
+      { productId: { $in: productIds } },
+      { productId: 1, imageUrl: 1, images: 1 }
+    ).lean();
+
+    const imageMap = new Map(
+      foundProducts.map((p) => [
+        p.productId,
+        {
+          imageUrl: p.imageUrl || null,
+          images: Array.isArray(p.images) ? p.images : [],
+        },
+      ])
     );
+
+    const paginatedProducts = filteredProducts
+      .slice(parseInt(offset), parseInt(offset) + parseInt(limit))
+      .map((p) => ({
+        ...p,
+        imageUrl: imageMap.get(p.productId)?.imageUrl || null,
+        images: imageMap.get(p.productId)?.images || [],
+      }));
 
     userLogger.info(
       `🛒 Get Cart: Cart fetched for userId ${userId}, showing ${paginatedProducts.length}/${totalProducts} items`

@@ -1,6 +1,7 @@
 const Cart = require('../models/cartModel'); // User-side cart model
 const logger = require('../utils/logger');
 const Messages = require("../utils/messages");
+const Product = require("../Admin/productModel");
 
 exports.addToCart = async (req, res) => {
   try {
@@ -67,11 +68,34 @@ exports.addToCart = async (req, res) => {
       parseInt(offset) + parseInt(limit)
     );
 
+    // Enrich cart items with product images
+    const pageProductIds = paginatedProducts.map((p) => p.productId);
+    const foundProducts = await Product.find(
+      { productId: { $in: pageProductIds } },
+      { productId: 1, imageUrl: 1, images: 1 }
+    ).lean();
+
+    const imageMap = new Map(
+      foundProducts.map((p) => [
+        p.productId,
+        {
+          imageUrl: p.imageUrl || null,
+          images: Array.isArray(p.images) ? p.images : [],
+        },
+      ])
+    );
+
+    const enrichedProducts = paginatedProducts.map((p) => ({
+      ...p,
+      imageUrl: imageMap.get(p.productId)?.imageUrl || null,
+      images: imageMap.get(p.productId)?.images || [],
+    }));
+
     res.status(200).json({
       message: Messages.USER.SUCCESS.ADD_TO_CART,
       cartTotal: cart.cartTotal,
       totalProducts,
-      products: paginatedProducts, // only send the current page
+      products: enrichedProducts, // only send the current page with images
       hasMore: parseInt(offset) + parseInt(limit) < totalProducts, // 👈 helpful for infinite scroll
     });
   } catch (err) {
