@@ -16,12 +16,12 @@ const sendEmail = async ({ toEmail, subject, html }) => {
     const SENDGRID_API_KEY = process.env.SendMoonApi || process.env.SENDMOONAPI;
     const SUPPORT_EMAIL = process.env.SUPPORT_EMAIL;
 
-    // Debugging logs
-    console.log("=== EMAIL DEBUG START ===");
-    console.log("SUPPORT_EMAIL:", SUPPORT_EMAIL || "❌ Not set");
-    console.log("SENDGRID_API_KEY exists?:", !!SENDGRID_API_KEY);
-    console.log("SENDGRID_API_KEY (first 6 chars):", SENDGRID_API_KEY ? SENDGRID_API_KEY.slice(0, 6) + "..." : "❌ Not set");
-    console.log("=== EMAIL DEBUG END ===");
+    // // Debugging logs
+    // console.log("=== EMAIL DEBUG START ===");
+    // console.log("SUPPORT_EMAIL:", SUPPORT_EMAIL || "❌ Not set");
+    // console.log("SENDGRID_API_KEY exists?:", !!SENDGRID_API_KEY);
+    // console.log("SENDGRID_API_KEY (first 6 chars):", SENDGRID_API_KEY ? SENDGRID_API_KEY.slice(0, 6) + "..." : "❌ Not set");
+    // console.log("=== EMAIL DEBUG END ===");
 
     const transporter = nodemailer.createTransport({
       host: "smtp.sendgrid.net",
