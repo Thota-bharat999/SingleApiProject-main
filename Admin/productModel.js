@@ -6,6 +6,8 @@ const productSchema = new mongoose.Schema({
   description: String,
   price: Number,
   stock: Number,
+  imageUrl: String, // primary image URL
+  images: [String], // optional gallery
   categoryId: { type: mongoose.Schema.Types.ObjectId, ref: "Category" }
 });
 
