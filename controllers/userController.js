@@ -350,7 +350,7 @@ exports.getProducts = async (req, res) => {
     // Count total matching products
     const total = await Product.countDocuments(query);
 
-    logger.info(`✅ Products fetched: ${products.length}/${total}`);
+    userLogger.info(`✅ Products fetched: ${products.length}/${total}`);
 
     res.status(200).json({
       products,
@@ -362,7 +362,7 @@ exports.getProducts = async (req, res) => {
       }
     });
   } catch (err) {
-    logger.error(`❌ Get Products Error: ${err.message}`);
+    userLogger.error(`❌ Get Products Error: ${err.message}`);
     res
       .status(500)
       .json({ message: Messages.COMMON.ERROR.SERVER_ERROR, error: err.message });
