@@ -6,7 +6,7 @@ const Product = require("../Admin/productModel");
 exports.addToCart = async (req, res) => {
   try {
     const { userId, products } = req.body;
-    const { limit = 10, offset = 0 } = req.query; // 👈 pagination params (defaults)
+    const { limit = 10, offset = 0 } = req.query;
 
     if (!userId || !Array.isArray(products) || products.length === 0) {
       return res.status(400).json({ message: Messages.USER.ERROR.ADD_TO_CART_INVALID });
@@ -14,7 +14,7 @@ exports.addToCart = async (req, res) => {
 
     let cart = await Cart.findOne({ userId });
 
-    // Prepare updated products
+    // Calculate updated products
     let cartTotal = 0;
     const updatedProducts = products.map((item) => {
       const price = Number(item.price);
@@ -24,7 +24,7 @@ exports.addToCart = async (req, res) => {
       cartTotal += totalPrice;
 
       return {
-        productId: item.productId,
+        productId: item.productId, // this must match Product._id or Product.productId
         name: item.name || "",
         price,
         quantity,
@@ -33,10 +33,9 @@ exports.addToCart = async (req, res) => {
     });
 
     if (cart) {
-      // Merge existing items
       updatedProducts.forEach((newItem) => {
         const existingItem = cart.products.find(
-          (p) => p.productId === newItem.productId
+          (p) => String(p.productId) === String(newItem.productId)
         );
         if (existingItem) {
           existingItem.quantity += newItem.quantity;
@@ -50,7 +49,6 @@ exports.addToCart = async (req, res) => {
       });
       cart.cartTotal = cart.products.reduce((sum, p) => sum + p.totalPrice, 0);
     } else {
-      // Create new cart
       cart = new Cart({
         userId,
         products: updatedProducts,
@@ -61,23 +59,23 @@ exports.addToCart = async (req, res) => {
 
     await cart.save();
 
-    // ✅ Pagination logic for infinite scrolling
+    // Pagination
     const totalProducts = cart.products.length;
     const paginatedProducts = cart.products.slice(
       parseInt(offset),
       parseInt(offset) + parseInt(limit)
     );
 
-    // Enrich cart items with product images
+    // Fetch product images from DB
     const pageProductIds = paginatedProducts.map((p) => p.productId);
     const foundProducts = await Product.find(
-      { productId: { $in: pageProductIds } },
-      { productId: 1, imageUrl: 1, images: 1 }
+      { _id: { $in: pageProductIds } }, // ✅ using _id instead of productId
+      { _id: 1, imageUrl: 1, images: 1 }
     ).lean();
 
     const imageMap = new Map(
       foundProducts.map((p) => [
-        p.productId,
+        String(p._id),
         {
           imageUrl: p.imageUrl || null,
           images: Array.isArray(p.images) ? p.images : [],
@@ -85,24 +83,25 @@ exports.addToCart = async (req, res) => {
       ])
     );
 
+    // Attach images
     const enrichedProducts = paginatedProducts.map((p) => ({
       ...p,
-      imageUrl: imageMap.get(p.productId)?.imageUrl || null,
-      images: imageMap.get(p.productId)?.images || [],
+      imageUrl: imageMap.get(String(p.productId))?.imageUrl || null,
+      images: imageMap.get(String(p.productId))?.images || [],
     }));
 
     res.status(200).json({
       message: Messages.USER.SUCCESS.ADD_TO_CART,
       cartTotal: cart.cartTotal,
       totalProducts,
-      products: enrichedProducts, // only send the current page with images
-      hasMore: parseInt(offset) + parseInt(limit) < totalProducts, // 👈 helpful for infinite scroll
+      products: enrichedProducts,
+      hasMore: parseInt(offset) + parseInt(limit) < totalProducts,
     });
   } catch (err) {
     logger.error(`❌ Error in addToCart: ${err.message}`);
-    res
-      .status(500)
-      .json({ message: Messages.COMMON.ERROR.SERVER_ERROR, error: err.message });
+    res.status(500).json({
+      message: Messages.COMMON.ERROR.SERVER_ERROR,
+      error: err.message,
+    });
   }
 };
-

@@ -5,7 +5,9 @@ const productSchema = new mongoose.Schema({
   name: String,
   price: { type: Number, default: 0 },
   quantity: { type: Number, required: true },
-  totalPrice: { type: Number, default: 0 }
+  totalPrice: { type: Number, default: 0 },
+  imageUrl: String,
+  images: [String]
 });
 
 const cartSchema = new mongoose.Schema({
