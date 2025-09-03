@@ -264,7 +264,14 @@ exports.getCartByUserId = async (req, res) => {
 
     if (!cart || cart.products.length === 0) {
       userLogger.info(`🛒 Get Cart: No items found for userId ${userId}`);
-      return res.status(404).json({ message: Messages.USER.ERROR.CART_USER_REQUIED });
+      return res.status(200).json({
+        userId,
+        products: [],
+        totalProducts: 0,
+        cartTotal: 0,
+        currency: "INR",
+        hasMore: false,
+      });
     }
 
     let cartTotal = 0;
@@ -298,20 +305,35 @@ exports.getCartByUserId = async (req, res) => {
 
     // Enrich cart items with product images
     const productIds = filteredProducts.map((p) => p.productId);
-    const foundProducts = await Product.find(
+
+    // First try to fetch by business productId (string)
+    const foundByBusinessId = await Product.find(
       { productId: { $in: productIds } },
-      { productId: 1, imageUrl: 1, images: 1 }
+      { productId: 1, imageUrl: 1, images: 1, _id: 1 }
     ).lean();
 
-    const imageMap = new Map(
-      foundProducts.map((p) => [
-        p.productId,
-        {
-          imageUrl: p.imageUrl || null,
-          images: Array.isArray(p.images) ? p.images : [],
-        },
-      ])
+    // For any remaining IDs that look like ObjectIds, fetch by _id
+    const missingIds = productIds.filter(
+      (id) => !foundByBusinessId.some((p) => String(p.productId) === String(id)) && mongoose.isValidObjectId(id)
     );
+
+    const foundByObjectId = missingIds.length
+      ? await Product.find({ _id: { $in: missingIds } }, { _id: 1, imageUrl: 1, images: 1, productId: 1 }).lean()
+      : [];
+
+    const imageMap = new Map();
+    for (const p of foundByBusinessId) {
+      imageMap.set(String(p.productId), {
+        imageUrl: p.imageUrl || null,
+        images: Array.isArray(p.images) ? p.images : [],
+      });
+    }
+    for (const p of foundByObjectId) {
+      imageMap.set(String(p._id), {
+        imageUrl: p.imageUrl || null,
+        images: Array.isArray(p.images) ? p.images : [],
+      });
+    }
 
     const paginatedProducts = filteredProducts
       .slice(parseInt(offset), parseInt(offset) + parseInt(limit))
