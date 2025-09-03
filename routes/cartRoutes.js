@@ -40,6 +40,6 @@ const { addToCart} = require("../controllers/cartController");
  *       500:
  *         description: Server error
  */
-router.post('/add', addToCart); 
+router.post("/add", addToCart);
 module.exports = router;
 
