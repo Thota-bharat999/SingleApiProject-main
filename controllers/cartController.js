@@ -9,15 +9,33 @@ exports.addToCart = async (req, res) => {
     const { limit = 10, offset = 0 } = req.query;
 
     if (!userId || !Array.isArray(products) || products.length === 0) {
-      return res.status(400).json({ message: Messages.USER.ERROR.ADD_TO_CART_INVALID });
+      return res
+        .status(400)
+        .json({ message: Messages.USER.ERROR.ADD_TO_CART_INVALID });
+    }
+
+    // fetch product details from DB
+    const productIds = products.map((p) => p.productId);
+    const dbProducts = await Product.find({ _id: { $in: productIds } }).lean();
+
+    if (!dbProducts || dbProducts.length === 0) {
+      return res
+        .status(404)
+        .json({ message: "Some products not found in database" });
     }
 
     let cart = await Cart.findOne({ userId });
 
-    // Calculate updated products and total
     let cartTotal = 0;
+
+    // prepare updated products with DB price
     const updatedProducts = products.map((item) => {
-      const price = Number(item.price) || 0;
+      const productFromDB = dbProducts.find(
+        (p) => String(p._id) === String(item.productId)
+      );
+
+      const price = productFromDB ? Number(productFromDB.price) : 0;
+      const name = productFromDB ? productFromDB.name : item.name || "";
       const quantity = Number(item.quantity) || 0;
       const totalPrice = price * quantity;
 
@@ -25,7 +43,7 @@ exports.addToCart = async (req, res) => {
 
       return {
         productId: item.productId,
-        name: item.name || "",
+        name,
         price,
         quantity,
         totalPrice,
@@ -33,6 +51,7 @@ exports.addToCart = async (req, res) => {
     });
 
     if (cart) {
+      // merge into existing cart
       updatedProducts.forEach((newItem) => {
         const existingItem = cart.products.find(
           (p) => String(p.productId) === String(newItem.productId)
@@ -47,8 +66,11 @@ exports.addToCart = async (req, res) => {
           cart.products.push(newItem);
         }
       });
+
+      // recalc total
       cart.cartTotal = cart.products.reduce((sum, p) => sum + p.totalPrice, 0);
     } else {
+      // create new cart
       cart = new Cart({
         userId,
         products: updatedProducts,
@@ -66,7 +88,7 @@ exports.addToCart = async (req, res) => {
       parseInt(offset) + parseInt(limit)
     );
 
-    // Fetch product images
+    // Fetch images for only paginated products
     const pageProductIds = paginatedProducts.map((p) => p.productId);
     const foundProducts = await Product.find(
       { _id: { $in: pageProductIds } },
@@ -83,9 +105,8 @@ exports.addToCart = async (req, res) => {
       ])
     );
 
-    // Attach images
     const enrichedProducts = paginatedProducts.map((p) => ({
-      ...p,
+      ...p.toObject?.() || p,
       imageUrl: imageMap.get(String(p.productId))?.imageUrl || null,
       images: imageMap.get(String(p.productId))?.images || [],
     }));
