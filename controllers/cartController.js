@@ -14,17 +14,17 @@ exports.addToCart = async (req, res) => {
 
     let cart = await Cart.findOne({ userId });
 
-    // Calculate updated products
+    // Calculate updated products and total
     let cartTotal = 0;
     const updatedProducts = products.map((item) => {
-      const price = Number(item.price);
-      const quantity = Number(item.quantity);
+      const price = Number(item.price) || 0;
+      const quantity = Number(item.quantity) || 0;
       const totalPrice = price * quantity;
 
       cartTotal += totalPrice;
 
       return {
-        productId: item.productId, // this must match Product._id or Product.productId
+        productId: item.productId,
         name: item.name || "",
         price,
         quantity,
@@ -66,10 +66,10 @@ exports.addToCart = async (req, res) => {
       parseInt(offset) + parseInt(limit)
     );
 
-    // Fetch product images from DB
+    // Fetch product images
     const pageProductIds = paginatedProducts.map((p) => p.productId);
     const foundProducts = await Product.find(
-      { _id: { $in: pageProductIds } }, // ✅ using _id instead of productId
+      { _id: { $in: pageProductIds } },
       { _id: 1, imageUrl: 1, images: 1 }
     ).lean();
 
