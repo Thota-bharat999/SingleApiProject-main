@@ -89,9 +89,9 @@ exports.getAllCategoris=async(req,res)=>{
   try{
 const categories=await Category.find({},{_id:0,id:1,name:1,description:1})
 const formated=categories.map(cat=>({
-  categoryId:cat.id,
-  name:cat.name,
-  description:cat.description
+  id: cat.id,
+  name: cat.name,
+  description: cat.description
 }))
 adminLogger.info("Fetched all categories successfully");
 res.json(formated)
