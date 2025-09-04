@@ -9,6 +9,7 @@ const sendEmail = require("../utils/sendEmail");
 const mongoose = require("mongoose");
 const Cart = require("../models/cartModel");
 const Product = require("../Admin/productModel"); 
+const Category = require("../Admin/categoryModels"); 
 exports.registerUser = async (req, res) => {
   try {
     const { name, email, password } = req.body;
@@ -408,17 +409,49 @@ exports.getProducts = async (req, res) => {
       Product.countDocuments(query),
     ]);
 
+    // Fallback for products whose categoryId is stored as a business 'id' string
+    const missingCategoryNameIds = [
+      ...new Set(
+        products
+          .filter((p) => typeof p.categoryId === "string")
+          .map((p) => p.categoryId)
+      ),
+    ];
+
+    const categoriesByStringId = missingCategoryNameIds.length
+      ? await Category.find(
+          { id: { $in: missingCategoryNameIds } },
+          { id: 1, name: 1 }
+        ).lean()
+      : [];
+
+    const categoryNameByStringId = new Map(
+      categoriesByStringId.map((c) => [c.id, c.name])
+    );
+
     res.json({
-      products: products.map(p => ({
+      products: products.map((p) => ({
         productId: p.productId,
         name: p.name,
         description: p.description,
         price: p.price,
         stock: p.stock,
-        categoryId: p.categoryId?._id,
-        categoryName: p.categoryId?.name || null,
-        imageUrl: p.imageUrl,   // ✅ include main image
-        images: p.images        // ✅ include gallery
+        categoryId:
+          (p.categoryId && p.categoryId._id) ||
+          (typeof p.categoryId === "string" ? p.categoryId : null),
+        categoryName:
+          (p.categoryId && p.categoryId.name) ||
+          (typeof p.categoryId === "string"
+            ? categoryNameByStringId.get(p.categoryId) || null
+            : null),
+        // alias for frontend expecting `category` instead of `categoryName`
+        category:
+          (p.categoryId && p.categoryId.name) ||
+          (typeof p.categoryId === "string"
+            ? categoryNameByStringId.get(p.categoryId) || null
+            : null),
+        imageUrl: p.imageUrl, // ✅ include main image
+        images: p.images, // ✅ include gallery
       })),
       pagination: {
         total,
