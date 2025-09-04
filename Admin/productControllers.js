@@ -27,14 +27,14 @@ exports.addProduct = async (req, res) => {
       stock,
       categoryId,
       productId,
-      imageUrl: imageUrl || null,   // ✅ add single image
-      images: images || []          // ✅ add multiple images (array)
+      imageUrl: imageUrl || null,
+      images: images || []
     });
 
     const saved = await newProduct.save();
     adminLogger.info(`Product added: ${saved.productId} - ${saved.name}`);
 
-    // fetch categoryName from Category collection
+    // Fetch category info
     const productWithCategory = await Product.findById(saved._id)
       .populate("categoryId", "name");
 
@@ -46,10 +46,10 @@ exports.addProduct = async (req, res) => {
         description: productWithCategory.description,
         price: productWithCategory.price,
         stock: productWithCategory.stock,
-        categoryId: productWithCategory.categoryId?._id,
-        categoryName: productWithCategory.categoryId?.name || null,
-        imageUrl: productWithCategory.imageUrl,  // ✅ return single image
-        images: productWithCategory.images       // ✅ return multiple images
+        categoryId: productWithCategory.categoryId?._id || null,
+        categoryName: productWithCategory.categoryId?.name || "Uncategorized",
+        imageUrl: productWithCategory.imageUrl,
+        images: productWithCategory.images
       },
     });
   } catch (err) {
@@ -60,6 +60,7 @@ exports.addProduct = async (req, res) => {
     });
   }
 };
+
 
 
 // ================== UPDATE PRODUCT ==================

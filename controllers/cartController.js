@@ -3,6 +3,7 @@ const logger = require('../utils/logger');
 const Messages = require("../utils/messages");
 const Product = require("../Admin/productModel");
 const mongoose = require('mongoose');
+const userLogger = require('../utils/userLogger');
 
 exports.addToCart = async (req, res) => {
   try {
@@ -14,8 +15,10 @@ exports.addToCart = async (req, res) => {
       products = [{ productId: req.body.productId, quantity: Number(req.body.quantity) || 1 }];
     }
 
+    userLogger.info(`[CART] AddToCart requested: userId=${userId || 'unknown'}, items=${Array.isArray(products) ? products.length : 0}`);
     if (!userId || !Array.isArray(products) || products.length === 0) {
-      return res.status(400).json({ message: "Invalid request" });
+      userLogger.warn(`[CART] Invalid addToCart request: userId=${userId || 'unknown'}, body=${JSON.stringify(req.body)}`);
+      return res.status(400).json({ message:Messages.USER.ERROR.ADD_TO_CART_INVALID  });
     }
 
     let cart = await Cart.findOne({ userId });
@@ -27,7 +30,10 @@ exports.addToCart = async (req, res) => {
       if (!product && mongoose.isValidObjectId(item.productId)) {
         product = await Product.findById(item.productId).lean();
       }
-      if (!product) continue;
+      if (!product) {
+        userLogger.warn(`[CART] Product not found for productId=${item.productId}`);
+        continue;
+      }
 
       const quantity = Number(item.quantity) || 1;
       const totalPrice = product.price * quantity;
@@ -67,8 +73,52 @@ exports.addToCart = async (req, res) => {
     }
 
     await cart.save();
-    res.status(200).json({ message: "Added to cart successfully", cart });
+    userLogger.info(`[CART] Cart updated successfully for userId=${userId}. items=${cart.products.length}, cartTotal=${cart.cartTotal}`);
+    res.status(200).json({ message: Messages.USER.SUCCESS.ADD_TO_CART, cart });
   } catch (err) {
-    res.status(500).json({ message: "Server error", error: err.message });
+    userLogger.error(`[CART] AddToCart error for userId=${req.body?.userId || 'unknown'}: ${err.message}`);
+    res.status(500).json({ message: Messages.COMMON.ERROR.SERVER_ERROR, error: err.message });
+  }
+};
+
+// Delete From Cart
+exports.deleteFromCart = async (req, res) => {
+  try {
+    const { userId, productId } = req.body;
+
+    if (!userId || !productId) {
+      userLogger.warn("⚠️ deleteFromCart: Missing userId or productId", { body: req.body });
+      return res.status(400).json({ message: Messages.USER.ERROR.ADD_TO_CART_INVALID });
+    }
+
+    const cart = await Cart.findOne({ userId });
+    if (!cart) {
+      userLogger.info(`🛒 Cart not found for userId=${userId}`);
+      return res.status(404).json({ message:Messages.USER.ERROR.CART_NOT_FOUND });
+    }
+
+    // Remove product
+    const initialLength = cart.products.length;
+    cart.products = cart.products.filter((p) => String(p.productId) !== String(productId));
+
+    if (cart.products.length === initialLength) {
+      userLogger.info(`❌ Product ${productId} not found in cart for userId=${userId}`);
+      return res.status(404).json({ message:Messages.USER.ERROR.CART_PRODUCT_NOT_FOUND });
+    }
+
+    // Recalculate total
+    cart.cartTotal = cart.products.reduce((sum, p) => sum + p.totalPrice, 0);
+
+    await cart.save();
+
+    userLogger.info(`✅ Product ${productId} removed from cart for userId=${userId}`);
+
+    return res.status(200).json({
+      message: Messages.USER.SUCCESS.CART_PRODUCT_REMOVED,
+      cart,
+    });
+  } catch (err) {
+    userLogger.error(`❌ Error in deleteFromCart for userId=${req.body?.userId || "unknown"}: ${err.message}`);
+    return res.status(500).json({ message:Messages.COMMON.ERROR.SERVER_ERROR, error: err.message });
   }
 };
