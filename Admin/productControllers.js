@@ -186,6 +186,8 @@ exports.getProducts = async (req, res) => {
         price: p.price,
         stock: p.stock,
         categoryId: p.categoryId,
+        // alias to support frontend expecting `category` as the business id
+        category: p.categoryData ? p.categoryData.id : p.categoryId,
         categoryName: p.categoryData ? p.categoryData.name : null,
       })),
     });
