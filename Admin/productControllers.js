@@ -148,23 +148,31 @@ exports.getProducts = async (req, res) => {
     const products = await Product.aggregate([
       {
         $lookup: {
-          from: "categories", // Category collection
-          localField: "categoryId",
-          foreignField: "id",
+          from: "categories",
+          let: { cid: "$categoryId" },
+          pipeline: [
+            {
+              $match: {
+                $expr: {
+                  $or: [
+                    { $eq: ["$_id", "$cid"] }, // when product.categoryId stores Category._id
+                    { $eq: ["$id", "$cid"] },   // when product.categoryId stores Category.id (business id)
+                  ],
+                },
+              },
+            },
+            { $project: { _id: 1, id: 1, name: 1, __v: 0 } },
+          ],
           as: "categoryData",
         },
       },
       {
-        $unwind: {
-          path: "$categoryData",
-          preserveNullAndEmptyArrays: true,
-        },
+        $unwind: { path: "$categoryData", preserveNullAndEmptyArrays: true },
       },
       {
         $project: {
           _id: 0,
           __v: 0,
-          "categoryData._id": 0,
           "categoryData.__v": 0,
         },
       },
@@ -186,8 +194,9 @@ exports.getProducts = async (req, res) => {
         price: p.price,
         stock: p.stock,
         categoryId: p.categoryId,
-        // alias to support frontend expecting `category` as the business id
-        category: p.categoryData ? p.categoryData.id : p.categoryId,
+        // Prefer business id if available; otherwise fallback to Mongo _id or stored categoryId
+        category:
+          (p.categoryData && (p.categoryData.id || p.categoryData._id)) || p.categoryId,
         categoryName: p.categoryData ? p.categoryData.name : null,
       })),
     });
