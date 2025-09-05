@@ -630,59 +630,7 @@ router.put('/product/:id', verifyAdmin, updateProduct);
  *               message: Server error
  */
 router.delete('/product/:id', verifyAdmin, deleteProduct);
-/**
- * @swagger
- * /api/admin/product/{id}:
- *   get:
- *     summary: Get a product by ID
- *     tags: [Admin - Products]
- *     security:
- *       - bearerAuth: []
- *     parameters:
- *       - in: path
- *         name: id
- *         required: true
- *         schema:
- *           type: string
- *         description: The productId of the product to retrieve
- *     responses:
- *       200:
- *         description: Product details
- *         content:
- *           application/json:
- *             example:
- *               productId: prod_123abc
- *               name: iPhone 14
- *               description: Latest Apple smartphone
- *               price: 999.99
- *               stock: 50
- *               categoryId: cat_abc123
- *               categoryName: Electronics
- *       404:
- *         description: Product not found
- *         content:
- *           application/json:
- *             example:
- *               message: Product not found
- *       401:
- *         description: Unauthorized
- *         content:
- *           application/json:
- *             example:
- *               message: "Unauthorized: No token provided"
- *       403:
- *         description: Forbidden
- *         content:
- *           application/json:
- *             example:
- *               message: "Forbidden: Not an admin"
- *       500:
- *         description: Server error
- *         content:
- *           application/json:
- *             example:
- *               message: Server error
- */
+
 /**
  * @swagger
  * /api/admin/product:
