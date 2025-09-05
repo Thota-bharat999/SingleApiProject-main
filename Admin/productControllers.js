@@ -180,6 +180,7 @@ exports.getProducts = async (req, res) => {
                 $expr: {
                   $or: [
                     { $eq: ["$_id", "$cid"] }, // when product.categoryId stores Category._id
+                    { $eq: ["$_id", { $convert: { input: "$cid", to: "objectId", onError: null, onNull: null } }] },
                     { $eq: ["$id", "$cid"] },   // when product.categoryId stores Category.id (business id)
                   ],
                 },
