@@ -218,9 +218,6 @@ exports.getProducts = async (req, res) => {
         price: p.price,
         stock: p.stock,
         categoryId: p.categoryId,
-        // Prefer business id if available; otherwise fallback to Mongo _id or stored categoryId
-        category:
-          (p.categoryData && (p.categoryData.id || p.categoryData._id)) || p.categoryId,
         categoryName: p.categoryData ? p.categoryData.name : null,
       })),
     });
