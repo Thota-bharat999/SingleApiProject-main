@@ -3,6 +3,7 @@ const Category = require("./categoryModels");
 const adminLogger = require("../utils/adminLogger");
 const { v4: uuidv4 } = require("uuid");
 const Messages = require("../utils/messages");
+const mongoose = require("mongoose");
 
 // ================== ADD PRODUCT ==================
 
@@ -20,12 +21,23 @@ exports.addProduct = async (req, res) => {
 
     const productId = "prod_" + uuidv4().slice(0, 8);
 
+    // Resolve categoryId to Category._id if a custom business id is provided
+    let resolvedCategoryId = categoryId;
+    if (!mongoose.isValidObjectId(categoryId)) {
+      const cat = await Category.findOne({ id: categoryId }).lean();
+      if (!cat) {
+        adminLogger.warn(`Add Product failed: Invalid categoryId provided: ${categoryId}`);
+        return res.status(400).json({ message: "Invalid categoryId" });
+      }
+      resolvedCategoryId = cat._id;
+    }
+
     const newProduct = new Product({
       name,
       description,
       price,
       stock,
-      categoryId,
+      categoryId: resolvedCategoryId,
       productId,
       imageUrl: imageUrl || null,
       images: images || []
@@ -69,9 +81,20 @@ exports.updateProduct = async (req, res) => {
     const productId = req.params.id.trim();
     adminLogger.info(`Incoming Product ID from params: ${productId}`);
 
+    // Normalize categoryId in update to Category._id when a business id is provided
+    const updateData = { ...req.body };
+    if (updateData.categoryId && !mongoose.isValidObjectId(updateData.categoryId)) {
+      const cat = await Category.findOne({ id: updateData.categoryId }).lean();
+      if (!cat) {
+        adminLogger.warn(`Update Product failed: Invalid categoryId provided: ${updateData.categoryId}`);
+        return res.status(400).json({ message: "Invalid categoryId" });
+      }
+      updateData.categoryId = cat._id;
+    }
+
     const updatedProduct = await Product.findOneAndUpdate(
       { productId },
-      req.body,
+      updateData,
       { new: true }
     );
 
@@ -82,10 +105,11 @@ exports.updateProduct = async (req, res) => {
         .json({ message: Messages.ADMIN.ERROR.PRODUCT_NOT_FOUND });
     }
 
-    // fetch categoryName from Category collection
-    const category = await Category.findOne({
-      id: updatedProduct.categoryId,
-    });
+    // fetch categoryName from Category collection (works for either ObjectId or business id)
+    let category = await Category.findById(updatedProduct.categoryId).lean();
+    if (!category && typeof updatedProduct.categoryId === "string") {
+      category = await Category.findOne({ id: updatedProduct.categoryId }).lean();
+    }
 
     adminLogger.info(`Product updated successfully: ${productId}`);
     return res.json({
