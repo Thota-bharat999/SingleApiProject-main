@@ -172,7 +172,7 @@ exports.getProducts = async (req, res) => {
     const products = await Product.aggregate([
       {
         $lookup: {
-          from: "categories",
+          from: Category.collection.name,
           let: { cid: "$categoryId" },
           pipeline: [
             {
