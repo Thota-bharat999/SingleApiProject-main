@@ -185,7 +185,7 @@ exports.getProducts = async (req, res) => {
                 },
               },
             },
-            { $project: { _id: 1, id: 1, name: 1, __v: 0 } },
+            { $project: { _id: 1, id: 1, name: 1 } },
           ],
           as: "categoryData",
         },
