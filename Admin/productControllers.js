@@ -179,9 +179,9 @@ exports.getProducts = async (req, res) => {
               $match: {
                 $expr: {
                   $or: [
-                    { $eq: ["$_id", "$cid"] }, // when product.categoryId stores Category._id
-                    { $eq: ["$_id", { $convert: { input: "$cid", to: "objectId", onError: null, onNull: null } }] },
-                    { $eq: ["$id", "$cid"] },   // when product.categoryId stores Category.id (business id)
+                    { $eq: ["$_id", "$$cid"] }, // when product.categoryId is ObjectId
+                    { $eq: ["$_id", { $convert: { input: "$$cid", to: "objectId", onError: null, onNull: null } }] },
+                    { $eq: ["$id", "$$cid"] },  // when product.categoryId is business id (string)
                   ],
                 },
               },
@@ -191,16 +191,7 @@ exports.getProducts = async (req, res) => {
           as: "categoryData",
         },
       },
-      {
-        $unwind: { path: "$categoryData", preserveNullAndEmptyArrays: true },
-      },
-      {
-        $project: {
-          _id: 0,
-          __v: 0,
-          "categoryData.__v": 0,
-        },
-      },
+      { $unwind: { path: "$categoryData", preserveNullAndEmptyArrays: true } },
       { $skip: skip },
       { $limit: limit },
     ]);
@@ -219,8 +210,9 @@ exports.getProducts = async (req, res) => {
         price: p.price,
         stock: p.stock,
         categoryId: p.categoryId,
-        category: p.categoryData ? (p.categoryData.id || p.categoryData._id) : null,
-        categoryName: p.categoryData ? p.categoryData.name : null,
+        categoryName: p.categoryData ? p.categoryData.name : "Uncategorized",
+        imageUrl: p.imageUrl || null,
+        images: p.images || [],
       })),
     });
   } catch (err) {
