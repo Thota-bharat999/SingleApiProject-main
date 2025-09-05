@@ -219,6 +219,7 @@ exports.getProducts = async (req, res) => {
         price: p.price,
         stock: p.stock,
         categoryId: p.categoryId,
+        category: p.categoryData ? (p.categoryData.id || p.categoryData._id) : null,
         categoryName: p.categoryData ? p.categoryData.name : null,
       })),
     });
