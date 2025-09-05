@@ -683,6 +683,87 @@ router.delete('/product/:id', verifyAdmin, deleteProduct);
  *             example:
  *               message: Server error
  */
+/**
+ * @swagger
+ * /api/admin/product:
+ *   get:
+ *     summary: Get paginated list of products
+ *     tags: [Admin - Products]
+ *     security:
+ *       - bearerAuth: []
+ *     parameters:
+ *       - in: query
+ *         name: page
+ *         schema:
+ *           type: integer
+ *           default: 1
+ *         description: Page number (1-based)
+ *       - in: query
+ *         name: limit
+ *         schema:
+ *           type: integer
+ *           default: 10
+ *         description: Number of items per page
+ *     responses:
+ *       200:
+ *         description: Products fetched successfully
+ *         content:
+ *           application/json:
+ *             schema:
+ *               type: object
+ *               properties:
+ *                 page:
+ *                   type: integer
+ *                   example: 1
+ *                 limit:
+ *                   type: integer
+ *                   example: 10
+ *                 total:
+ *                   type: integer
+ *                   example: 100
+ *                 totalPages:
+ *                   type: integer
+ *                   example: 10
+ *                 products:
+ *                   type: array
+ *                   items:
+ *                     type: object
+ *                     properties:
+ *                       productId:
+ *                         type: string
+ *                         example: prod_1234abcd
+ *                       name:
+ *                         type: string
+ *                         example: "Dior Sauvage"
+ *                       description:
+ *                         type: string
+ *                         example: "Fresh and spicy men's fragrance..."
+ *                       price:
+ *                         type: number
+ *                         example: 120
+ *                       stock:
+ *                         type: integer
+ *                         example: 40
+ *                       categoryId:
+ *                         type: string
+ *                         example: 68b6d056e20db74591c092fb
+ *                       category:
+ *                         description: Business category id or Mongo ObjectId, depending on stored form
+ *                         oneOf:
+ *                           - type: string
+ *                           - type: string
+ *                         example: "cat_perfume" 
+ *                       categoryName:
+ *                         type: string
+ *                         nullable: true
+ *                         example: "Perfume"
+ *       401:
+ *         description: Unauthorized
+ *       403:
+ *         description: Forbidden - Admin access required
+ *       500:
+ *         description: Server error
+ */
 router.get('/product', verifyAdmin,getProducts);
 /**
  * @swagger
