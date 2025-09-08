@@ -3,40 +3,70 @@ const mongoose = require("mongoose"); //
 const Order = require("../models/orderModel");
 const Messages = require("../utils/messages");
 
-exports.placeOrder = async (req, res) => {
-  try {
-    const userId = req.user?.id;
-    userLogger.debug(`Incoming placeOrder request from userId: ${userId}`);
-    userLogger.debug(`req.user object: ${JSON.stringify(req.user)}`); // ✅ corrected
+const Cart = require('../models/cartModel');
+  // Fallback logger if userLogger isn't available in this module
+  const logger = (typeof userLogger !== 'undefined' && userLogger) || console;
 
-    if (!userId) {
-      userLogger.warn("User ID missing in request");
-      return res.status(400).json({ message:Messages.USER.ERROR.INVALID_ORDER });
+  // POST /api/user/order
+  // Body: { cartItems: [{ productId, quantity }], paymentMethod: "Online"|"COD"|..., total?: number, paymentId?: string, paymentStatus?: string }
+  // Response: { message, orderId, paymentId, paymentStatus }
+  exports.placeOrder = async (req, res) => {
+    try {
+      const authUserId = req.user?.id || req.user?._id; // from auth middleware if present
+      const userId = req.body.userId || authUserId;
+
+      const { cartItems, paymentMethod, total, paymentId: bodyPaymentId, paymentStatus: bodyPaymentStatus } = req.body;
+
+      if (!userId) {
+        logger.warn("⚠️ placeOrder: Missing userId");
+        return res.status(400).json({ message: Messages.USER.ERROR.VIEW_USERS_REQUIRED });
+      }
+
+      if (!Array.isArray(cartItems) || cartItems.length === 0 || !paymentMethod) {
+        logger.warn("⚠️ placeOrder: Missing required fields", { body: req.body });
+        return res.status(400).json({ message: Messages.USER.ERROR.MISSING_FIELDS });
+      }
+
+      // Load user's cart to derive totals and any existing payment metadata
+      const cart = await Cart.findOne({ userId });
+      if (!cart || !Array.isArray(cart.products) || cart.products.length === 0) {
+        logger.info(`🛒 Cart empty or not found for userId=${userId}`);
+        return res.status(404).json({ message: Messages.USER.ERROR.CART_USER_REQUIED });
+      }
+
+      // Prefer cart values if present; then body; then defaults
+      const resolvedPaymentId = cart.paymentId || bodyPaymentId || `pay_${Date.now()}`;
+      const resolvedPaymentStatus = cart.paymentStatus || bodyPaymentStatus || 'Pending';
+      const resolvedTotal = typeof total === 'number' ? total : cart.cartTotal;
+
+      // Persist the order
+      const orderPayload = {
+        userId,
+        items: cartItems,
+        total: resolvedTotal,
+        paymentMethod,
+        paymentId: resolvedPaymentId,
+        paymentStatus: resolvedPaymentStatus,
+        currency: cart.currency || 'INR',
+      };
+
+      const order = await Order.create(orderPayload);
+
+      logger.info(`✅ Order placed for userId=${userId} orderId=${order._id} paymentId=${resolvedPaymentId} status=${resolvedPaymentStatus}`);
+
+      // Return the existing shape plus the requested fields
+      return res.status(200).json({
+        message: Messages.USER.SUCCESS.PLACE_ORDER,
+        orderId: order._id,
+        paymentId: resolvedPaymentId,
+        paymentStatus: resolvedPaymentStatus,
+      });
+    } catch (err) {
+      logger.error(`❌ Error in placeOrder for userId=${req.body?.userId || req.user?.id || "unknown"}: ${err.message}`);
+      return res.status(500).json({ message: Messages.USER.ERROR.PLACE_ORDER_FAILED, error: err.message });
     }
+  };
 
-    const { cartItems, paymentMethod } = req.body;
-
-    if (!cartItems || !cartItems.length) {
-      userLogger.warn(`Cart is empty or not found for userId: ${userId}`);
-      return res.status(400).json({ message:Messages.USER.ERROR.CART_USER_REQUIED });
-    }
-
-    const order = await Order.create({
-      userId: new mongoose.Types.ObjectId(userId),
-      cartItems,
-      paymentMethod
-    });
-
-    userLogger.info(`Order placed successfully by userId: ${userId}, orderId: ${order._id}`);
-    res.status(201).json({
-      message: Messages.USER.SUCCESS.PLACE_ORDER,
-      orderId: order._id,
-    });
-  } catch (err) {
-    userLogger.error(`Error placing order for userId: ${req.user?.id || "unknown"} - ${err.message}`);
-    res.status(500).json({ message: Messages.COMMON.ERROR.SERVER_ERROR, error: err.message });
-  }
-};
 
 exports.getUserOrders = async (req, res) => {
   try {
