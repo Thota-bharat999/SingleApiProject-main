@@ -1438,36 +1438,6 @@
 [2025-09-09 13:06:04] [33mwarn[39m: [ADMIN] Admin is not found with eamil:wesselinnogo-1526@yopmail.com
 [2025-09-09 13:06:05] [33mwarn[39m: [ADMIN] Admin is not found with eamil:wesselinnogo-1526@yopmail.com
 [2025-09-09 13:21:31] [33mwarn[39m: [ADMIN] Admin is not found with eamil:wesselinnogo-1526@yopmail.com
-[2025-09-09 13:36:15] [33mwarn[39m: [ADMIN] Admin is not found with eamil:paugreufonezu-7814@yopmail.com
-[2025-09-09 13:36:58] [33mwarn[39m: [ADMIN] Admin is not found with eamil:paugreufonezu-7814@yopmail.com
-[2025-09-09 13:40:21] [33mwarn[39m: [ADMIN] Admin is not found with eamil:paugreufonezu-7814@yopmail.com
-[2025-09-09 13:43:01] [33mwarn[39m: [ADMIN] Admin is not found with eamil:paugreufonezu-7814@yopmail.com
-[2025-09-09 13:51:12] [33mwarn[39m: [ADMIN] Admin is not found with eamil:paugreufonezu-7814@yopmail.com
-[2025-09-09 16:07:44] [33mwarn[39m: [ADMIN] Admin is not found with eamil:paugreufonezu-7814@yopmail.com
-[2025-09-09 16:13:52] [33mwarn[39m: [ADMIN] Admin is not found with eamil:paugreufonezu-7814@yopmail.com
-[2025-09-09 16:33:23] [32minfo[39m: 🚀 Server running on port 5000
-[2025-09-09 16:33:24] [32minfo[39m: ✅ MongoDB connected
-[2025-09-09 16:36:15] [33mwarn[39m: [ADMIN] Admin is not found with eamil:paugreufonezu-7814@yopmail.com
-[2025-09-09 16:36:48] [33mwarn[39m: [ADMIN] Admin is not found with eamil:paugreufonezu-7814@yopmail.com
-[2025-09-09 16:38:14] [33mwarn[39m: [ADMIN] Admin is not found with eamil:paugreufonezu-7814@yopmail.com
-[2025-09-09 16:38:35] [33mwarn[39m: [ADMIN] Admin is not found with eamil:paugreufonezu-7814@yopmail.com
-[2025-09-09 16:48:20] [33mwarn[39m: [ADMIN] Admin is not found with eamil:paugreufonezu-7814@yopmail.com
-[2025-09-09 17:00:12] [33mwarn[39m: [ADMIN] Admin is not found with eamil:paugreufonezu-7814@yopmail.com
-[2025-09-09 17:01:32] [33mwarn[39m: [ADMIN] Admin is not found with eamil:paugreufonezu-7814@yopmail.com
-[2025-09-09 17:02:07] [33mwarn[39m: [ADMIN] Admin is not found with eamil:paugreufonezu-7814@yopmail.com
-[2025-09-09 17:16:19] [33mwarn[39m: [ADMIN] Admin is not found with eamil:paugreufonezu-7814@yopmail.com
-[2025-09-09 17:20:34] [33mwarn[39m: [ADMIN] Admin is not found with eamil:paugreufonezu-7814@yopmail.com
-[2025-09-09 18:55:05] [32minfo[39m: 🚀 Server running on port 5000
-[2025-09-09 18:55:06] [32minfo[39m: ✅ MongoDB connected
-[2025-09-09 19:31:28] [32minfo[39m: 🚀 Server running on port 5000
-[2025-09-09 19:31:28] [32minfo[39m: ✅ MongoDB connected
-[2025-09-10 10:22:12] [32minfo[39m: 🚀 Server running on port 5000
-[2025-09-10 10:22:13] [32minfo[39m: ✅ MongoDB connected
-[2025-09-10 11:07:03] [32minfo[39m: 🚀 Server running on port 5000
-[2025-09-10 11:07:04] [32minfo[39m: ✅ MongoDB connected
-[2025-09-10 11:14:19] [32minfo[39m: 🚀 Server running on port 5000
-[2025-09-10 11:14:19] [32minfo[39m: ✅ MongoDB connected
-[2025-09-10 11:41:09] [32minfo[39m: 🚀 Server running on port 5000
-[2025-09-10 11:41:10] [32minfo[39m: ✅ MongoDB connected
-[2025-09-10 11:59:41] [32minfo[39m: 🚀 Server running on port 5000
-[2025-09-10 11:59:42] [32minfo[39m: ✅ MongoDB connected
+[2025-09-10 15:55:49] [31merror[39m: [ADMIN] JWT verification failed: invalid signature
+[2025-09-10 16:25:27] [32minfo[39m: 🚀 Server running on port 5000
+[2025-09-10 16:25:28] [32minfo[39m: ✅ MongoDB connected
