@@ -35,10 +35,14 @@ exports.placeOrder = async (req, res) => {
 
     // Load cart
     const cart = await Cart.findOne({ userId });
-    if (!cart || !Array.isArray(cart.products) || cart.products.length === 0) {
-      logger.info(`🛒 Cart empty for userId=${userId}`, { userId, ip: req.ip });
-      return res.status(404).json({ message: "Cart is empty" });
-    }
+    let itemsToOrder = [];
+if (cart && Array.isArray(cart.products) && cart.products.length > 0) {
+  itemsToOrder = cart.products;
+} else if (Array.isArray(req.body.cartItems) && req.body.cartItems.length > 0) {
+  itemsToOrder = req.body.cartItems;   // fallback to request body
+} else {
+  return res.status(404).json({ message: "Cart is empty" });
+}
 
     // Resolve payment info
     const resolvedPaymentId = bodyPaymentId || `pay_${Date.now()}`;
@@ -53,7 +57,7 @@ exports.placeOrder = async (req, res) => {
         name: p.name,
         price: p.price,
         quantity: p.quantity,
-        image: p.image || p.imageUrl || "/assets/images/no-image.png",
+        imageUrl: p.image || p.imageUrl || "/assets/images/no-image.png",
       })),
       total: resolvedTotal,
       paymentMethod,
