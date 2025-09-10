@@ -1,24 +1,17 @@
-const userLogger = require('../utils/userLogger');
+const userLogger = require("../utils/userLogger");
 const mongoose = require("mongoose");
 const Order = require("../models/orderModel");
 const Messages = require("../utils/messages");
-const Cart = require('../models/cartModel');
+const Cart = require("../models/cartModel");
 
-// Fallback logger if userLogger isn't available
-const logger = (typeof userLogger !== 'undefined' && userLogger) || console;
-
-/**
- * POST /api/user/order
- * Body: { paymentMethod, total?, paymentId?, paymentStatus? }
- * Response: { message, order }
- */
+// POST /api/user/order
 exports.placeOrder = async (req, res) => {
   try {
     const authUserId = req.user?.id || req.user?._id;
     const userId = req.body.userId || authUserId;
 
     if (!userId) {
-      logger.warn("⚠️ placeOrder: Missing userId", {
+      userLogger.warn("⚠️ placeOrder: Missing userId", {
         ip: req.ip,
         endpoint: req.originalUrl,
         body: req.body,
@@ -26,62 +19,68 @@ exports.placeOrder = async (req, res) => {
       return res.status(400).json({ message: "User ID required" });
     }
 
-    const { paymentMethod, total, paymentId: bodyPaymentId, paymentStatus: bodyPaymentStatus } = req.body;
+    const { paymentMethod, total, paymentId, paymentStatus, cartItems } = req.body;
 
     if (!paymentMethod) {
-      logger.warn("⚠️ placeOrder: Missing paymentMethod", { userId, body: req.body });
+      userLogger.warn("⚠️ placeOrder: Missing paymentMethod", { userId, body: req.body });
       return res.status(400).json({ message: "Payment method required" });
     }
 
-    // Load cart
+    // ✅ Prefer cart from DB, fallback to body.cartItems
+    let items = [];
+    let resolvedTotal = total;
+
     const cart = await Cart.findOne({ userId });
-    let itemsToOrder = [];
-if (cart && Array.isArray(cart.products) && cart.products.length > 0) {
-  itemsToOrder = cart.products;
-} else if (Array.isArray(req.body.cartItems) && req.body.cartItems.length > 0) {
-  itemsToOrder = req.body.cartItems;   // fallback to request body
-} else {
-  return res.status(404).json({ message: "Cart is empty" });
-}
-
-    // Resolve payment info
-    const resolvedPaymentId = bodyPaymentId || `pay_${Date.now()}`;
-    const resolvedPaymentStatus = bodyPaymentStatus || "Failed";
-    const resolvedTotal = typeof total === "number" ? total : cart.cartTotal;
-
-    // Prepare order with snapshot of product details
-    const orderPayload = {
-      userId,
-      items: cart.products.map(p => ({
+    if (cart && Array.isArray(cart.products) && cart.products.length > 0) {
+      items = cart.products.map((p) => ({
         productId: p.productId,
         name: p.name,
         price: p.price,
         quantity: p.quantity,
-        imageUrl: p.image || p.imageUrl || "/assets/images/no-image.png",
-      })),
+        image: p.image,
+      }));
+      resolvedTotal = cart.cartTotal;
+    } else if (Array.isArray(cartItems) && cartItems.length > 0) {
+      items = cartItems;
+    } else {
+      userLogger.info(`🛒 Cart empty for userId=${userId}`);
+      return res.status(404).json({ message: "Cart is empty" });
+    }
+
+    // Resolve payment info
+    const resolvedPaymentId = paymentId || `pay_${Date.now()}`;
+    const resolvedPaymentStatus = paymentStatus || "Failed";
+
+    // ✅ Prepare order payload
+    const orderPayload = {
+      userId,
+      items,
       total: resolvedTotal,
       paymentMethod,
       paymentId: resolvedPaymentId,
       paymentStatus: resolvedPaymentStatus,
-      currency: cart.currency || "INR",
+      currency: "INR",
       status: resolvedPaymentStatus === "Successful" ? "Successful" : "Failed",
     };
 
-    logger.debug("📝 Creating order", {
+    userLogger.debug("📝 Creating order", {
       userId,
       paymentId: resolvedPaymentId,
       paymentStatus: resolvedPaymentStatus,
       total: resolvedTotal,
-      itemCount: cart.products.length,
+      itemCount: items.length,
     });
 
     const order = await Order.create(orderPayload);
 
-    // Clear cart after order placement
-    cart.products = [];
-    await cart.save();
+    // ✅ Clear cart after placing order
+    if (cart) {
+      cart.products = [];
+      cart.cartTotal = 0;
+      await cart.save();
+    }
 
-    logger.info("✅ Order placed & cart cleared", {
+    userLogger.info("✅ Order placed & cart cleared", {
       userId,
       orderId: order._id,
       paymentId: resolvedPaymentId,
@@ -94,7 +93,7 @@ if (cart && Array.isArray(cart.products) && cart.products.length > 0) {
       order,
     });
   } catch (err) {
-    logger.error("❌ Error in placeOrder", {
+    userLogger.error("❌ Error in placeOrder", {
       userId: req.body?.userId || req.user?.id || "unknown",
       error: err.message,
       stack: err.stack,
@@ -106,10 +105,7 @@ if (cart && Array.isArray(cart.products) && cart.products.length > 0) {
   }
 };
 
-/**
- * GET /api/user/orders
- * Returns list of orders with product details
- */
+// GET /api/user/orders
 exports.getUserOrders = async (req, res) => {
   try {
     const userId = req.user?.id;
@@ -125,14 +121,14 @@ exports.getUserOrders = async (req, res) => {
       userId: new mongoose.Types.ObjectId(userId),
     }).select("_id items total paymentMethod paymentStatus status createdAt");
 
-    const formattedOrders = orders.map(order => ({
+    const formattedOrders = orders.map((order) => ({
       orderId: order._id,
       paymentMethod: order.paymentMethod,
       paymentStatus: order.paymentStatus,
       total: order.total,
       status: order.status,
       createdAt: order.createdAt,
-      items: order.items.map(item => ({
+      items: order.items.map((item) => ({
         productId: item.productId,
         name: item.name,
         price: item.price,
@@ -144,7 +140,11 @@ exports.getUserOrders = async (req, res) => {
     userLogger.info(`Found ${orders.length} orders for userId=${userId}`);
     res.json(formattedOrders);
   } catch (err) {
-    userLogger.error(`Error fetching orders for userId=${req.user?.id || "unknown"} - ${err.message}`);
-    res.status(500).json({ message: Messages.COMMON.ERROR.SERVER_ERROR, error: err.message });
+    userLogger.error(
+      `Error fetching orders for userId=${req.user?.id || "unknown"} - ${err.message}`
+    );
+    res
+      .status(500)
+      .json({ message: Messages.COMMON.ERROR.SERVER_ERROR, error: err.message });
   }
 };
