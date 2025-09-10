@@ -12,34 +12,44 @@ const Cart = require('../models/cartModel');
   // Response: { message, orderId, paymentId, paymentStatus }
   exports.placeOrder = async (req, res) => {
   try {
-    const authUserId = req.user?.id || req.user?._id; 
+    const authUserId = req.user?.id || req.user?._id;
     const userId = req.body.userId || authUserId;
 
     if (!userId) {
-      logger.warn("⚠️ placeOrder: Missing userId");
-      return res.status(400).json({ message: Messages.USER.ERROR.VIEW_USERS_REQUIRED });
+      logger.warn("⚠️ placeOrder: Missing userId", {
+        ip: req.ip,
+        endpoint: req.originalUrl,
+        body: req.body,
+      });
+      return res.status(400).json({ message: "User ID required" });
     }
 
     const { paymentMethod, total, paymentId: bodyPaymentId, paymentStatus: bodyPaymentStatus } = req.body;
 
     if (!paymentMethod) {
-      logger.warn("⚠️ placeOrder: Missing required fields", { body: req.body });
-      return res.status(400).json({ message: Messages.USER.ERROR.MISSING_FIELDS });
+      logger.warn("⚠️ placeOrder: Missing paymentMethod", {
+        userId,
+        body: req.body,
+      });
+      return res.status(400).json({ message: "Payment method required" });
     }
 
     // Load cart
     const cart = await Cart.findOne({ userId });
     if (!cart || !Array.isArray(cart.products) || cart.products.length === 0) {
-      logger.info(`🛒 Cart empty or not found for userId=${userId}`);
-      return res.status(404).json({ message: Messages.USER.ERROR.CART_USER_REQUIED });
+      logger.info(`🛒 Cart empty for userId=${userId}`, {
+        userId,
+        ip: req.ip,
+      });
+      return res.status(404).json({ message: "Cart is empty" });
     }
 
-    // Resolve payment + totals
+    // Resolve payment info
     const resolvedPaymentId = bodyPaymentId || `pay_${Date.now()}`;
-    const resolvedPaymentStatus = bodyPaymentStatus || "Failed"; // default to failed
+    const resolvedPaymentStatus = bodyPaymentStatus || "Failed";
     const resolvedTotal = typeof total === "number" ? total : cart.cartTotal;
 
-    // Persist the order (use cart.products instead of req.body.cartItems)
+    // Prepare order
     const orderPayload = {
       userId,
       items: cart.products,
@@ -50,30 +60,45 @@ const Cart = require('../models/cartModel');
       currency: cart.currency || "INR",
     };
 
+    logger.debug("📝 Creating order", {
+      userId,
+      paymentId: resolvedPaymentId,
+      paymentStatus: resolvedPaymentStatus,
+      total: resolvedTotal,
+      itemCount: cart.products.length,
+    });
+
     const order = await Order.create(orderPayload);
 
-    // ✅ Clear cart after placing order
+    // Clear cart
     cart.products = [];
     await cart.save();
 
-    logger.info(
-      `✅ Order placed for userId=${userId} orderId=${order._id} paymentId=${resolvedPaymentId} status=${resolvedPaymentStatus}`
-    );
+    logger.info("✅ Order placed & cart cleared", {
+      userId,
+      orderId: order._id,
+      paymentId: resolvedPaymentId,
+      paymentStatus: resolvedPaymentStatus,
+      total: resolvedTotal,
+    });
 
     return res.status(200).json({
-      message: Messages.USER.SUCCESS.PLACE_ORDER,
+      message: "Order placed successfully",
       order,
     });
   } catch (err) {
-    logger.error(
-      `❌ Error in placeOrder for userId=${req.body?.userId || req.user?.id || "unknown"}: ${err.message}`
-    );
+    logger.error("❌ Error in placeOrder", {
+      userId: req.body?.userId || req.user?.id || "unknown",
+      error: err.message,
+      stack: err.stack,
+    });
     return res.status(500).json({
-      message: Messages.USER.ERROR.PLACE_ORDER_FAILED,
+      message: "Order placement failed",
       error: err.message,
     });
   }
 };
+
 
 
 
