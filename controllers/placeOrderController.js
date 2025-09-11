@@ -37,7 +37,7 @@ exports.placeOrder = async (req, res) => {
         name: p.name,
         price: p.price,
         quantity: p.quantity,
-        image: p.image,
+        imageUrl: p.imageUrl,
       }));
       resolvedTotal = cart.cartTotal;
     } else if (Array.isArray(cartItems) && cartItems.length > 0) {
@@ -133,7 +133,7 @@ exports.getUserOrders = async (req, res) => {
         name: item.name,
         price: item.price,
         quantity: item.quantity,
-        image: item.image,
+        imageUrl: item.imageUrl,
       })),
     }));
 
