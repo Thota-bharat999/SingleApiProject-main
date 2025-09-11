@@ -33,7 +33,7 @@ exports.placeOrder = async (req, res) => {
     const cart = await Cart.findOne({ userId });
     if (cart && Array.isArray(cart.products) && cart.products.length > 0) {
       items = cart.products.map((p) => ({
-        productId: p.productId,
+        productId: p.productId, // 🔥 keep as string
         name: p.name,
         price: p.price,
         quantity: p.quantity,
@@ -41,7 +41,13 @@ exports.placeOrder = async (req, res) => {
       }));
       resolvedTotal = cart.cartTotal;
     } else if (Array.isArray(cartItems) && cartItems.length > 0) {
-      items = cartItems;
+      items = cartItems.map((p) => ({
+        productId: p.productId,
+        name: p.name,
+        price: p.price,
+        quantity: p.quantity,
+        imageUrl: p.imageUrl,
+      }));
     } else {
       userLogger.info(`🛒 Cart empty for userId=${userId}`);
       return res.status(404).json({ message: "Cart is empty" });
@@ -133,7 +139,7 @@ exports.getUserOrders = async (req, res) => {
         name: item.name,
         price: item.price,
         quantity: item.quantity,
-        imageUrl: item.imageUrl,
+        imageUrl: item.imageUrl, // 🔥 fixed field
       })),
     }));
 
