@@ -57,18 +57,19 @@ exports.placeOrder = async (req, res) => {
     }
 
     return res.status(200).json({
-      message: "Order placed successfully",
-      order: {
-        orderCode: order.orderCode, // ✅ clean readable order code
-        mongoId: order._id,         // optional raw Mongo ID
-        paymentId: order.paymentId,
-        paymentStatus: order.paymentStatus,
-        total: order.total,
-        status: order.status,
-        createdAt: order.createdAt,
-        items: order.items,
-      },
-    });
+  message: "Order placed successfully",
+  order: {
+    orderId: order.orderCode,   // ✅ expose orderCode as orderId
+    mongoId: order._id,         // keep Mongo _id if needed internally
+    paymentId: order.paymentId,
+    paymentStatus: order.paymentStatus,
+    total: order.total,
+    status: order.status,
+    createdAt: order.createdAt,
+    items: order.items,
+  },
+});
+
   } catch (err) {
     return res.status(500).json({
       message: "Order placement failed",
@@ -90,15 +91,16 @@ exports.getUserOrders = async (req, res) => {
       userId: new mongoose.Types.ObjectId(userId),
     }).select("orderCode items total paymentMethod paymentStatus status createdAt");
 
-    const formattedOrders = orders.map((order) => ({
-      orderCode: order.orderCode, // ✅ clean unique order code
-      paymentMethod: order.paymentMethod,
-      paymentStatus: order.paymentStatus,
-      total: order.total,
-      status: order.status,
-      createdAt: order.createdAt,
-      items: order.items,
-    }));
+   const formattedOrders = orders.map((order) => ({
+  orderId: order.orderCode,    // ✅ expose orderCode as orderId
+  paymentMethod: order.paymentMethod,
+  paymentStatus: order.paymentStatus,
+  total: order.total,
+  status: order.status,
+  createdAt: order.createdAt,
+  items: order.items,
+}));
+
 
     res.json(formattedOrders);
   } catch (err) {
