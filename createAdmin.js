@@ -8,15 +8,15 @@ require("dotenv").config();
 mongoose.connect(process.env.MONGO_URI)
   .then(async () => {
     try {
-      const existing = await Admin.findOne({ email: "doframmattissa-9908@yopmail.com" });
+      const existing = await Admin.findOne({ email: "moonshadeperfumes@gmail.com" });
       if (existing) {
         logger.warn("⚠️ Admin already exists. Skipping creation.");
         process.exit();
       }
 
-      const hashedPassword = await bcrypt.hash("admin@1234", 10);
+      const hashedPassword = await bcrypt.hash("Moonshade@test", 15);
       const admin = new Admin({
-        email: "doframmattissa-9908@yopmail.com",
+        email: "moonshadeperfumes@gmail.com",
         password: hashedPassword
       });
 

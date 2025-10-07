@@ -19,7 +19,7 @@ exports.registerUser = async (req, res) => {
       return res.status(400).json({ message: Messages.USER.SUCCESS.USER_EXIST });
     }
 
-    const user = await User.create({ name, email, password }); // no manual hash
+    const user = await User.create({ name, email, password }); 
 
     const token = jwt.sign({ id: user._id }, process.env.JWT_SECRET, {
       expiresIn: "1h",
