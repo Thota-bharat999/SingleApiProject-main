@@ -13,7 +13,7 @@ const sendEmail = async ({ toEmail, subject, html }) => {
     const start = Date.now();
 
     // 🔍 Support both upper & camelcase env names
-    const SENDGRID_API_KEY = process.env.SendMoonApi || process.env.SENDMOONAPI;
+    const SENDGRID_API_KEY = process.env.Moonshade || process.env.MOONSHADE;
     const SUPPORT_EMAIL = process.env.SUPPORT_EMAIL;
 
     // // Debugging logs
