@@ -11,6 +11,7 @@ const mongoose = require("mongoose");
 exports.addProduct = async (req, res) => {
   try {
     const { name, description, price, stock, categoryId, imageUrl, images } = req.body;
+    console.log("Received Body:", req.body);
 
     if (!name || !price || !stock || !categoryId) {
       adminLogger.warn("Missing required fields in addProduct request");
