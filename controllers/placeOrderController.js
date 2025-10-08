@@ -34,19 +34,30 @@ exports.placeOrder = async (req, res) => {
       return res.status(404).json({ message: "Cart is empty" });
     }
 
-    const resolvedPaymentId = paymentId || `pay_${Date.now()}`;
-    const resolvedPaymentStatus = paymentStatus || "Failed";
+    // 🧾 Payment details
+const resolvedPaymentId = paymentId || `pay_${Date.now()}`;
+const resolvedPaymentStatus = paymentStatus || "Failed";
 
-    const orderPayload = {
-      userId,
-      items,
-      total: resolvedTotal,
-      paymentMethod,
-      paymentId: resolvedPaymentId,
-      paymentStatus: resolvedPaymentStatus,
-      currency: "INR",
-      status: resolvedPaymentStatus === "Successful" ? "Successful" : "Failed",
-    };
+// 🧠 Correctly map order status
+let orderStatus = "Pending";
+
+if (resolvedPaymentStatus === "Successful") {
+  orderStatus = "Delivered"; // ✅ valid enum
+} else if (resolvedPaymentStatus === "Failed") {
+  orderStatus = "Failed";
+}
+
+const orderPayload = {
+  userId,
+  items,
+  total: resolvedTotal,
+  paymentMethod,
+  paymentId: resolvedPaymentId,
+  paymentStatus: resolvedPaymentStatus,
+  currency: "INR",
+  status: orderStatus, // ✅ fixed here
+};
+
 
     const order = await Order.create(orderPayload);
 

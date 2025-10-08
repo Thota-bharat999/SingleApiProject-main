@@ -40,12 +40,12 @@ const orderSchema = new mongoose.Schema(
 );
 
 // 🔥 Pre-save hook to generate unique orderCode
-orderSchema.pre("validate", function (next) {
-  if (!this.orderCode) {
-    const timestamp = Date.now();
-    this.orderCode = `ORD-${timestamp}-${Math.floor(1000 + Math.random() * 9000)}`;
-  }
+orderSchema.pre("save", function (next) {
+  if (this.paymentStatus === "Successful") this.status = "Delivered";
+  else if (this.paymentStatus === "Failed") this.status = "Failed";
+  else this.status = "Pending";
   next();
 });
+
 
 module.exports = mongoose.model("Order", orderSchema);
