@@ -1,7 +1,7 @@
 const adminLogger = require('../utils/adminLogger');
 const Order = require('../models/orderModel');
 const Messages = require("../utils/messages");
-const Product = require('../models/productModel');
+const Product = require('../Admin/productModel');
 const User = require('../models/userModel');
 
 exports.getPaginatedOrders = async (req, res) => {
