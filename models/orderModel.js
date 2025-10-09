@@ -9,7 +9,7 @@ const orderSchema = new mongoose.Schema(
     },
     userId: {
       type: mongoose.Schema.Types.ObjectId,
-      ref: "User",
+      ref: "User", // ✅ reference to User collection
       required: true,
     },
     items: [
@@ -35,17 +35,48 @@ const orderSchema = new mongoose.Schema(
       enum: ["Pending", "Delivered", "Failed"],
       default: "Pending",
     },
+    // ✅ New virtual fields for user info
+    userEmail: {
+      type: String,
+      default: null,
+    },
+    userName: {
+      type: String,
+      default: null,
+    },
   },
   { timestamps: true }
 );
 
-// 🔥 Pre-save hook to generate unique orderCode
-orderSchema.pre("save", function (next) {
-  if (this.paymentStatus === "Successful") this.status = "Delivered";
-  else if (this.paymentStatus === "Failed") this.status = "Failed";
-  else this.status = "Pending";
+// 🔥 Pre-validate hook to auto-generate orderCode
+orderSchema.pre("validate", function (next) {
+  if (!this.orderCode) {
+    const timestamp = Date.now();
+    this.orderCode = `ORD-${timestamp}-${Math.floor(1000 + Math.random() * 9000)}`;
+  }
   next();
 });
 
+// ✅ Auto-populate user details whenever order is fetched
+orderSchema.pre(/^find/, function (next) {
+  this.populate({
+    path: "userId",
+    select: "email name", // only fetch what we need
+  });
+  next();
+});
+
+// ✅ Add virtuals in JSON output
+orderSchema.set("toJSON", {
+  virtuals: true,
+  transform: (doc, ret) => {
+    if (ret.userId && typeof ret.userId === "object") {
+      ret.userEmail = ret.userId.email || null;
+      ret.userName = ret.userId.name || null;
+      ret.userId = ret.userId._id;
+    }
+    return ret;
+  },
+});
 
 module.exports = mongoose.model("Order", orderSchema);
