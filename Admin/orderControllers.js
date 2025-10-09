@@ -1,7 +1,7 @@
 const adminLogger = require('../utils/adminLogger');
 const Order = require('../models/orderModel');
 const Messages = require("../utils/messages");
-const Product = require('../Admin/productModel');
+const Product = require('../Admin/productModel'); // ✅ fixed import path
 const User = require('../models/userModel');
 
 exports.getPaginatedOrders = async (req, res) => {
@@ -13,7 +13,7 @@ exports.getPaginatedOrders = async (req, res) => {
     adminLogger.info(`Fetching orders - Page: ${page}, Limit: ${limit}`);
 
     const orders = await Order.find()
-      .populate('userId', 'email name') // ✅ Fetch email + name
+      .populate('userId', 'email name') // ✅ Fetch user email and name
       .sort({ createdAt: -1 })
       .skip(skip)
       .limit(limit)
@@ -23,15 +23,16 @@ exports.getPaginatedOrders = async (req, res) => {
 
     const formattedOrders = orders.map((order) => ({
       mongoId: order._id,
-      orderId: order.orderCode, // ✅ matches frontend expected field
+      orderId: order.orderCode, // ✅ Matches frontend expected field
       userId: order.userId?._id || null,
       email: order.userId?.email || null,
       name: order.userId?.name || null,
-      paymentMethod: order.paymentMethod,
-      paymentStatus: order.paymentStatus,
-      total: order.total,
-      currency: order.currency,
-      status: order.status,
+      paymentId: order.paymentId || null, // ✅ Added payment ID
+      paymentMethod: order.paymentMethod || "N/A",
+      paymentStatus: order.paymentStatus || "Pending",
+      total: order.total || 0,
+      currency: order.currency || "INR",
+      status: order.status || "Pending",
       createdAt: order.createdAt,
       updatedAt: order.updatedAt,
       items: order.items?.map((item) => ({
@@ -43,7 +44,7 @@ exports.getPaginatedOrders = async (req, res) => {
       })) || [],
     }));
 
-    adminLogger.info(`Orders fetched successfully - ${formattedOrders.length} orders returned`);
+    adminLogger.info(`✅ Orders fetched successfully - ${formattedOrders.length} orders returned`);
 
     return res.status(200).json({
       message: "Orders fetched successfully",
@@ -53,7 +54,7 @@ exports.getPaginatedOrders = async (req, res) => {
       orders: formattedOrders,
     });
   } catch (err) {
-    adminLogger.error(`Admin View Orders Error: ${err.message}`);
+    adminLogger.error(`❌ Admin View Orders Error: ${err.message}`);
     return res.status(500).json({
       message: Messages.ADMIN.ERROR.SERVER_ERROR,
       error: err.message,
