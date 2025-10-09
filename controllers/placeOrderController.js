@@ -3,6 +3,7 @@ const mongoose = require("mongoose");
 const Order = require("../models/orderModel");
 const Messages = require("../utils/messages");
 const Cart = require("../models/cartModel");
+const User = require("../models/userModel"); // ✅ make sure this model exists
 
 // ==========================
 // POST /api/user/order
@@ -65,6 +66,10 @@ exports.placeOrder = async (req, res) => {
 
     // 🧠 Save order in DB
     const order = await Order.create(orderPayload);
+
+    // ✅ Fetch user info to include email in response
+    const user = await User.findById(userId).select("email name");
+
     userLogger.info(`✅ [User: ${userId}] Order placed successfully. OrderCode: ${order.orderCode}`);
 
     // 🧹 Clear user's cart
@@ -75,16 +80,23 @@ exports.placeOrder = async (req, res) => {
       userLogger.info(`🧹 [User: ${userId}] Cart cleared after order placement.`);
     }
 
+    // ✅ Full response
     return res.status(200).json({
       message: "Order placed successfully",
       order: {
+        mongoId: order._id, // ✅ actual MongoDB ID
         orderId: order.orderCode,
-        mongoId: order._id,
+        userId: userId,
+        email: user?.email || null,
+        name: user?.name || null,
         paymentId: order.paymentId,
         paymentStatus: order.paymentStatus,
+        paymentMethod: order.paymentMethod,
         total: order.total,
+        currency: order.currency,
         status: order.status,
         createdAt: order.createdAt,
+        updatedAt: order.updatedAt,
         items: order.items,
       },
     });
@@ -114,22 +126,35 @@ exports.getUserOrders = async (req, res) => {
       return res.status(400).json({ message: Messages.USER.ERROR.INVALID_ORDER });
     }
 
+    // ✅ Fetch user to include email
+    const user = await User.findById(userId).select("email name");
+
     const orders = await Order.find({ userId: new mongoose.Types.ObjectId(userId) })
-      .select("orderCode items total paymentMethod paymentStatus status createdAt");
+      .select("orderCode items total paymentMethod paymentStatus status currency createdAt updatedAt");
 
     userLogger.info(`📦 [User: ${userId}] Retrieved ${orders.length} orders.`);
 
     const formattedOrders = orders.map(order => ({
+      mongoId: order._id,
       orderId: order.orderCode,
+      userId,
+      email: user?.email || null,
+      name: user?.name || null,
       paymentMethod: order.paymentMethod,
       paymentStatus: order.paymentStatus,
       total: order.total,
+      currency: order.currency,
       status: order.status,
       createdAt: order.createdAt,
+      updatedAt: order.updatedAt,
       items: order.items,
     }));
 
-    res.json(formattedOrders);
+    res.json({
+      count: formattedOrders.length,
+      orders: formattedOrders,
+    });
+
   } catch (err) {
     userLogger.error(`🔥 [Get Orders Error] ${err.message}`, {
       stack: err.stack,
