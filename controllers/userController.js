@@ -111,13 +111,17 @@ exports.forgotPassword = async (req, res) => {
 
     if (!email) {
       userLogger.warn("Forgot password attempt failed: Email not provided");
-      return res.status(400).json({ message:Messages.USER.ERROR.EMAIL_REQUIRED });
+      return res.status(400).json({
+        message: Messages.USER.ERROR.EMAIL_REQUIRED,
+      });
     }
 
     const user = await User.findOne({ email });
     if (!user) {
       userLogger.warn(`Forgot password attempt: No user found with email ${email}`);
-      return res.status(404).json({ message:Messages.USER.ERROR.USER_NOT_FOUND});
+      return res.status(404).json({
+        message: Messages.USER.ERROR.USER_NOT_FOUND,
+      });
     }
 
     // ✅ Generate 6-digit OTP
@@ -126,32 +130,34 @@ exports.forgotPassword = async (req, res) => {
     // ✅ Hash OTP for storage
     const hashedOTP = crypto.createHash("sha256").update(otp).digest("hex");
 
-    // ✅ Save hashed OTP and expiry
+    // ✅ Save hashed OTP and expiry (10 minutes)
     user.resetPasswordToken = hashedOTP;
-    user.resetPasswordExpires = Date.now() + 10 * 60 * 1000; // 10 minutes
+    user.resetPasswordExpires = Date.now() + 10 * 60 * 1000;
     await user.save();
 
-    // ✅ Send email
+    // ✅ Send OTP email using the HTML template
     const startTime = Date.now();
 
     await sendEmail({
       toEmail: user.email,
-      subject: "Your OTP Code",
-      html: `<p>Hello User,</p>
-      <p>Your OTP is: <b>${otp}</b></p>
-       <p>This OTP is valid for 15 minutes.</p>
-       <p>If you did not request this, please ignore.</p>`,
+      subject: "Your Moon Shade OTP Code",
+      otp, // this automatically replaces {{OTP}} and {{EMAIL}} in otp-template.html
     });
-    userLogger.info("Sending to:", user.email, "OTP:", otp);
 
+    userLogger.info(`📤 OTP email sent to: ${user.email}, OTP: ${otp}`);
     const duration = Date.now() - startTime;
-    userLogger.info(`📤 OTP email sent to ${email} in ${duration} ms`);
+    userLogger.info(`⏱️ Email delivery took ${duration} ms`);
 
-    return res.status(200).json({ message:Messages.USER.SUCCESS.OTP_SENT});
+    return res.status(200).json({
+      message: Messages.USER.SUCCESS.OTP_SENT,
+    });
 
   } catch (err) {
-    userLogger.error(`Forgot password error for ${req.body.email}: ${err.message}`);
-    return res.status(500).json({ message: Messages.COMMON.ERROR.SERVER_ERROR, error: err.message });
+    userLogger.error(`❌ Forgot password error for ${req.body.email}: ${err.message}`);
+    return res.status(500).json({
+      message: Messages.COMMON.ERROR.SERVER_ERROR,
+      error: err.message,
+    });
   }
 };
 

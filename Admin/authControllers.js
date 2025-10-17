@@ -57,47 +57,54 @@ exports.loginAdmin = async (req, res) => {
 // Admin Forgot_password
 exports.adminForgotPassword = async (req, res) => {
   try {
-   const { email } = req.body;
-    adminLogger.info(`[ADMIN] Connecting to DB for admin forgot password. Email: ${email}`);
+    const { email } = req.body;
+    adminLogger.info(`[ADMIN] Forgot password request received. Email: ${email}`);
 
+    // ✅ Validate email input
     if (!email) {
       adminLogger.warn(`[ADMIN] Email not provided in forgot password request`);
-      return res.status(400).json({ message:Messages.ADMIN.ERROR.EMAIL_REQUIRED });
+      return res.status(400).json({ message: Messages.ADMIN.ERROR.EMAIL_REQUIRED });
     }
 
+    // ✅ Check admin existence
     const admin = await Admin.findOne({ email });
     if (!admin) {
       adminLogger.warn(`[ADMIN] Admin not found: ${email}`);
-      return res.status(404).json({ message:Messages.ADMIN.ERROR.ADMIN_NOT_FOUND });
+      return res.status(404).json({ message: Messages.ADMIN.ERROR.ADMIN_NOT_FOUND });
     }
 
-    // Generate 6-digit OTP
+    // ✅ Generate 6-digit OTP
     const otp = Math.floor(100000 + Math.random() * 900000).toString();
 
-    // Save OTP and expiry
+    // ✅ Save OTP and expiry
     admin.resetOTP = otp;
-    admin.resetOTPExpiry = Date.now() + 15 * 60 * 1000; // 15 mins
+    admin.resetOTPExpiry = Date.now() + 15 * 60 * 1000; // 15 minutes
     await admin.save();
 
-    // Log OTP and email content for debug (don't do this in production!)
-    adminLogger.debug(`[ADMIN] Generated OTP: ${otp}`);
+    adminLogger.debug(`[ADMIN] Generated OTP for ${email}: ${otp}`);
 
-    // Send email
+    // ✅ Send OTP email using your HTML template
+    const startTime = Date.now();
+
     await sendEmail({
       toEmail: admin.email,
-      subject: 'Admin OTP for Password ',
-      html: `<p>Hello Admin,</p>
-             <p>Your OTP for password reset is: <b>${otp}</b></p>
-             <p>This OTP is valid for 15 minutes.</p>
-             <p>If you did not request this, please ignore.</p>`,
+      subject: "Moon Shade Admin Password Reset OTP",
+      otp, // will automatically replace {{OTP}} and {{EMAIL}} in otp-template.html
     });
 
-    adminLogger.info(`[ADMIN] OTP sent to admin email: ${email}`);
-    res.status(200).json({ message: Messages.ADMIN.SUCCESS.OTP_SENT });
+    const duration = Date.now() - startTime;
+    adminLogger.info(`[ADMIN] OTP email sent to ${email} in ${duration} ms`);
 
+    // ✅ Response
+    return res.status(200).json({
+      message: Messages.ADMIN.SUCCESS.OTP_SENT,
+    });
   } catch (error) {
     adminLogger.error(`[ADMIN] Forgot Password OTP Error: ${error.message}`);
-    res.status(500).json({ message: Messages.COMMON.ERROR.SERVER_ERROR, error: error.message });
+    return res.status(500).json({
+      message: Messages.COMMON.ERROR.SERVER_ERROR,
+      error: error.message,
+    });
   }
 };
 
