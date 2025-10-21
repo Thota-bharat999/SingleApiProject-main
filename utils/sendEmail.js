@@ -10,10 +10,10 @@ require("dotenv").config();
  * @param {string} options.toEmail - Recipient email
  * @param {string} options.subject - Email subject
  * @param {string} [options.otp] - OTP or dynamic content (optional)
- * @param {string} [options.userRole] - User role (e.g., "User", "Admin") (optional)
+ * @param {string} [options.userName] - User name (optional)
  * @param {string} [options.html] - Optional custom HTML (if provided, overrides template)
  */
-const sendEmail = async ({ toEmail, subject, otp, userRole, html }) => {
+const sendEmail = async ({ toEmail, subject, otp, userName, html }) => {
   try {
     if (!toEmail || !subject) {
       logger.warn("⚠️ Missing toEmail or subject in sendEmail");
@@ -47,17 +47,31 @@ const sendEmail = async ({ toEmail, subject, otp, userRole, html }) => {
       // Replace placeholders dynamically
       emailHtml = emailHtml
         .replace(/{{OTP_CODE}}/g, otp || "----")
-        .replace(/{{USER_ROLE}}/g, userRole || "User")
+        .replace(/{{USER_NAME}}/g, userName || "User")
         .replace(/{{EMAIL}}/g, toEmail)
         .replace(/{{YEAR}}/g, new Date().getFullYear());
     }
 
     const msg = {
       to: toEmail,
-      from: SUPPORT_EMAIL,
+      from: {
+        email: SUPPORT_EMAIL,
+        name: "Moon Shade Support"
+      },
       subject,
       html: emailHtml,
       text: emailHtml.replace(/<[^>]+>/g, ""), // fallback plain text
+      // Additional headers to improve deliverability
+      headers: {
+        'X-Priority': '1',
+        'X-MSMail-Priority': 'High',
+        'Importance': 'High'
+      },
+      // Set reply-to to support email
+      reply_to: {
+        email: SUPPORT_EMAIL,
+        name: "Moon Shade Support"
+      }
     };
 
     logger.info(`[EMAIL] 📧 Preparing to send via SendGrid API to: ${toEmail}`);
