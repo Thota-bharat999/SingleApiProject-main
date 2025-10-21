@@ -89,7 +89,8 @@ exports.adminForgotPassword = async (req, res) => {
     await sendEmail({
       toEmail: admin.email,
       subject: "Moon Shade Admin Password Reset OTP",
-      otp, // will automatically replace {{OTP}} and {{EMAIL}} in otp-template.html
+      otp, // will automatically replace {{OTP_CODE}} and {{EMAIL}} in otp-template.html
+      userRole: "Admin", // Specify user role
     });
 
     const duration = Date.now() - startTime;

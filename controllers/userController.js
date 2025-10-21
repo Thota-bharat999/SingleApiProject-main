@@ -141,7 +141,8 @@ exports.forgotPassword = async (req, res) => {
     await sendEmail({
       toEmail: user.email,
       subject: "Your Moon Shade OTP Code",
-      otp, // this automatically replaces {{OTP}} and {{EMAIL}} in otp-template.html
+      otp, // this automatically replaces {{OTP_CODE}} and {{EMAIL}} in otp-template.html
+      userRole: "User", // Specify user role
     });
 
     userLogger.info(`📤 OTP email sent to: ${user.email}, OTP: ${otp}`);

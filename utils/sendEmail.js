@@ -10,9 +10,10 @@ require("dotenv").config();
  * @param {string} options.toEmail - Recipient email
  * @param {string} options.subject - Email subject
  * @param {string} [options.otp] - OTP or dynamic content (optional)
+ * @param {string} [options.userRole] - User role (e.g., "User", "Admin") (optional)
  * @param {string} [options.html] - Optional custom HTML (if provided, overrides template)
  */
-const sendEmail = async ({ toEmail, subject, otp, html }) => {
+const sendEmail = async ({ toEmail, subject, otp, userRole, html }) => {
   try {
     if (!toEmail || !subject) {
       logger.warn("⚠️ Missing toEmail or subject in sendEmail");
@@ -45,7 +46,8 @@ const sendEmail = async ({ toEmail, subject, otp, html }) => {
 
       // Replace placeholders dynamically
       emailHtml = emailHtml
-        .replace(/{{OTP}}/g, otp || "----")
+        .replace(/{{OTP_CODE}}/g, otp || "----")
+        .replace(/{{USER_ROLE}}/g, userRole || "User")
         .replace(/{{EMAIL}}/g, toEmail)
         .replace(/{{YEAR}}/g, new Date().getFullYear());
     }
