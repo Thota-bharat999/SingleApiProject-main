@@ -48,3 +48,7 @@
 [2025-08-30 11:39:51] [31merror[39m: ❌ MongoDB error querySrv EREFUSED _mongodb._tcp.cluster0.ciqbnzp.mongodb.net
 [2025-09-09 11:18:14] [31merror[39m: [ADMIN] JWT verification failed: invalid signature
 [2025-09-10 15:55:49] [31merror[39m: [ADMIN] JWT verification failed: invalid signature
+[2025-10-24 21:50:32] [31merror[39m: [ADMIN] JWT verification failed: jwt malformed
+[2025-10-24 21:51:04] [31merror[39m: [ADMIN] JWT verification failed: jwt malformed
+[2025-10-24 21:51:10] [31merror[39m: [ADMIN] JWT verification failed: jwt malformed
+[2025-10-24 21:51:25] [31merror[39m: [ADMIN] JWT verification failed: jwt malformed

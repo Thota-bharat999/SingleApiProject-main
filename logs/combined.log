@@ -1557,3 +1557,19 @@
 [2025-10-21 17:50:09] [32minfo[39m: ✅ MongoDB connected
 [2025-10-21 17:50:25] [32minfo[39m: 🚀 Server running on port 5000
 [2025-10-21 17:50:25] [32minfo[39m: ✅ MongoDB connected
+[2025-10-21 18:25:19] [32minfo[39m: 🚀 Server running on port 5000
+[2025-10-24 21:46:20] [32minfo[39m: 🚀 Server running on port 5000
+[2025-10-24 21:46:20] [32minfo[39m: ✅ MongoDB connected
+[2025-10-24 21:49:38] [32minfo[39m: 🚀 Server running on port 5000
+[2025-10-24 21:49:39] [32minfo[39m: ✅ MongoDB connected
+[2025-10-24 21:50:32] [31merror[39m: [ADMIN] JWT verification failed: jwt malformed
+[2025-10-24 21:50:50] [33mwarn[39m: ⚠️ Admin already exists. Skipping creation.
+[2025-10-24 21:50:58] [32minfo[39m: [ADMIN] Admin Login Successful:moonshadeperfumes@gmail.com
+[2025-10-24 21:51:04] [31merror[39m: [ADMIN] JWT verification failed: jwt malformed
+[2025-10-24 21:51:10] [31merror[39m: [ADMIN] JWT verification failed: jwt malformed
+[2025-10-24 21:51:19] [32minfo[39m: [ADMIN] Admin Login Successful:moonshadeperfumes@gmail.com
+[2025-10-24 21:51:25] [31merror[39m: [ADMIN] JWT verification failed: jwt malformed
+[2025-10-24 21:52:30] [32minfo[39m: 🚀 Server running on port 5000
+[2025-10-24 21:52:30] [32minfo[39m: ✅ MongoDB connected
+[2025-10-24 21:52:39] [32minfo[39m: 🚀 Server running on port 5000
+[2025-10-24 21:52:39] [32minfo[39m: ✅ MongoDB connected

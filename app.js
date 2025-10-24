@@ -11,6 +11,7 @@ const orderRoutes = require('./routes/orderRoutes');
 const uploadRoutes = require('./Admin/upload/routes/uploadRoutes');
 const adminRoutes = require('./Admin/adminRoutes');
 const commonRoutes = require('./Admin/commonRoutes');
+const { getProducts } = require('./controllers/userController');
 
 // Swagger
 const { swaggerUi, specs } = require('./swagger');
@@ -45,6 +46,10 @@ mongoose.connect(process.env.MONGO_URI, {
 app.get('/', (req, res) => {
   res.send('🚀 API is running!');
 });
+
+// Public route for products (no auth required)
+app.get('/api/products', getProducts);
+app.get('/products', getProducts);
 
 // Start Server
 const PORT = process.env.PORT || 5000;
