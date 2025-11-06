@@ -46,7 +46,6 @@ exports.addProduct = async (req, res) => {
 
     const saved = await newProduct.save();
     adminLogger.info(`Product added: ${saved.productId} - ${saved.name}`);
-
     // Fetch category info
     const productWithCategory = await Product.findById(saved._id)
       .populate("categoryId", "name");
